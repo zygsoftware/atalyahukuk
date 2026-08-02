@@ -8,6 +8,7 @@
     "home": "Home",
     "about": "About Us",
     "services": "Practice Areas",
+    "gallery": "Gallery",
     "blog": "Blog",
     "announcements": "Announcements",
     "contact": "Contact",
@@ -40,6 +41,12 @@
     "blogTeaserSubtitle": "Recent legal developments and expert insights",
     "blogTeaserCta": "View All Articles",
     "announcementsTeaserTitle": "Announcements",
+    "processTitle": "How We Work",
+    "processSubtitle": "We follow a transparent, well-organized process from the first meeting to reporting the outcome.",
+    "teamTitle": "Our Team",
+    "teamSubtitle": "Meet our team of expert attorneys.",
+    "testimonialsTitle": "What Our Clients Say",
+    "testimonialsSubtitle": "Experiences from clients who trust us.",
     "ctaTitle": "Need Legal Support?",
     "ctaSubtitle": "Get in touch with us so we can evaluate your situation.",
     "ctaButton": "Contact Us Now"
@@ -60,6 +67,53 @@
     "teamTitle": "Our Team",
     "teamBody": "Our team of expert attorneys and advisors approaches every case with the same care and professionalism."
   },
+  "team": {
+    "members": {
+      "member1": { "name": "Elif Yıldız, Esq.", "title": "Founding Partner, Family & Inheritance Law" },
+      "member2": { "name": "Mert Kaya, Esq.", "title": "Criminal Law" },
+      "member3": { "name": "Deniz Aydın, Esq.", "title": "Commercial & Corporate Law" },
+      "member4": { "name": "Ayşe Korkmaz, Esq.", "title": "Labor & Real Estate Law" }
+    }
+  },
+  "process": {
+    "steps": {
+      "step1": {
+        "title": "Initial Consultation",
+        "body": "We listen to your situation and map out the legal path together."
+      },
+      "step2": {
+        "title": "Case Review & Strategy",
+        "body": "Our expert team analyzes your case and prepares the most suitable strategy."
+      },
+      "step3": {
+        "title": "Legal Process Follow-up",
+        "body": "We keep you regularly informed at every stage of the process."
+      },
+      "step4": {
+        "title": "Outcome & Reporting",
+        "body": "At the end of the process, we share the outcome with you clearly and transparently."
+      }
+    }
+  },
+  "testimonials": {
+    "items": {
+      "t1": {
+        "quote": "I felt supported at every stage of the process — their approach is transparent and reassuring.",
+        "name": "M.K.",
+        "role": "Commercial Law Client"
+      },
+      "t2": {
+        "quote": "I'm truly grateful for the sensitivity and professionalism they showed during my divorce process.",
+        "name": "A.Y.",
+        "role": "Family Law Client"
+      },
+      "t3": {
+        "quote": "They resolved a complex enforcement case much faster and more smoothly than I expected.",
+        "name": "S.D.",
+        "role": "Corporate Client"
+      }
+    }
+  },
   "services": {
     "eyebrow": "Our Services",
     "title": "Our Practice Areas",
@@ -67,47 +121,102 @@
     "detailCta": "Get Detailed Information",
     "backToList": "Back to All Services",
     "contactCta": "Get Advice in This Area",
+    "benefitsTitle": "What We Offer in This Area",
+    "relatedTitle": "Related Practice Areas",
     "items": {
       "ceza-hukuku": {
         "title": "Criminal Law",
         "shortDescription": "Effective defense and legal representation throughout investigation and prosecution.",
-        "description": "Our Criminal Law team protects clients' rights at every stage of detention, questioning, investigation and prosecution. We develop effective defense strategies in all criminal proceedings, whether as suspect, defendant or victim."
+        "description": "Our Criminal Law team protects clients' rights at every stage of detention, questioning, investigation and prosecution. We develop effective defense strategies in all criminal proceedings, whether as suspect, defendant or victim.",
+        "benefits": [
+          "Legal support during detention and questioning",
+          "Thorough review of the investigation file",
+          "Effective defense and representation at trial"
+        ]
       },
       "aile-hukuku": {
         "title": "Family Law",
         "shortDescription": "Legal support in divorce, alimony, custody and property division matters.",
-        "description": "We carefully protect our clients' rights in contested and uncontested divorce, alimony, custody, matrimonial property regime and compensation cases, aiming to conclude the process with minimal strain."
+        "description": "We carefully protect our clients' rights in contested and uncontested divorce, alimony, custody, matrimonial property regime and compensation cases, aiming to conclude the process with minimal strain.",
+        "benefits": [
+          "Representation in uncontested and contested divorce",
+          "Advisory on alimony and custody disputes",
+          "Handling property division and compensation claims"
+        ]
       },
       "is-hukuku": {
         "title": "Labor Law",
         "shortDescription": "Litigation and advisory services in disputes between employees and employers.",
-        "description": "We offer services in reinstatement, severance and notice pay, overtime, workplace accident and mobbing cases, as well as advisory support for employment contracts and HR processes on the employer side."
+        "description": "We offer services in reinstatement, severance and notice pay, overtime, workplace accident and mobbing cases, as well as advisory support for employment contracts and HR processes on the employer side.",
+        "benefits": [
+          "Representation in reinstatement and compensation cases",
+          "Drafting and reviewing employment contracts",
+          "Advisory on workplace accident and mobbing cases"
+        ]
       },
       "ticaret-hukuku": {
         "title": "Commercial & Corporate Law",
         "shortDescription": "Advisory services on company formation, contracts and commercial disputes.",
-        "description": "We provide comprehensive legal support to our corporate clients in company formation, mergers and acquisitions, partnership agreements, drafting commercial contracts, and resolving commercial disputes."
+        "description": "We provide comprehensive legal support to our corporate clients in company formation, mergers and acquisitions, partnership agreements, drafting commercial contracts, and resolving commercial disputes.",
+        "benefits": [
+          "Advisory on company formation and structuring",
+          "Drafting and negotiating commercial contracts",
+          "Legal support in partnership and merger processes"
+        ]
       },
       "gayrimenkul-hukuku": {
         "title": "Real Estate Law",
         "shortDescription": "Legal representation in title deed, lease, expropriation and construction disputes.",
-        "description": "We provide expert support in title deed cancellation and registration, lease disputes, condominium ownership, expropriation valuation, and disputes arising from construction contracts."
+        "description": "We provide expert support in title deed cancellation and registration, lease disputes, condominium ownership, expropriation valuation, and disputes arising from construction contracts.",
+        "benefits": [
+          "Representation in title deed cancellation cases",
+          "Advisory on lease and condominium disputes",
+          "Handling expropriation valuation processes"
+        ]
       },
       "icra-iflas-hukuku": {
         "title": "Enforcement & Bankruptcy Law",
         "shortDescription": "Effective solutions in debt collection and enforcement proceedings.",
-        "description": "We provide fast and effective legal solutions to both creditors and debtors in initiating enforcement proceedings, debt collection, objection cancellation/removal, and bankruptcy processes."
+        "description": "We provide fast and effective legal solutions to both creditors and debtors in initiating enforcement proceedings, debt collection, objection cancellation/removal, and bankruptcy processes.",
+        "benefits": [
+          "Initiating enforcement proceedings and debt collection",
+          "Objection cancellation and removal processes",
+          "Advisory on bankruptcy and composition proceedings"
+        ]
       },
       "miras-hukuku": {
         "title": "Inheritance Law",
         "shortDescription": "Legal advisory on succession, estate division and reduction claims.",
-        "description": "We protect our clients' rights in obtaining certificates of inheritance, renunciation of inheritance, heirship documents, reduction claims and estate division disputes."
+        "description": "We protect our clients' rights in obtaining certificates of inheritance, renunciation of inheritance, heirship documents, reduction claims and estate division disputes.",
+        "benefits": [
+          "Certificate of inheritance and heirship procedures",
+          "Representation in estate division and reduction cases",
+          "Advisory on renunciation of inheritance"
+        ]
       },
       "sozlesmeler-hukuku": {
         "title": "Contract Law",
         "shortDescription": "Drafting, review and dispute resolution for all types of contracts.",
-        "description": "We advise individual and corporate clients on drafting, negotiating and reviewing contracts, as well as resolving disputes arising from them."
+        "description": "We advise individual and corporate clients on drafting, negotiating and reviewing contracts, as well as resolving disputes arising from them.",
+        "benefits": [
+          "Drafting contract templates",
+          "Legal review of existing contracts",
+          "Resolving contract disputes"
+        ]
       }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "Gallery",
+    "subtitle": "Moments from our office, our team, and our events.",
+    "empty": "No gallery images have been added yet.",
+    "filterAll": "All",
+    "categories": {
+      "ofis": "Office",
+      "ekip": "Team",
+      "etkinlik": "Events",
+      "diger": "Other"
     }
   },
   "blog": {
@@ -157,7 +266,8 @@
   },
   "common": {
     "loading": "Loading...",
-    "notFound": "Page not found.",
+    "notFound": "Page Not Found",
+    "notFoundSubtitle": "The page you're looking for may have been moved, removed, or never existed.",
     "backHome": "Back to Home"
   }
 }

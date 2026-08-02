@@ -7,10 +7,13 @@ export const NAV_ITEMS = [
   { href: "/", key: "home" },
   { href: "/hakkimizda", key: "about" },
   { href: "/hizmetler", key: "services" },
+  { href: "/galeri", key: "gallery" },
   { href: "/blog", key: "blog" },
   { href: "/duyurular", key: "announcements" },
   { href: "/iletisim", key: "contact" },
 ] as const;
+
+export const GALLERY_CATEGORIES = ["ofis", "ekip", "etkinlik", "diger"] as const;
 
 export const SERVICE_SLUGS = [
   "ceza-hukuku",
@@ -24,3 +27,14 @@ export const SERVICE_SLUGS = [
 ] as const;
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
+
+export const TEAM_MEMBER_KEYS = [
+  "member1",
+  "member2",
+  "member3",
+  "member4",
+] as const;
+
+export const PROCESS_STEP_KEYS = ["step1", "step2", "step3", "step4"] as const;
+
+export const TESTIMONIAL_KEYS = ["t1", "t2", "t3"] as const;

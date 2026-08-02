@@ -14,18 +14,23 @@ export async function Header() {
 
   return (
     <header className="relative z-40 border-b border-bordo-100 bg-cream/95 backdrop-blur supports-[backdrop-filter]:bg-cream/80">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-3 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-2.5 lg:px-8">
+        <Link href="/" className="flex items-center gap-3.5">
           <Image
             src="/logo-mark.png"
             alt="Atalya Hukuk Bürosu"
-            width={44}
-            height={44}
+            width={68}
+            height={68}
             priority
-            className="h-11 w-11"
+            className="h-16 w-16 shrink-0 sm:h-[68px] sm:w-[68px]"
           />
-          <span className="font-serif text-xl tracking-wide text-bordo-500">
-            ATALYA
+          <span className="flex flex-col leading-none">
+            <span className="font-serif text-2xl tracking-[0.12em] text-bordo-500 sm:text-[28px]">
+              ATALYA
+            </span>
+            <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-gold-600">
+              Hukuk Bürosu
+            </span>
           </span>
         </Link>
 

@@ -5,17 +5,17 @@
   --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
   --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
 
-  /* Bordo — marka birincil rengi (logodan örneklendi) */
+  /* Bordo — marka birincil rengi (#680A0F) */
   --color-bordo-50: #f6f0f1;
   --color-bordo-100: #eaddde;
-  --color-bordo-200: #d5bbbc;
-  --color-bordo-300: #bc9193;
-  --color-bordo-400: #9a595c;
-  --color-bordo-500: #6a0b0f;
-  --color-bordo-600: #5d0b0e;
-  --color-bordo-700: #4e0b0d;
-  --color-bordo-800: #3f0a0c;
-  --color-bordo-900: #300a0c;
+  --color-bordo-200: #d5babc;
+  --color-bordo-300: #bb9193;
+  --color-bordo-400: #98585c;
+  --color-bordo-500: #680a0f;
+  --color-bordo-600: #5b0a0e;
+  --color-bordo-700: #4d0a0d;
+  --color-bordo-800: #3e0a0c;
+  --color-bordo-900: #2f0a0c;
   --color-bordo-950: #230a0b;
 
   /* Gold — marka ikincil/vurgu rengi */

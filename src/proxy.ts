@@ -7,6 +7,10 @@ const intlMiddleware = createMiddleware(routing);
 
 const ADMIN_ONLY_PREFIXES = ["/admin/muvekkiller", "/admin/kullanicilar"];
 
+const MAINTENANCE_MODE = process.env.MAINTENANCE_MODE === "true";
+const MAINTENANCE_BYPASS_TOKEN = process.env.MAINTENANCE_BYPASS_TOKEN;
+const BYPASS_COOKIE = "atalya_bypass";
+
 async function handleAdmin(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const { supabaseResponse, user, role } = await updateSession(request);
@@ -34,18 +38,64 @@ async function handleAdmin(request: NextRequest) {
   return supabaseResponse;
 }
 
+/** Bakım modu açıkken devrede kalması gereken yollar (admin paneli ve API her zaman erişilebilir olmalı). */
+function isExemptFromMaintenance(pathname: string) {
+  return (
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/maintenance")
+  );
+}
+
+function hasValidBypass(request: NextRequest) {
+  if (!MAINTENANCE_BYPASS_TOKEN) return false;
+  const queryToken = request.nextUrl.searchParams.get("bypass");
+  const cookieToken = request.cookies.get(BYPASS_COOKIE)?.value;
+  return (
+    queryToken === MAINTENANCE_BYPASS_TOKEN ||
+    cookieToken === MAINTENANCE_BYPASS_TOKEN
+  );
+}
+
+function grantsNewBypass(request: NextRequest) {
+  return (
+    Boolean(MAINTENANCE_BYPASS_TOKEN) &&
+    request.nextUrl.searchParams.get("bypass") === MAINTENANCE_BYPASS_TOKEN
+  );
+}
+
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  if (
+    MAINTENANCE_MODE &&
+    !isExemptFromMaintenance(pathname) &&
+    !hasValidBypass(request)
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/maintenance";
+    url.search = "";
+    return NextResponse.rewrite(url, { status: 503 });
+  }
+
+  let response: NextResponse;
   if (pathname.startsWith("/admin")) {
-    return handleAdmin(request);
+    response = await handleAdmin(request);
+  } else if (pathname.startsWith("/api")) {
+    response = NextResponse.next();
+  } else {
+    response = intlMiddleware(request);
   }
 
-  if (pathname.startsWith("/api")) {
-    return NextResponse.next();
+  if (grantsNewBypass(request)) {
+    response.cookies.set(BYPASS_COOKIE, MAINTENANCE_BYPASS_TOKEN!, {
+      maxAge: 60 * 60 * 24,
+      httpOnly: true,
+      sameSite: "lax",
+    });
   }
 
-  return intlMiddleware(request);
+  return response;
 }
 
 export const config = {

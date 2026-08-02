@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import { TeamCard } from "@/components/site/TeamCard";
+import { TEAM_MEMBER_KEYS } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -20,14 +22,18 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("about");
+  const [t, tTeam] = await Promise.all([
+    getTranslations("about"),
+    getTranslations("team"),
+  ]);
 
   const values = [t("value1"), t("value2"), t("value3"), t("value4")];
 
   return (
     <>
-      <section className="bg-bordo-950 py-16 sm:py-20">
-        <Container>
+      <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
+        <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
+        <Container className="relative">
           <SectionHeading eyebrow={t("eyebrow")} title={t("title")} light />
         </Container>
       </section>
@@ -72,13 +78,25 @@ export default async function AboutPage({
             </ul>
           </div>
 
-          <div className="mt-14">
-            <h2 className="font-serif text-2xl text-bordo-950">
-              {t("teamTitle")}
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink/70">
-              {t("teamBody")}
-            </p>
+        </Container>
+      </section>
+
+      <section className="bg-bordo-50/60 py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            align="center"
+            title={t("teamTitle")}
+            subtitle={t("teamBody")}
+            className="mx-auto"
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {TEAM_MEMBER_KEYS.map((key) => (
+              <TeamCard
+                key={key}
+                name={tTeam(`members.${key}.name`)}
+                title={tTeam(`members.${key}.title`)}
+              />
+            ))}
           </div>
         </Container>
       </section>

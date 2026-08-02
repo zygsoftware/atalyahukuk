@@ -8,6 +8,7 @@
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
     "services": "Hizmetlerimiz",
+    "gallery": "Galeri",
     "blog": "Blog",
     "announcements": "Duyurular",
     "contact": "İletişim",
@@ -40,6 +41,12 @@
     "blogTeaserSubtitle": "Güncel hukuki gelişmeler ve uzman görüşlerimiz",
     "blogTeaserCta": "Tüm Yazıları Gör",
     "announcementsTeaserTitle": "Duyurular",
+    "processTitle": "Nasıl Çalışıyoruz?",
+    "processSubtitle": "İlk görüşmeden sonucun size raporlanmasına kadar şeffaf ve düzenli bir süreç izliyoruz.",
+    "teamTitle": "Ekibimiz",
+    "teamSubtitle": "Alanında uzman avukat kadromuzla tanışın.",
+    "testimonialsTitle": "Müvekkillerimiz Ne Diyor?",
+    "testimonialsSubtitle": "Bize güvenen müvekkillerimizin deneyimleri.",
     "ctaTitle": "Hukuki Desteğe mi İhtiyacınız Var?",
     "ctaSubtitle": "Durumunuzu değerlendirmemiz için bizimle iletişime geçin.",
     "ctaButton": "Hemen İletişime Geçin"
@@ -60,6 +67,53 @@
     "teamTitle": "Ekibimiz",
     "teamBody": "Alanında uzman avukat ve danışmanlardan oluşan kadromuz, her dosyaya aynı özen ve profesyonellikle yaklaşır."
   },
+  "team": {
+    "members": {
+      "member1": { "name": "Av. Elif Yıldız", "title": "Kurucu Ortak, Aile ve Miras Hukuku" },
+      "member2": { "name": "Av. Mert Kaya", "title": "Ceza Hukuku" },
+      "member3": { "name": "Av. Deniz Aydın", "title": "Ticaret ve Şirketler Hukuku" },
+      "member4": { "name": "Av. Ayşe Korkmaz", "title": "İş ve Gayrimenkul Hukuku" }
+    }
+  },
+  "process": {
+    "steps": {
+      "step1": {
+        "title": "İlk Görüşme",
+        "body": "Durumunuzu dinliyor, hukuki yol haritasını birlikte belirliyoruz."
+      },
+      "step2": {
+        "title": "Dosya İncelemesi ve Strateji",
+        "body": "Uzman ekibimiz dosyanızı analiz ederek en uygun stratejiyi hazırlar."
+      },
+      "step3": {
+        "title": "Hukuki Süreç Takibi",
+        "body": "Sürecin her aşamasında sizi düzenli olarak bilgilendiririz."
+      },
+      "step4": {
+        "title": "Sonuç ve Raporlama",
+        "body": "Süreç sonunda net ve şeffaf bir şekilde sonucu sizinle paylaşırız."
+      }
+    }
+  },
+  "testimonials": {
+    "items": {
+      "t1": {
+        "quote": "Sürecin her aşamasında yanımda olduklarını hissettim, güven veren ve şeffaf bir yaklaşımları var.",
+        "name": "M.K.",
+        "role": "Ticaret Hukuku Müvekkili"
+      },
+      "t2": {
+        "quote": "Boşanma sürecimde gösterdikleri hassasiyet ve profesyonellik için gerçekten teşekkür ederim.",
+        "name": "A.Y.",
+        "role": "Aile Hukuku Müvekkili"
+      },
+      "t3": {
+        "quote": "Karmaşık bir icra sürecini beklediğimden çok daha hızlı ve sorunsuz sonuçlandırdılar.",
+        "name": "S.D.",
+        "role": "Kurumsal Müvekkil"
+      }
+    }
+  },
   "services": {
     "eyebrow": "Hizmetlerimiz",
     "title": "Hukuki Hizmet Alanlarımız",
@@ -67,47 +121,102 @@
     "detailCta": "Detaylı Bilgi Al",
     "backToList": "Tüm Hizmetlere Dön",
     "contactCta": "Bu Alanda Danışmanlık Alın",
+    "benefitsTitle": "Bu Alanda Sunduğumuz Hizmetler",
+    "relatedTitle": "İlgili Hizmet Alanları",
     "items": {
       "ceza-hukuku": {
         "title": "Ceza Hukuku",
         "shortDescription": "Soruşturma ve kovuşturma aşamalarında etkin savunma ve hukuki temsil.",
-        "description": "Ceza Hukuku ekibimiz; gözaltı, sorgu, soruşturma ve kovuşturma süreçlerinin her aşamasında müvekkillerimizin haklarını korur. Şüpheli, sanık ya da mağdur sıfatıyla yürütülen tüm ceza yargılamalarında etkin savunma stratejileri geliştiriyoruz."
+        "description": "Ceza Hukuku ekibimiz; gözaltı, sorgu, soruşturma ve kovuşturma süreçlerinin her aşamasında müvekkillerimizin haklarını korur. Şüpheli, sanık ya da mağdur sıfatıyla yürütülen tüm ceza yargılamalarında etkin savunma stratejileri geliştiriyoruz.",
+        "benefits": [
+          "Gözaltı ve sorgu aşamasında hukuki destek",
+          "Soruşturma dosyasının titizlikle incelenmesi",
+          "Duruşmalarda etkin savunma ve temsil"
+        ]
       },
       "aile-hukuku": {
         "title": "Aile Hukuku",
         "shortDescription": "Boşanma, nafaka, velayet ve mal paylaşımı süreçlerinde hukuki destek.",
-        "description": "Boşanma, anlaşmalı/çekişmeli boşanma, nafaka, velayet, mal rejimi ve tazminat davalarında müvekkillerimizin haklarını hassasiyetle koruyor, süreci en az yıpranmayla sonuçlandırmayı hedefliyoruz."
+        "description": "Boşanma, anlaşmalı/çekişmeli boşanma, nafaka, velayet, mal rejimi ve tazminat davalarında müvekkillerimizin haklarını hassasiyetle koruyor, süreci en az yıpranmayla sonuçlandırmayı hedefliyoruz.",
+        "benefits": [
+          "Anlaşmalı ve çekişmeli boşanma süreçlerinde temsil",
+          "Nafaka ve velayet uyuşmazlıklarında danışmanlık",
+          "Mal paylaşımı ve tazminat taleplerinin takibi"
+        ]
       },
       "is-hukuku": {
         "title": "İş Hukuku",
         "shortDescription": "İşçi ve işveren arasındaki uyuşmazlıklarda dava ve danışmanlık hizmeti.",
-        "description": "İşe iade, kıdem ve ihbar tazminatı, fazla mesai, iş kazası ve mobbing davaları ile işveren tarafında iş sözleşmeleri ve insan kaynakları süreçlerine yönelik danışmanlık sunuyoruz."
+        "description": "İşe iade, kıdem ve ihbar tazminatı, fazla mesai, iş kazası ve mobbing davaları ile işveren tarafında iş sözleşmeleri ve insan kaynakları süreçlerine yönelik danışmanlık sunuyoruz.",
+        "benefits": [
+          "İşe iade ve tazminat davalarında temsil",
+          "İş sözleşmelerinin hazırlanması ve incelenmesi",
+          "İş kazası ve mobbing davalarında danışmanlık"
+        ]
       },
       "ticaret-hukuku": {
         "title": "Ticaret ve Şirketler Hukuku",
         "shortDescription": "Şirket kuruluşu, sözleşmeler ve ticari uyuşmazlıklarda danışmanlık.",
-        "description": "Şirket kuruluşu, birleşme ve devralmalar, ortaklık sözleşmeleri, ticari sözleşmelerin hazırlanması ve ticari uyuşmazlıkların çözümünde kurumsal müvekkillerimize kapsamlı hukuki destek sağlıyoruz."
+        "description": "Şirket kuruluşu, birleşme ve devralmalar, ortaklık sözleşmeleri, ticari sözleşmelerin hazırlanması ve ticari uyuşmazlıkların çözümünde kurumsal müvekkillerimize kapsamlı hukuki destek sağlıyoruz.",
+        "benefits": [
+          "Şirket kuruluşu ve yapılandırma danışmanlığı",
+          "Ticari sözleşmelerin hazırlanması ve müzakeresi",
+          "Ortaklık ve birleşme süreçlerinde hukuki destek"
+        ]
       },
       "gayrimenkul-hukuku": {
         "title": "Gayrimenkul Hukuku",
         "shortDescription": "Tapu, kira, kamulaştırma ve inşaat uyuşmazlıklarında hukuki temsil.",
-        "description": "Tapu iptal ve tescil, kira uyuşmazlıkları, kat mülkiyeti, kamulaştırma bedeli tespiti ve inşaat sözleşmelerinden doğan davalarda uzman desteği sunuyoruz."
+        "description": "Tapu iptal ve tescil, kira uyuşmazlıkları, kat mülkiyeti, kamulaştırma bedeli tespiti ve inşaat sözleşmelerinden doğan davalarda uzman desteği sunuyoruz.",
+        "benefits": [
+          "Tapu iptal ve tescil davalarında temsil",
+          "Kira ve kat mülkiyeti uyuşmazlıklarında danışmanlık",
+          "Kamulaştırma bedeli tespiti süreçlerinin takibi"
+        ]
       },
       "icra-iflas-hukuku": {
         "title": "İcra ve İflas Hukuku",
         "shortDescription": "Alacakların tahsili ve icra takibi süreçlerinde etkin çözümler.",
-        "description": "İcra takibi başlatılması, alacağın tahsili, itirazın iptali/kaldırılması ve iflas süreçlerinde alacaklı ve borçlu taraflara hızlı ve etkili hukuki çözümler sunuyoruz."
+        "description": "İcra takibi başlatılması, alacağın tahsili, itirazın iptali/kaldırılması ve iflas süreçlerinde alacaklı ve borçlu taraflara hızlı ve etkili hukuki çözümler sunuyoruz.",
+        "benefits": [
+          "İcra takibi başlatma ve alacak tahsili",
+          "İtirazın iptali ve kaldırılması süreçleri",
+          "İflas ve konkordato süreçlerinde danışmanlık"
+        ]
       },
       "miras-hukuku": {
         "title": "Miras Hukuku",
         "shortDescription": "Veraset, mirasın paylaşımı ve tenkis davalarında hukuki danışmanlık.",
-        "description": "Veraset ilamı alınması, mirasın reddi, mirasçılık belgesi, tenkis ve miras paylaşımı uyuşmazlıklarında müvekkillerimizin haklarını koruyoruz."
+        "description": "Veraset ilamı alınması, mirasın reddi, mirasçılık belgesi, tenkis ve miras paylaşımı uyuşmazlıklarında müvekkillerimizin haklarını koruyoruz.",
+        "benefits": [
+          "Veraset ilamı ve mirasçılık belgesi işlemleri",
+          "Miras paylaşımı ve tenkis davalarında temsil",
+          "Mirasın reddi süreçlerinde danışmanlık"
+        ]
       },
       "sozlesmeler-hukuku": {
         "title": "Sözleşmeler Hukuku",
         "shortDescription": "Her türlü sözleşmenin hazırlanması, incelenmesi ve uyuşmazlık çözümü.",
-        "description": "Bireysel ve kurumsal müvekkillerimiz için sözleşmelerin hazırlanması, müzakeresi, incelenmesi ve sözleşmeden doğan uyuşmazlıkların çözümünde danışmanlık veriyoruz."
+        "description": "Bireysel ve kurumsal müvekkillerimiz için sözleşmelerin hazırlanması, müzakeresi, incelenmesi ve sözleşmeden doğan uyuşmazlıkların çözümünde danışmanlık veriyoruz.",
+        "benefits": [
+          "Sözleşme taslaklarının hazırlanması",
+          "Mevcut sözleşmelerin hukuki incelemesi",
+          "Sözleşme uyuşmazlıklarının çözümü"
+        ]
       }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Galeri",
+    "title": "Galeri",
+    "subtitle": "Ofisimizden, ekibimizden ve etkinliklerimizden kareler.",
+    "empty": "Henüz galeri görseli eklenmemiş.",
+    "filterAll": "Tümü",
+    "categories": {
+      "ofis": "Ofis",
+      "ekip": "Ekip",
+      "etkinlik": "Etkinlik",
+      "diger": "Diğer"
     }
   },
   "blog": {
@@ -157,7 +266,8 @@
   },
   "common": {
     "loading": "Yükleniyor...",
-    "notFound": "Sayfa bulunamadı.",
+    "notFound": "Sayfa Bulunamadı",
+    "notFoundSubtitle": "Aradığınız sayfa taşınmış, kaldırılmış ya da hiç var olmamış olabilir.",
     "backHome": "Ana Sayfaya Dön"
   }
 }

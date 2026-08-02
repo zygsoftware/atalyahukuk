@@ -1,6 +1,7 @@
 export type ProfileRole = "admin" | "editor";
 export type PostStatus = "draft" | "published";
 export type ClientStatus = "aktif" | "pasif" | "arsiv";
+export type GalleryCategory = "ofis" | "ekip" | "etkinlik" | "diger";
 
 export interface Database {
   public: {
@@ -165,6 +166,34 @@ export interface Database {
         };
         Insert: Partial<Database["public"]["Tables"]["site_settings"]["Row"]>;
         Update: Partial<Database["public"]["Tables"]["site_settings"]["Row"]>;
+        Relationships: [];
+      };
+      gallery_images: {
+        Row: {
+          id: string;
+          image_url: string;
+          caption_tr: string | null;
+          caption_en: string | null;
+          category: GalleryCategory;
+          sort_order: number;
+          is_active: boolean;
+          created_by: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          image_url: string;
+          caption_tr?: string | null;
+          caption_en?: string | null;
+          category?: GalleryCategory;
+          sort_order?: number;
+          is_active?: boolean;
+          created_by?: string | null;
+          created_at?: string;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["gallery_images"]["Insert"]
+        >;
         Relationships: [];
       };
     };

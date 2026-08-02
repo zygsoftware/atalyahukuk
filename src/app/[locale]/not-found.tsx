@@ -1,0 +1,40 @@
+import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { Container } from "@/components/site/Container";
+import { SITE_NAME } from "@/lib/constants";
+
+export default async function NotFound() {
+  const t = await getTranslations("common");
+
+  return (
+    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-bordo-950">
+      <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gold-600/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 left-1/4 h-96 w-96 rounded-full bg-bordo-500/20 blur-3xl" />
+      <Container className="relative flex flex-col items-center py-24 text-center">
+        <Image
+          src="/logo-mark.png"
+          alt={SITE_NAME}
+          width={72}
+          height={72}
+          className="h-16 w-16 opacity-90"
+        />
+        <p className="mt-8 font-serif text-7xl text-gold-300 sm:text-8xl">
+          404
+        </p>
+        <h1 className="mt-4 font-serif text-2xl text-cream sm:text-3xl">
+          {t("notFound")}
+        </h1>
+        <p className="mt-3 max-w-md text-sm leading-relaxed text-cream/70">
+          {t("notFoundSubtitle")}
+        </p>
+        <Link
+          href="/"
+          className="mt-9 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-semibold text-bordo-950 transition hover:bg-gold-400"
+        >
+          {t("backHome")}
+        </Link>
+      </Container>
+    </section>
+  );
+}

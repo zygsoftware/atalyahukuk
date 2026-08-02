@@ -5,9 +5,17 @@ import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ServiceCard } from "@/components/site/ServiceCard";
 import { PostCard } from "@/components/site/PostCard";
+import { TeamCard } from "@/components/site/TeamCard";
+import { TestimonialCard } from "@/components/site/TestimonialCard";
 import { JsonLd } from "@/components/site/JsonLd";
-import { SERVICE_SLUGS } from "@/lib/constants";
+import {
+  SERVICE_SLUGS,
+  TEAM_MEMBER_KEYS,
+  PROCESS_STEP_KEYS,
+  TESTIMONIAL_KEYS,
+} from "@/lib/constants";
 import { getPublishedPosts } from "@/lib/data/posts";
+import { getActiveGalleryImages } from "@/lib/data/gallery";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 
 export default async function HomePage({
@@ -18,15 +26,22 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [t, tServices, tBlog, posts] = await Promise.all([
-    getTranslations("home"),
-    getTranslations("services"),
-    getTranslations("blog"),
-    getPublishedPosts(),
-  ]);
+  const [t, tServices, tBlog, tTeam, tProcess, tTestimonials, tGallery, posts, galleryImages] =
+    await Promise.all([
+      getTranslations("home"),
+      getTranslations("services"),
+      getTranslations("blog"),
+      getTranslations("team"),
+      getTranslations("process"),
+      getTranslations("testimonials"),
+      getTranslations("gallery"),
+      getPublishedPosts(),
+      getActiveGalleryImages(),
+    ]);
 
   const featuredServices = SERVICE_SLUGS.slice(0, 6);
   const latestPosts = posts.slice(0, 3);
+  const featuredGalleryImages = galleryImages.slice(0, 4);
 
   return (
     <>
@@ -72,17 +87,27 @@ export default async function HomePage({
               </Link>
             </div>
           </div>
-          <div className="relative mx-auto flex aspect-square w-full max-w-sm items-center justify-center">
-            <div className="absolute inset-0 rounded-full border border-gold-400/30" />
-            <div className="absolute inset-8 rounded-full border border-gold-400/20" />
-            <Image
-              src="/logo-mark.png"
-              alt={SITE_NAME}
-              width={280}
-              height={280}
-              priority
-              className="relative w-56 sm:w-64"
-            />
+          <div className="relative mx-auto w-full max-w-sm">
+            <div className="pointer-events-none absolute -inset-7 rounded-full border border-gold-400/25" />
+            <div className="pointer-events-none absolute -inset-3 rounded-full border border-gold-400/40" />
+            <div className="relative flex aspect-square items-center justify-center rounded-full bg-cream shadow-[0_25px_60px_-15px_rgba(0,0,0,0.55)] ring-1 ring-gold-400/50">
+              <Image
+                src="/logo-mark.png"
+                alt={SITE_NAME}
+                width={320}
+                height={320}
+                priority
+                className="relative w-[62%]"
+              />
+            </div>
+            <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 flex-col items-center rounded-2xl bg-gold-500 px-7 py-3.5 text-center shadow-xl sm:-right-4 sm:left-auto sm:translate-x-0">
+              <p className="font-serif text-2xl leading-none text-bordo-950">
+                10+
+              </p>
+              <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-bordo-900">
+                {t("statsExperience")}
+              </p>
+            </div>
           </div>
         </Container>
 
@@ -162,8 +187,38 @@ export default async function HomePage({
         </Container>
       </section>
 
-      {/* Neden biz */}
+      {/* Nasıl Çalışıyoruz */}
       <section className="py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            align="center"
+            title={t("processTitle")}
+            subtitle={t("processSubtitle")}
+            className="mx-auto"
+          />
+          <div className="relative mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="pointer-events-none absolute top-7 right-0 left-0 hidden border-t border-dashed border-gold-300 lg:block" />
+            {PROCESS_STEP_KEYS.map((key, index) => (
+              <div key={key} className="relative text-center">
+                <div className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cream ring-2 ring-bordo-500">
+                  <span className="font-serif text-xl text-bordo-500">
+                    {index + 1}
+                  </span>
+                </div>
+                <h3 className="mt-5 font-serif text-lg text-bordo-950">
+                  {tProcess(`steps.${key}.title`)}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                  {tProcess(`steps.${key}.body`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Neden biz */}
+      <section className="bg-bordo-50/60 py-20 sm:py-24">
         <Container>
           <SectionHeading
             align="center"
@@ -187,6 +242,91 @@ export default async function HomePage({
           </div>
         </Container>
       </section>
+
+      {/* Ekibimiz */}
+      <section className="py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            align="center"
+            title={t("teamTitle")}
+            subtitle={t("teamSubtitle")}
+            className="mx-auto"
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {TEAM_MEMBER_KEYS.map((key) => (
+              <TeamCard
+                key={key}
+                name={tTeam(`members.${key}.name`)}
+                title={tTeam(`members.${key}.title`)}
+              />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Müvekkil yorumları */}
+      <section className="bg-bordo-50/60 py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            align="center"
+            title={t("testimonialsTitle")}
+            subtitle={t("testimonialsSubtitle")}
+            className="mx-auto"
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {TESTIMONIAL_KEYS.map((key) => (
+              <TestimonialCard
+                key={key}
+                quote={tTestimonials(`items.${key}.quote`)}
+                name={tTestimonials(`items.${key}.name`)}
+                role={tTestimonials(`items.${key}.role`)}
+              />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Galeri teaser */}
+      {featuredGalleryImages.length > 0 && (
+        <section className="py-20 sm:py-24">
+          <Container>
+            <SectionHeading
+              align="center"
+              eyebrow={tGallery("eyebrow")}
+              title={tGallery("title")}
+              subtitle={tGallery("subtitle")}
+              className="mx-auto"
+            />
+            <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
+              {featuredGalleryImages.map((img) => (
+                <Link
+                  key={img.id}
+                  href="/galeri"
+                  className="group relative aspect-square overflow-hidden rounded-xl bg-bordo-50"
+                >
+                  <Image
+                    src={img.image_url}
+                    alt={
+                      (locale === "tr" ? img.caption_tr : img.caption_en) ?? ""
+                    }
+                    fill
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </Link>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link
+                href="/galeri"
+                className="inline-block rounded-full border border-bordo-300 px-6 py-3 text-sm font-semibold text-bordo-500 transition hover:bg-bordo-500 hover:text-cream"
+              >
+                {tGallery("title")} →
+              </Link>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Blog teaser */}
       {latestPosts.length > 0 && (
@@ -230,8 +370,9 @@ export default async function HomePage({
       )}
 
       {/* CTA */}
-      <section className="bg-bordo-950 py-20 sm:py-24">
-        <Container className="text-center">
+      <section className="relative overflow-hidden bg-bordo-950 py-20 sm:py-24">
+        <div className="pointer-events-none absolute -left-24 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-gold-600/10 blur-3xl" />
+        <Container className="relative text-center">
           <SectionHeading
             align="center"
             title={t("ctaTitle")}

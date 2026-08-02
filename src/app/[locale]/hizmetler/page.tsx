@@ -26,8 +26,9 @@ export default async function ServicesPage({
 
   return (
     <>
-      <section className="bg-bordo-950 py-16 sm:py-20">
-        <Container>
+      <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
+        <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
+        <Container className="relative">
           <SectionHeading
             eyebrow={t("eyebrow")}
             title={t("title")}
