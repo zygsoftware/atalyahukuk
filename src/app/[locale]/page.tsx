@@ -1,0 +1,252 @@
+import Image from "next/image";
+import { getTranslations, setRequestLocale, getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { Container } from "@/components/site/Container";
+import { SectionHeading } from "@/components/site/SectionHeading";
+import { ServiceCard } from "@/components/site/ServiceCard";
+import { PostCard } from "@/components/site/PostCard";
+import { JsonLd } from "@/components/site/JsonLd";
+import { SERVICE_SLUGS } from "@/lib/constants";
+import { getPublishedPosts } from "@/lib/data/posts";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const [t, tServices, tBlog, posts] = await Promise.all([
+    getTranslations("home"),
+    getTranslations("services"),
+    getTranslations("blog"),
+    getPublishedPosts(),
+  ]);
+
+  const featuredServices = SERVICE_SLUGS.slice(0, 6);
+  const latestPosts = posts.slice(0, 3);
+
+  return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "LegalService",
+          name: SITE_NAME,
+          url: SITE_URL,
+          image: `${SITE_URL}/logo.png`,
+          priceRange: "$$",
+          areaServed: "TR",
+        }}
+      />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-bordo-950">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gold-600/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-32 left-1/3 h-96 w-96 rounded-full bg-bordo-500/20 blur-3xl" />
+        <Container className="relative grid gap-12 py-20 sm:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gold-300">
+              {t("heroEyebrow")}
+            </p>
+            <h1 className="mt-4 font-serif text-4xl leading-tight text-cream sm:text-5xl lg:text-6xl">
+              {t("heroTitle")}
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
+              {t("heroSubtitle")}
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link
+                href="/iletisim"
+                className="rounded-full bg-gold-500 px-7 py-3.5 text-sm font-semibold text-bordo-950 transition hover:bg-gold-400"
+              >
+                {t("heroPrimaryCta")}
+              </Link>
+              <Link
+                href="/hizmetler"
+                className="rounded-full border border-cream/30 px-7 py-3.5 text-sm font-semibold text-cream transition hover:border-cream"
+              >
+                {t("heroSecondaryCta")}
+              </Link>
+            </div>
+          </div>
+          <div className="relative mx-auto flex aspect-square w-full max-w-sm items-center justify-center">
+            <div className="absolute inset-0 rounded-full border border-gold-400/30" />
+            <div className="absolute inset-8 rounded-full border border-gold-400/20" />
+            <Image
+              src="/logo-mark.png"
+              alt={SITE_NAME}
+              width={280}
+              height={280}
+              priority
+              className="relative w-56 sm:w-64"
+            />
+          </div>
+        </Container>
+
+        <Container className="relative grid grid-cols-2 gap-6 border-t border-cream/10 py-10 sm:grid-cols-4">
+          {[
+            [t("statsExperience"), "10+"],
+            [t("statsCases"), "500+"],
+            [t("statsClients"), "300+"],
+            [t("statsAreas"), "8"],
+          ].map(([label, value]) => (
+            <div key={label} className="text-center sm:text-left">
+              <p className="font-serif text-3xl text-gold-300">{value}</p>
+              <p className="mt-1 text-xs uppercase tracking-wide text-cream/60">
+                {label}
+              </p>
+            </div>
+          ))}
+        </Container>
+      </section>
+
+      {/* Hakkımızda teaser */}
+      <section className="py-20 sm:py-24">
+        <Container className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-bordo-50">
+            <Image
+              src="/logo.png"
+              alt={SITE_NAME}
+              fill
+              className="object-contain p-16"
+            />
+          </div>
+          <div>
+            <SectionHeading
+              eyebrow={t("heroEyebrow")}
+              title={t("aboutTeaserTitle")}
+              subtitle={t("aboutTeaserBody")}
+            />
+            <Link
+              href="/hakkimizda"
+              className="mt-6 inline-block text-sm font-semibold text-bordo-500 hover:text-gold-600"
+            >
+              {t("aboutTeaserCta")} →
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      {/* Hizmetler teaser */}
+      <section className="bg-bordo-50/60 py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            align="center"
+            eyebrow={tServices("eyebrow")}
+            title={t("servicesTeaserTitle")}
+            subtitle={t("servicesTeaserSubtitle")}
+            className="mx-auto"
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredServices.map((slug) => (
+              <ServiceCard
+                key={slug}
+                slug={slug}
+                title={tServices(`items.${slug}.title`)}
+                description={tServices(`items.${slug}.shortDescription`)}
+                cta={tServices("detailCta")}
+              />
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/hizmetler"
+              className="inline-block rounded-full border border-bordo-300 px-6 py-3 text-sm font-semibold text-bordo-500 transition hover:bg-bordo-500 hover:text-cream"
+            >
+              {t("servicesTeaserCta")}
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      {/* Neden biz */}
+      <section className="py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            align="center"
+            title={t("whyUsTitle")}
+            className="mx-auto"
+          />
+          <div className="mt-12 grid gap-8 sm:grid-cols-3">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="text-center">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-bordo-500 font-serif text-xl text-cream">
+                  {i}
+                </div>
+                <h3 className="mt-5 font-serif text-lg text-bordo-950">
+                  {t(`whyUsItem${i}Title` as "whyUsItem1Title")}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                  {t(`whyUsItem${i}Body` as "whyUsItem1Body")}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Blog teaser */}
+      {latestPosts.length > 0 && (
+        <section className="bg-bordo-50/60 py-20 sm:py-24">
+          <Container>
+            <SectionHeading
+              align="center"
+              eyebrow={tBlog("eyebrow")}
+              title={t("blogTeaserTitle")}
+              subtitle={t("blogTeaserSubtitle")}
+              className="mx-auto"
+            />
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {latestPosts.map((post) => (
+                <PostCard
+                  key={post.id}
+                  slug={post.slug}
+                  title={locale === "tr" ? post.title_tr : (post.title_en ?? post.title_tr)}
+                  excerpt={
+                    locale === "tr"
+                      ? post.excerpt_tr
+                      : (post.excerpt_en ?? post.excerpt_tr)
+                  }
+                  coverImageUrl={post.cover_image_url}
+                  publishedAt={post.published_at}
+                  locale={locale}
+                  readMoreLabel={tBlog("readMore")}
+                />
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link
+                href="/blog"
+                className="inline-block rounded-full border border-bordo-300 px-6 py-3 text-sm font-semibold text-bordo-500 transition hover:bg-bordo-500 hover:text-cream"
+              >
+                {t("blogTeaserCta")}
+              </Link>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* CTA */}
+      <section className="bg-bordo-950 py-20 sm:py-24">
+        <Container className="text-center">
+          <SectionHeading
+            align="center"
+            title={t("ctaTitle")}
+            subtitle={t("ctaSubtitle")}
+            light
+            className="mx-auto"
+          />
+          <Link
+            href="/iletisim"
+            className="mt-8 inline-block rounded-full bg-gold-500 px-8 py-4 text-sm font-semibold text-bordo-950 transition hover:bg-gold-400"
+          >
+            {t("ctaButton")}
+          </Link>
+        </Container>
+      </section>
+    </>
+  );
+}

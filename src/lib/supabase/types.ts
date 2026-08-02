@@ -1,0 +1,174 @@
+export type ProfileRole = "admin" | "editor";
+export type PostStatus = "draft" | "published";
+export type ClientStatus = "aktif" | "pasif" | "arsiv";
+
+export interface Database {
+  public: {
+    Tables: {
+      profiles: {
+        Row: {
+          id: string;
+          full_name: string;
+          role: ProfileRole;
+          created_at: string;
+        };
+        Insert: {
+          id: string;
+          full_name: string;
+          role?: ProfileRole;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          full_name?: string;
+          role?: ProfileRole;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
+      posts: {
+        Row: {
+          id: string;
+          slug: string;
+          title_tr: string;
+          title_en: string | null;
+          excerpt_tr: string | null;
+          excerpt_en: string | null;
+          content_tr: string;
+          content_en: string | null;
+          cover_image_url: string | null;
+          status: PostStatus;
+          meta_title: string | null;
+          meta_description: string | null;
+          author_id: string | null;
+          published_at: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          slug: string;
+          title_tr: string;
+          title_en?: string | null;
+          excerpt_tr?: string | null;
+          excerpt_en?: string | null;
+          content_tr?: string;
+          content_en?: string | null;
+          cover_image_url?: string | null;
+          status?: PostStatus;
+          meta_title?: string | null;
+          meta_description?: string | null;
+          author_id?: string | null;
+          published_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["posts"]["Insert"]>;
+        Relationships: [];
+      };
+      announcements: {
+        Row: {
+          id: string;
+          slug: string;
+          title_tr: string;
+          title_en: string | null;
+          content_tr: string;
+          content_en: string | null;
+          is_pinned: boolean;
+          is_active: boolean;
+          published_at: string;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          slug: string;
+          title_tr: string;
+          title_en?: string | null;
+          content_tr?: string;
+          content_en?: string | null;
+          is_pinned?: boolean;
+          is_active?: boolean;
+          published_at?: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["announcements"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      clients: {
+        Row: {
+          id: string;
+          full_name: string;
+          phone: string | null;
+          email: string | null;
+          practice_area: string | null;
+          note: string | null;
+          status: ClientStatus;
+          created_by: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          full_name: string;
+          phone?: string | null;
+          email?: string | null;
+          practice_area?: string | null;
+          note?: string | null;
+          status?: ClientStatus;
+          created_by?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["clients"]["Insert"]>;
+        Relationships: [];
+      };
+      contact_messages: {
+        Row: {
+          id: string;
+          name: string;
+          email: string;
+          phone: string | null;
+          message: string;
+          is_read: boolean;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          name: string;
+          email: string;
+          phone?: string | null;
+          message: string;
+          is_read?: boolean;
+          created_at?: string;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["contact_messages"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      site_settings: {
+        Row: {
+          id: number;
+          phone: string | null;
+          email: string | null;
+          address_tr: string | null;
+          address_en: string | null;
+          working_hours_tr: string | null;
+          working_hours_en: string | null;
+          instagram_url: string | null;
+          linkedin_url: string | null;
+          updated_at: string;
+        };
+        Insert: Partial<Database["public"]["Tables"]["site_settings"]["Row"]>;
+        Update: Partial<Database["public"]["Tables"]["site_settings"]["Row"]>;
+        Relationships: [];
+      };
+    };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+  };
+}

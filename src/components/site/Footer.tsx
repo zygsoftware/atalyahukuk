@@ -1,0 +1,93 @@
+import Image from "next/image";
+import { getTranslations, getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { NAV_ITEMS } from "@/lib/constants";
+import { getSiteSettings } from "@/lib/data/site-settings";
+import { Container } from "./Container";
+
+export async function Footer() {
+  const [t, tContact, locale, settings] = await Promise.all([
+    getTranslations("footer"),
+    getTranslations("contact"),
+    getLocale(),
+    getSiteSettings(),
+  ]);
+  const tNav = await getTranslations("nav");
+
+  const address =
+    (locale === "tr" ? settings?.address_tr : settings?.address_en) ??
+    tContact("addressPlaceholder");
+  const hours =
+    (locale === "tr" ? settings?.working_hours_tr : settings?.working_hours_en) ??
+    tContact("hoursPlaceholder");
+  const phone = settings?.phone ?? tContact("phonePlaceholder");
+  const email = settings?.email ?? tContact("emailPlaceholder");
+
+  return (
+    <footer className="border-t border-bordo-100 bg-bordo-950 text-cream/90">
+      <Container className="grid gap-10 py-14 md:grid-cols-3">
+        <div>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo-mark.png"
+              alt="Atalya Hukuk Bürosu"
+              width={40}
+              height={40}
+              className="h-10 w-10"
+            />
+            <span className="font-serif text-lg tracking-wide text-gold-300">
+              ATALYA
+            </span>
+          </div>
+          <p className="mt-4 max-w-xs text-sm text-cream/70">{t("tagline")}</p>
+        </div>
+
+        <div>
+          <h3 className="font-serif text-base text-gold-300">
+            {t("quickLinksTitle")}
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.key}>
+                <Link
+                  href={item.href}
+                  className="text-cream/70 transition hover:text-cream"
+                >
+                  {tNav(item.key)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-serif text-base text-gold-300">
+            {t("contactTitle")}
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm text-cream/70">
+            <li>{address}</li>
+            <li>
+              <a href={`tel:${phone}`} className="hover:text-cream">
+                {phone}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${email}`} className="hover:text-cream">
+                {email}
+              </a>
+            </li>
+            <li>{hours}</li>
+          </ul>
+        </div>
+      </Container>
+
+      <div className="border-t border-cream/10 py-5">
+        <Container className="flex flex-col items-center justify-between gap-2 text-xs text-cream/50 md:flex-row">
+          <p>
+            © {new Date().getFullYear()} Atalya Hukuk Bürosu. {t("rights")}
+          </p>
+        </Container>
+      </div>
+    </footer>
+  );
+}

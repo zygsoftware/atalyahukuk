@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+
+  /* Bordo — marka birincil rengi (logodan örneklendi) */
+  --color-bordo-50: #f6f0f1;
+  --color-bordo-100: #eaddde;
+  --color-bordo-200: #d5bbbc;
+  --color-bordo-300: #bc9193;
+  --color-bordo-400: #9a595c;
+  --color-bordo-500: #6a0b0f;
+  --color-bordo-600: #5d0b0e;
+  --color-bordo-700: #4e0b0d;
+  --color-bordo-800: #3f0a0c;
+  --color-bordo-900: #300a0c;
+  --color-bordo-950: #230a0b;
+
+  /* Gold — marka ikincil/vurgu rengi */
+  --color-gold-50: #f9f7f4;
+  --color-gold-100: #f2ece5;
+  --color-gold-200: #e5daca;
+  --color-gold-300: #d6c3aa;
+  --color-gold-400: #c0a57f;
+  --color-gold-500: #a37a43;
+  --color-gold-600: #8e693a;
+  --color-gold-700: #755631;
+  --color-gold-800: #5c4226;
+  --color-gold-900: #422e1c;
+  --color-gold-950: #2e1e14;
+
+  /* Nötr krem/antrasit tonlar */
+  --color-cream: #faf8f5;
+  --color-ink: #241f1c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+::selection {
+  background-color: var(--color-bordo-200);
+  color: var(--color-bordo-900);
+}

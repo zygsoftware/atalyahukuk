@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "siteName": "Atalya Hukuk Bürosu",
+    "titleTemplate": "%s | Atalya Hukuk Bürosu",
+    "defaultDescription": "Atalya Hukuk Bürosu; ceza, aile, iş, ticaret ve gayrimenkul hukuku başta olmak üzere birçok alanda güvenilir ve etkili hukuki danışmanlık sunar."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "blog": "Blog",
+    "announcements": "Duyurular",
+    "contact": "İletişim",
+    "callToAction": "Ücretsiz Ön Görüşme"
+  },
+  "home": {
+    "heroEyebrow": "Atalya Hukuk Bürosu",
+    "heroTitle": "Haklarınızı Güvenle Savunuyoruz",
+    "heroSubtitle": "Deneyimli avukat kadromuzla ceza, aile, iş, ticaret ve gayrimenkul hukuku alanlarında müvekkillerimize güvenilir, şeffaf ve etkili hukuki danışmanlık sunuyoruz.",
+    "heroPrimaryCta": "Bize Ulaşın",
+    "heroSecondaryCta": "Hizmetlerimizi İnceleyin",
+    "statsExperience": "Yıllık Deneyim",
+    "statsCases": "Sonuçlanan Dosya",
+    "statsClients": "Memnun Müvekkil",
+    "statsAreas": "Uzmanlık Alanı",
+    "aboutTeaserTitle": "Atalya Hukuk Bürosu Hakkında",
+    "aboutTeaserBody": "Atalya Hukuk Bürosu olarak, her müvekkilimizin hukuki sürecini titizlikle takip ediyor; şeffaf iletişim ve güçlü savunma stratejileriyle yanınızda oluyoruz.",
+    "aboutTeaserCta": "Daha Fazla Bilgi",
+    "servicesTeaserTitle": "Hizmet Alanlarımız",
+    "servicesTeaserSubtitle": "Geniş bir yelpazede uzmanlaşmış hukuki destek sunuyoruz.",
+    "servicesTeaserCta": "Tüm Hizmetleri Gör",
+    "whyUsTitle": "Neden Atalya Hukuk Bürosu?",
+    "whyUsItem1Title": "Deneyimli Kadro",
+    "whyUsItem1Body": "Alanında uzman avukatlarımızla her dosyaya özel strateji geliştiriyoruz.",
+    "whyUsItem2Title": "Şeffaf İletişim",
+    "whyUsItem2Body": "Sürecin her aşamasında müvekkillerimizi düzenli olarak bilgilendiriyoruz.",
+    "whyUsItem3Title": "Güvenilir Sonuçlar",
+    "whyUsItem3Body": "Titiz çalışma prensibimizle güçlü ve tutarlı sonuçlar elde ediyoruz.",
+    "blogTeaserTitle": "Blog ve Makaleler",
+    "blogTeaserSubtitle": "Güncel hukuki gelişmeler ve uzman görüşlerimiz",
+    "blogTeaserCta": "Tüm Yazıları Gör",
+    "announcementsTeaserTitle": "Duyurular",
+    "ctaTitle": "Hukuki Desteğe mi İhtiyacınız Var?",
+    "ctaSubtitle": "Durumunuzu değerlendirmemiz için bizimle iletişime geçin.",
+    "ctaButton": "Hemen İletişime Geçin"
+  },
+  "about": {
+    "eyebrow": "Hakkımızda",
+    "title": "Atalya Hukuk Bürosu",
+    "intro": "Atalya Hukuk Bürosu, müvekkillerine hukukun her alanında güvenilir, çözüm odaklı ve şeffaf danışmanlık sunmak amacıyla kurulmuştur. Deneyimli avukat kadromuzla; bireysel ve kurumsal müvekkillerimizin haklarını en etkili şekilde savunuyoruz.",
+    "missionTitle": "Misyonumuz",
+    "missionBody": "Her müvekkilimize özel, titizlikle hazırlanmış hukuki stratejilerle adalete erişimi kolaylaştırmak.",
+    "visionTitle": "Vizyonumuz",
+    "visionBody": "Güven, şeffaflık ve uzmanlık ilkeleriyle bölgesinde tercih edilen ilk hukuk bürosu olmak.",
+    "valuesTitle": "Değerlerimiz",
+    "value1": "Dürüstlük ve Şeffaflık",
+    "value2": "Müvekkil Odaklılık",
+    "value3": "Hukuki Titizlik",
+    "value4": "Sürekli Gelişim",
+    "teamTitle": "Ekibimiz",
+    "teamBody": "Alanında uzman avukat ve danışmanlardan oluşan kadromuz, her dosyaya aynı özen ve profesyonellikle yaklaşır."
+  },
+  "services": {
+    "eyebrow": "Hizmetlerimiz",
+    "title": "Hukuki Hizmet Alanlarımız",
+    "subtitle": "Aşağıdaki alanlarda uzman kadromuzla hukuki danışmanlık ve dava takibi hizmeti sunuyoruz.",
+    "detailCta": "Detaylı Bilgi Al",
+    "backToList": "Tüm Hizmetlere Dön",
+    "contactCta": "Bu Alanda Danışmanlık Alın",
+    "items": {
+      "ceza-hukuku": {
+        "title": "Ceza Hukuku",
+        "shortDescription": "Soruşturma ve kovuşturma aşamalarında etkin savunma ve hukuki temsil.",
+        "description": "Ceza Hukuku ekibimiz; gözaltı, sorgu, soruşturma ve kovuşturma süreçlerinin her aşamasında müvekkillerimizin haklarını korur. Şüpheli, sanık ya da mağdur sıfatıyla yürütülen tüm ceza yargılamalarında etkin savunma stratejileri geliştiriyoruz."
+      },
+      "aile-hukuku": {
+        "title": "Aile Hukuku",
+        "shortDescription": "Boşanma, nafaka, velayet ve mal paylaşımı süreçlerinde hukuki destek.",
+        "description": "Boşanma, anlaşmalı/çekişmeli boşanma, nafaka, velayet, mal rejimi ve tazminat davalarında müvekkillerimizin haklarını hassasiyetle koruyor, süreci en az yıpranmayla sonuçlandırmayı hedefliyoruz."
+      },
+      "is-hukuku": {
+        "title": "İş Hukuku",
+        "shortDescription": "İşçi ve işveren arasındaki uyuşmazlıklarda dava ve danışmanlık hizmeti.",
+        "description": "İşe iade, kıdem ve ihbar tazminatı, fazla mesai, iş kazası ve mobbing davaları ile işveren tarafında iş sözleşmeleri ve insan kaynakları süreçlerine yönelik danışmanlık sunuyoruz."
+      },
+      "ticaret-hukuku": {
+        "title": "Ticaret ve Şirketler Hukuku",
+        "shortDescription": "Şirket kuruluşu, sözleşmeler ve ticari uyuşmazlıklarda danışmanlık.",
+        "description": "Şirket kuruluşu, birleşme ve devralmalar, ortaklık sözleşmeleri, ticari sözleşmelerin hazırlanması ve ticari uyuşmazlıkların çözümünde kurumsal müvekkillerimize kapsamlı hukuki destek sağlıyoruz."
+      },
+      "gayrimenkul-hukuku": {
+        "title": "Gayrimenkul Hukuku",
+        "shortDescription": "Tapu, kira, kamulaştırma ve inşaat uyuşmazlıklarında hukuki temsil.",
+        "description": "Tapu iptal ve tescil, kira uyuşmazlıkları, kat mülkiyeti, kamulaştırma bedeli tespiti ve inşaat sözleşmelerinden doğan davalarda uzman desteği sunuyoruz."
+      },
+      "icra-iflas-hukuku": {
+        "title": "İcra ve İflas Hukuku",
+        "shortDescription": "Alacakların tahsili ve icra takibi süreçlerinde etkin çözümler.",
+        "description": "İcra takibi başlatılması, alacağın tahsili, itirazın iptali/kaldırılması ve iflas süreçlerinde alacaklı ve borçlu taraflara hızlı ve etkili hukuki çözümler sunuyoruz."
+      },
+      "miras-hukuku": {
+        "title": "Miras Hukuku",
+        "shortDescription": "Veraset, mirasın paylaşımı ve tenkis davalarında hukuki danışmanlık.",
+        "description": "Veraset ilamı alınması, mirasın reddi, mirasçılık belgesi, tenkis ve miras paylaşımı uyuşmazlıklarında müvekkillerimizin haklarını koruyoruz."
+      },
+      "sozlesmeler-hukuku": {
+        "title": "Sözleşmeler Hukuku",
+        "shortDescription": "Her türlü sözleşmenin hazırlanması, incelenmesi ve uyuşmazlık çözümü.",
+        "description": "Bireysel ve kurumsal müvekkillerimiz için sözleşmelerin hazırlanması, müzakeresi, incelenmesi ve sözleşmeden doğan uyuşmazlıkların çözümünde danışmanlık veriyoruz."
+      }
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Blog ve Makaleler",
+    "subtitle": "Hukuki gelişmeler, güncel mevzuat değişiklikleri ve uzman değerlendirmelerimiz.",
+    "empty": "Henüz yayınlanmış bir yazı bulunmuyor.",
+    "readMore": "Devamını Oku",
+    "backToList": "Tüm Yazılara Dön",
+    "publishedOn": "Yayın Tarihi"
+  },
+  "announcements": {
+    "eyebrow": "Duyurular",
+    "title": "Duyurular",
+    "subtitle": "Büromuzla ilgili güncel duyuru ve haberler.",
+    "empty": "Şu anda aktif bir duyuru bulunmuyor.",
+    "pinned": "Sabitlenmiş",
+    "backToList": "Tüm Duyurulara Dön"
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "Bizimle İletişime Geçin",
+    "subtitle": "Sorularınız ve hukuki talepleriniz için formu doldurun, en kısa sürede size dönüş yapalım.",
+    "formName": "Ad Soyad",
+    "formEmail": "E-posta",
+    "formPhone": "Telefon",
+    "formMessage": "Mesajınız",
+    "formSubmit": "Gönder",
+    "formSending": "Gönderiliyor...",
+    "formSuccess": "Mesajınız başarıyla iletildi. En kısa sürede size dönüş yapacağız.",
+    "formError": "Mesajınız gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+    "officeTitle": "Ofis Bilgilerimiz",
+    "addressLabel": "Adres",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-posta",
+    "hoursLabel": "Çalışma Saatleri",
+    "addressPlaceholder": "[Adres bilgisi yönetim panelinden güncellenecek]",
+    "phonePlaceholder": "+90 (___) ___ __ __",
+    "emailPlaceholder": "info@atalyahukuk.com",
+    "hoursPlaceholder": "Pazartesi - Cuma, 09:00 - 18:00"
+  },
+  "footer": {
+    "tagline": "Haklarınızı güvenle savunuyoruz.",
+    "quickLinksTitle": "Hızlı Bağlantılar",
+    "contactTitle": "İletişim",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "notFound": "Sayfa bulunamadı.",
+    "backHome": "Ana Sayfaya Dön"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "siteName": "Atalya Law Firm",
+    "titleTemplate": "%s | Atalya Law Firm",
+    "defaultDescription": "Atalya Law Firm provides reliable and effective legal counsel across criminal, family, labor, commercial and real estate law, among other areas."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Practice Areas",
+    "blog": "Blog",
+    "announcements": "Announcements",
+    "contact": "Contact",
+    "callToAction": "Free Initial Consultation"
+  },
+  "home": {
+    "heroEyebrow": "Atalya Law Firm",
+    "heroTitle": "Defending Your Rights with Confidence",
+    "heroSubtitle": "With our experienced team of attorneys, we provide reliable, transparent and effective legal counsel in criminal, family, labor, commercial and real estate law.",
+    "heroPrimaryCta": "Contact Us",
+    "heroSecondaryCta": "Explore Our Services",
+    "statsExperience": "Years of Experience",
+    "statsCases": "Cases Resolved",
+    "statsClients": "Satisfied Clients",
+    "statsAreas": "Practice Areas",
+    "aboutTeaserTitle": "About Atalya Law Firm",
+    "aboutTeaserBody": "At Atalya Law Firm, we carefully follow every client's legal process, standing by them with transparent communication and strong defense strategies.",
+    "aboutTeaserCta": "Learn More",
+    "servicesTeaserTitle": "Our Practice Areas",
+    "servicesTeaserSubtitle": "We offer specialized legal support across a wide range of fields.",
+    "servicesTeaserCta": "View All Services",
+    "whyUsTitle": "Why Atalya Law Firm?",
+    "whyUsItem1Title": "Experienced Team",
+    "whyUsItem1Body": "Our expert attorneys develop a tailored strategy for every case.",
+    "whyUsItem2Title": "Transparent Communication",
+    "whyUsItem2Body": "We keep our clients informed at every stage of the process.",
+    "whyUsItem3Title": "Reliable Results",
+    "whyUsItem3Body": "Our diligent approach delivers strong and consistent outcomes.",
+    "blogTeaserTitle": "Blog & Articles",
+    "blogTeaserSubtitle": "Recent legal developments and expert insights",
+    "blogTeaserCta": "View All Articles",
+    "announcementsTeaserTitle": "Announcements",
+    "ctaTitle": "Need Legal Support?",
+    "ctaSubtitle": "Get in touch with us so we can evaluate your situation.",
+    "ctaButton": "Contact Us Now"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Atalya Law Firm",
+    "intro": "Atalya Law Firm was founded to provide reliable, solution-oriented and transparent legal counsel to clients across every area of law. With our experienced team of attorneys, we defend the rights of our individual and corporate clients as effectively as possible.",
+    "missionTitle": "Our Mission",
+    "missionBody": "To facilitate access to justice through carefully tailored legal strategies for every client.",
+    "visionTitle": "Our Vision",
+    "visionBody": "To be the preferred law firm in our region, built on trust, transparency and expertise.",
+    "valuesTitle": "Our Values",
+    "value1": "Integrity and Transparency",
+    "value2": "Client Focus",
+    "value3": "Legal Diligence",
+    "value4": "Continuous Development",
+    "teamTitle": "Our Team",
+    "teamBody": "Our team of expert attorneys and advisors approaches every case with the same care and professionalism."
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Our Practice Areas",
+    "subtitle": "We provide legal counsel and litigation support in the following areas with our expert team.",
+    "detailCta": "Get Detailed Information",
+    "backToList": "Back to All Services",
+    "contactCta": "Get Advice in This Area",
+    "items": {
+      "ceza-hukuku": {
+        "title": "Criminal Law",
+        "shortDescription": "Effective defense and legal representation throughout investigation and prosecution.",
+        "description": "Our Criminal Law team protects clients' rights at every stage of detention, questioning, investigation and prosecution. We develop effective defense strategies in all criminal proceedings, whether as suspect, defendant or victim."
+      },
+      "aile-hukuku": {
+        "title": "Family Law",
+        "shortDescription": "Legal support in divorce, alimony, custody and property division matters.",
+        "description": "We carefully protect our clients' rights in contested and uncontested divorce, alimony, custody, matrimonial property regime and compensation cases, aiming to conclude the process with minimal strain."
+      },
+      "is-hukuku": {
+        "title": "Labor Law",
+        "shortDescription": "Litigation and advisory services in disputes between employees and employers.",
+        "description": "We offer services in reinstatement, severance and notice pay, overtime, workplace accident and mobbing cases, as well as advisory support for employment contracts and HR processes on the employer side."
+      },
+      "ticaret-hukuku": {
+        "title": "Commercial & Corporate Law",
+        "shortDescription": "Advisory services on company formation, contracts and commercial disputes.",
+        "description": "We provide comprehensive legal support to our corporate clients in company formation, mergers and acquisitions, partnership agreements, drafting commercial contracts, and resolving commercial disputes."
+      },
+      "gayrimenkul-hukuku": {
+        "title": "Real Estate Law",
+        "shortDescription": "Legal representation in title deed, lease, expropriation and construction disputes.",
+        "description": "We provide expert support in title deed cancellation and registration, lease disputes, condominium ownership, expropriation valuation, and disputes arising from construction contracts."
+      },
+      "icra-iflas-hukuku": {
+        "title": "Enforcement & Bankruptcy Law",
+        "shortDescription": "Effective solutions in debt collection and enforcement proceedings.",
+        "description": "We provide fast and effective legal solutions to both creditors and debtors in initiating enforcement proceedings, debt collection, objection cancellation/removal, and bankruptcy processes."
+      },
+      "miras-hukuku": {
+        "title": "Inheritance Law",
+        "shortDescription": "Legal advisory on succession, estate division and reduction claims.",
+        "description": "We protect our clients' rights in obtaining certificates of inheritance, renunciation of inheritance, heirship documents, reduction claims and estate division disputes."
+      },
+      "sozlesmeler-hukuku": {
+        "title": "Contract Law",
+        "shortDescription": "Drafting, review and dispute resolution for all types of contracts.",
+        "description": "We advise individual and corporate clients on drafting, negotiating and reviewing contracts, as well as resolving disputes arising from them."
+      }
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Blog & Articles",
+    "subtitle": "Legal developments, recent legislative changes and our expert commentary.",
+    "empty": "There are no published articles yet.",
+    "readMore": "Read More",
+    "backToList": "Back to All Articles",
+    "publishedOn": "Published on"
+  },
+  "announcements": {
+    "eyebrow": "Announcements",
+    "title": "Announcements",
+    "subtitle": "Current announcements and news about our firm.",
+    "empty": "There are no active announcements at the moment.",
+    "pinned": "Pinned",
+    "backToList": "Back to All Announcements"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in Touch",
+    "subtitle": "Fill out the form with your questions or legal requests, and we'll get back to you as soon as possible.",
+    "formName": "Full Name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formMessage": "Your Message",
+    "formSubmit": "Send",
+    "formSending": "Sending...",
+    "formSuccess": "Your message has been sent successfully. We'll get back to you shortly.",
+    "formError": "An error occurred while sending your message. Please try again.",
+    "officeTitle": "Office Information",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "hoursLabel": "Working Hours",
+    "addressPlaceholder": "[Address to be updated from the admin panel]",
+    "phonePlaceholder": "+90 (___) ___ __ __",
+    "emailPlaceholder": "info@atalyahukuk.com",
+    "hoursPlaceholder": "Monday - Friday, 9:00 AM - 6:00 PM"
+  },
+  "footer": {
+    "tagline": "Defending your rights with confidence.",
+    "quickLinksTitle": "Quick Links",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "notFound": "Page not found.",
+    "backHome": "Back to Home"
+  }
+}
