@@ -1,8 +1,8 @@
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/static";
 
 export async function getActiveAnnouncements() {
   try {
-    const supabase = await createClient();
+    const supabase = createStaticClient();
     const { data } = await supabase
       .from("announcements")
       .select("id, slug, title_tr, title_en, is_pinned, published_at")
@@ -18,7 +18,7 @@ export async function getActiveAnnouncements() {
 
 export async function getActiveAnnouncementBySlug(slug: string) {
   try {
-    const supabase = await createClient();
+    const supabase = createStaticClient();
     const { data } = await supabase
       .from("announcements")
       .select("*")
@@ -34,7 +34,7 @@ export async function getActiveAnnouncementBySlug(slug: string) {
 
 export async function getActiveAnnouncementSlugs() {
   try {
-    const supabase = await createClient();
+    const supabase = createStaticClient();
     const { data } = await supabase
       .from("announcements")
       .select("slug")

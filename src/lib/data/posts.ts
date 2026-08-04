@@ -1,8 +1,8 @@
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/static";
 
 export async function getPublishedPosts() {
   try {
-    const supabase = await createClient();
+    const supabase = createStaticClient();
     const { data } = await supabase
       .from("posts")
       .select(
@@ -19,7 +19,7 @@ export async function getPublishedPosts() {
 
 export async function getPublishedPostBySlug(slug: string) {
   try {
-    const supabase = await createClient();
+    const supabase = createStaticClient();
     const { data } = await supabase
       .from("posts")
       .select("*")
@@ -35,7 +35,7 @@ export async function getPublishedPostBySlug(slug: string) {
 
 export async function getPublishedPostSlugs() {
   try {
-    const supabase = await createClient();
+    const supabase = createStaticClient();
     const { data } = await supabase
       .from("posts")
       .select("slug")
