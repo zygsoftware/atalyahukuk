@@ -67,7 +67,12 @@ export default async function AdminClientsListPage({
             {(clients ?? []).map((client) => (
               <tr key={client.id} className="border-t border-bordo-50">
                 <td className="px-5 py-3 font-medium text-ink">
-                  {client.full_name}
+                  <Link
+                    href={`/admin/muvekkiller/${client.id}`}
+                    className="hover:text-bordo-600 hover:underline"
+                  >
+                    {client.full_name}
+                  </Link>
                 </td>
                 <td className="px-5 py-3 text-ink/60">
                   {client.phone ?? client.email ?? "—"}
