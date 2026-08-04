@@ -5,7 +5,11 @@ import { updateSession } from "@/lib/supabase/middleware";
 
 const intlMiddleware = createMiddleware(routing);
 
-const ADMIN_ONLY_PREFIXES = ["/admin/muvekkiller", "/admin/kullanicilar"];
+const ADMIN_ONLY_PREFIXES = [
+  "/admin/muvekkiller",
+  "/admin/kullanicilar",
+  "/admin/takvim",
+];
 
 const MAINTENANCE_MODE = process.env.MAINTENANCE_MODE === "true";
 const MAINTENANCE_BYPASS_TOKEN = process.env.MAINTENANCE_BYPASS_TOKEN;

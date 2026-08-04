@@ -11,7 +11,33 @@ function absolute(locale: (typeof routing.locales)[number], href: Href) {
   return `${SITE_URL}${getPathname({ locale, href })}`;
 }
 
+function buildLanguageAlternates(href: Href) {
+  const languages: Record<string, string> = {};
+  for (const locale of routing.locales) {
+    languages[locale] = absolute(locale, href);
+  }
+  return languages;
+}
+
+function buildEntries(
+  href: Href,
+  changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>,
+  priority: number,
+  lastModified: Date,
+): MetadataRoute.Sitemap {
+  const languages = buildLanguageAlternates(href);
+  return routing.locales.map((locale) => ({
+    url: absolute(locale, href),
+    lastModified,
+    changeFrequency,
+    priority,
+    alternates: { languages },
+  }));
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date();
+
   const staticPaths = [
     "/",
     "/hakkimizda",
@@ -30,46 +56,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const path of staticPaths) {
-    for (const locale of routing.locales) {
-      entries.push({
-        url: absolute(locale, path),
-        changeFrequency: path === "/" ? "weekly" : "monthly",
-        priority: path === "/" ? 1 : 0.7,
-      });
-    }
+    entries.push(
+      ...buildEntries(path, path === "/" ? "weekly" : "monthly", path === "/" ? 1 : 0.7, now),
+    );
   }
 
   for (const slug of SERVICE_SLUGS) {
-    for (const locale of routing.locales) {
-      entries.push({
-        url: absolute(locale, { pathname: "/hizmetler/[slug]", params: { slug } }),
-        changeFrequency: "monthly",
-        priority: 0.6,
-      });
-    }
+    entries.push(
+      ...buildEntries(
+        { pathname: "/hizmetler/[slug]", params: { slug } },
+        "monthly",
+        0.6,
+        now,
+      ),
+    );
   }
 
   for (const slug of postSlugs) {
-    for (const locale of routing.locales) {
-      entries.push({
-        url: absolute(locale, { pathname: "/blog/[slug]", params: { slug } }),
-        changeFrequency: "yearly",
-        priority: 0.5,
-      });
-    }
+    entries.push(
+      ...buildEntries({ pathname: "/blog/[slug]", params: { slug } }, "yearly", 0.5, now),
+    );
   }
 
   for (const slug of announcementSlugs) {
-    for (const locale of routing.locales) {
-      entries.push({
-        url: absolute(locale, {
-          pathname: "/duyurular/[slug]",
-          params: { slug },
-        }),
-        changeFrequency: "yearly",
-        priority: 0.4,
-      });
-    }
+    entries.push(
+      ...buildEntries(
+        { pathname: "/duyurular/[slug]", params: { slug } },
+        "yearly",
+        0.4,
+        now,
+      ),
+    );
   }
 
   return entries;

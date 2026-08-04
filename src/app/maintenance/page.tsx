@@ -17,14 +17,16 @@ export default function MaintenancePage() {
           <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gold-600/10 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-32 left-1/4 h-96 w-96 rounded-full bg-bordo-500/20 blur-3xl" />
           <div className="relative mx-auto flex w-full max-w-xl flex-col items-center px-6 py-24 text-center">
-            <Image
-              src="/logo-mark.png"
-              alt={SITE_NAME}
-              width={72}
-              height={72}
-              className="h-16 w-16 opacity-90"
-              priority
-            />
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-cream p-2 shadow-lg shadow-black/20">
+              <Image
+                src="/logo-mark.png"
+                alt={SITE_NAME}
+                width={72}
+                height={72}
+                className="h-full w-full"
+                priority
+              />
+            </div>
             <span className="mt-8 font-serif text-lg tracking-wide text-gold-300">
               ATALYA
             </span>

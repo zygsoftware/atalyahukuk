@@ -16,10 +16,12 @@ export function GalleryClient({
   images,
   categoryLabels,
   allLabel,
+  fallbackAlt,
 }: {
   images: GalleryImageItem[];
   categoryLabels: Record<GalleryCategory, string>;
   allLabel: string;
+  fallbackAlt: string;
 }) {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory | "all">(
     "all",
@@ -104,7 +106,7 @@ export function GalleryClient({
           >
             <Image
               src={img.imageUrl}
-              alt={img.caption ?? ""}
+              alt={img.caption ?? `${fallbackAlt} — ${categoryLabels[img.category]}`}
               fill
               sizes="(min-width: 1024px) 25vw, 50vw"
               className="object-cover transition duration-500 group-hover:scale-105"
@@ -170,7 +172,10 @@ export function GalleryClient({
             <div className="relative h-[70vh] w-[85vw] max-w-4xl">
               <Image
                 src={activeImage.imageUrl}
-                alt={activeImage.caption ?? ""}
+                alt={
+                  activeImage.caption ??
+                  `${fallbackAlt} — ${categoryLabels[activeImage.category]}`
+                }
                 fill
                 sizes="90vw"
                 className="object-contain"

@@ -2,6 +2,8 @@ export type ProfileRole = "admin" | "editor";
 export type PostStatus = "draft" | "published";
 export type ClientStatus = "aktif" | "pasif" | "arsiv";
 export type GalleryCategory = "ofis" | "ekip" | "etkinlik" | "diger";
+export type CaseStatus = "acik" | "kapali" | "beklemede";
+export type HearingStatus = "planlandi" | "tamamlandi" | "ertelendi";
 
 export interface Database {
   public: {
@@ -194,6 +196,94 @@ export interface Database {
         Update: Partial<
           Database["public"]["Tables"]["gallery_images"]["Insert"]
         >;
+        Relationships: [];
+      };
+      cases: {
+        Row: {
+          id: string;
+          client_id: string;
+          title: string;
+          case_number: string | null;
+          practice_area: string | null;
+          court: string | null;
+          status: CaseStatus;
+          opened_date: string;
+          closed_date: string | null;
+          note: string | null;
+          created_by: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          client_id: string;
+          title: string;
+          case_number?: string | null;
+          practice_area?: string | null;
+          court?: string | null;
+          status?: CaseStatus;
+          opened_date?: string;
+          closed_date?: string | null;
+          note?: string | null;
+          created_by?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["cases"]["Insert"]>;
+        Relationships: [];
+      };
+      hearings: {
+        Row: {
+          id: string;
+          case_id: string;
+          hearing_date: string;
+          title: string | null;
+          location: string | null;
+          status: HearingStatus;
+          outcome_note: string | null;
+          created_by: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          case_id: string;
+          hearing_date: string;
+          title?: string | null;
+          location?: string | null;
+          status?: HearingStatus;
+          outcome_note?: string | null;
+          created_by?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["hearings"]["Insert"]>;
+        Relationships: [];
+      };
+      reminders: {
+        Row: {
+          id: string;
+          title: string;
+          description: string | null;
+          due_date: string;
+          client_id: string | null;
+          case_id: string | null;
+          is_done: boolean;
+          created_by: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          title: string;
+          description?: string | null;
+          due_date: string;
+          client_id?: string | null;
+          case_id?: string | null;
+          is_done?: boolean;
+          created_by?: string | null;
+          created_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["reminders"]["Insert"]>;
         Relationships: [];
       };
     };

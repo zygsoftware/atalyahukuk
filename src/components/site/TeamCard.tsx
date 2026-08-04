@@ -10,9 +10,9 @@ function getInitials(name: string) {
 
 export function TeamCard({ name, title }: { name: string; title: string }) {
   return (
-    <div className="flex flex-col items-center rounded-2xl border border-bordo-100 bg-white p-7 text-center shadow-sm transition hover:-translate-y-1 hover:border-gold-300 hover:shadow-md">
-      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-bordo-50 ring-1 ring-gold-300">
-        <span className="font-serif text-2xl text-bordo-500">
+    <div className="group flex flex-col items-center rounded-2xl border border-bordo-100 bg-white p-7 text-center shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-300 hover:shadow-xl hover:shadow-bordo-900/10">
+      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-bordo-50 ring-1 ring-gold-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-bordo-500 group-hover:ring-gold-400">
+        <span className="font-serif text-2xl text-bordo-500 transition-colors duration-300 group-hover:text-cream">
           {getInitials(name)}
         </span>
       </div>

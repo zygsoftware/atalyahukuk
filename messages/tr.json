@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "Atalya Hukuk Bürosu",
     "titleTemplate": "%s | Atalya Hukuk Bürosu",
-    "defaultDescription": "Atalya Hukuk Bürosu; ceza, aile, iş, ticaret ve gayrimenkul hukuku başta olmak üzere birçok alanda güvenilir ve etkili hukuki danışmanlık sunar."
+    "defaultDescription": "Atalya Hukuk Bürosu; Antalya merkezli olarak ceza, aile, iş, ticaret ve gayrimenkul hukuku başta olmak üzere birçok alanda güvenilir ve etkili hukuki danışmanlık sunar."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -47,6 +47,8 @@
     "teamSubtitle": "Alanında uzman avukat kadromuzla tanışın.",
     "testimonialsTitle": "Müvekkillerimiz Ne Diyor?",
     "testimonialsSubtitle": "Bize güvenen müvekkillerimizin deneyimleri.",
+    "faqTitle": "Sık Sorulan Sorular",
+    "faqSubtitle": "Merak ettiklerinizin cevaplarını burada bulabilirsiniz.",
     "ctaTitle": "Hukuki Desteğe mi İhtiyacınız Var?",
     "ctaSubtitle": "Durumunuzu değerlendirmemiz için bizimle iletişime geçin.",
     "ctaButton": "Hemen İletişime Geçin"
@@ -54,11 +56,19 @@
   "about": {
     "eyebrow": "Hakkımızda",
     "title": "Atalya Hukuk Bürosu",
-    "intro": "Atalya Hukuk Bürosu, müvekkillerine hukukun her alanında güvenilir, çözüm odaklı ve şeffaf danışmanlık sunmak amacıyla kurulmuştur. Deneyimli avukat kadromuzla; bireysel ve kurumsal müvekkillerimizin haklarını en etkili şekilde savunuyoruz.",
+    "metaDescription": "Atalya Hukuk Bürosu, Antalya merkezli olarak ceza, aile, iş, ticaret ve gayrimenkul hukuku başta olmak üzere geniş bir alanda güvenilir hukuki danışmanlık sunar.",
+    "intro": "Atalya Hukuk Bürosu, Antalya merkezli olarak bireysel ve kurumsal müvekkillerine hukukun geniş bir yelpazesinde güvenilir, çözüm odaklı ve şeffaf danışmanlık hizmeti sunan bir hukuk bürosudur. Deneyimli avukat kadromuzla; ceza, aile, iş, ticaret, gayrimenkul, icra-iflas, miras ve sözleşmeler hukuku başta olmak üzere birçok alanda müvekkillerimizin haklarını en etkili şekilde savunuyoruz.",
+    "approachTitle": "Çalışma Prensibimiz",
+    "approachBody": "Her dosyayı kendine özgü koşullarıyla ele alır, müvekkillerimizle süreç boyunca açık ve düzenli iletişim kurarız. Hukuki sürecin her aşamasında sizi bilgilendirir, olası riskleri ve seçenekleri netlikle ortaya koyarız. Amacımız yalnızca bir davayı sonuçlandırmak değil; müvekkillerimizin haklarını en baştan koruyacak, sağlam ve sürdürülebilir hukuki çözümler üretmektir.",
+    "localTitle": "Antalya'da Güvenilir Hukuki Destek",
+    "localBody": "Antalya'da bulunan büromuz; Muratpaşa, Konyaaltı, Kepez, Döşemealtı ve çevre ilçelerdeki bireysel ve kurumsal müvekkillere hizmet vermektedir. Bölgenin turizm, inşaat, gayrimenkul ve ticaret alanlarındaki yoğun hukuki ihtiyaçlarına hâkim olan ekibimiz, yerel dinamikleri yakından takip ederek isabetli ve uygulanabilir çözümler sunar. Antalya dışından veya yurt dışından bize ulaşan müvekkillerimiz için de süreçlerimizi çevrimiçi görüşme ve dijital belge yönetimiyle kolaylıkla yürütebiliyoruz.",
+    "expertiseTitle": "Uzmanlık Alanlarımız",
+    "expertiseBody": "Ceza davalarından aile hukukuna, ticari uyuşmazlıklardan gayrimenkul işlemlerine kadar geniş bir hizmet yelpazesinde müvekkillerimizin yanındayız. Her uzmanlık alanımız hakkında detaylı bilgiye Hizmetlerimiz sayfamızdan ulaşabilirsiniz.",
+    "expertiseCta": "Hizmetlerimizi İnceleyin",
     "missionTitle": "Misyonumuz",
     "missionBody": "Her müvekkilimize özel, titizlikle hazırlanmış hukuki stratejilerle adalete erişimi kolaylaştırmak.",
     "visionTitle": "Vizyonumuz",
-    "visionBody": "Güven, şeffaflık ve uzmanlık ilkeleriyle bölgesinde tercih edilen ilk hukuk bürosu olmak.",
+    "visionBody": "Güven, şeffaflık ve uzmanlık ilkeleriyle Antalya ve çevresinde tercih edilen ilk hukuk bürosu olmak.",
     "valuesTitle": "Değerlerimiz",
     "value1": "Dürüstlük ve Şeffaflık",
     "value2": "Müvekkil Odaklılık",
@@ -69,10 +79,8 @@
   },
   "team": {
     "members": {
-      "member1": { "name": "Av. Elif Yıldız", "title": "Kurucu Ortak, Aile ve Miras Hukuku" },
-      "member2": { "name": "Av. Mert Kaya", "title": "Ceza Hukuku" },
-      "member3": { "name": "Av. Deniz Aydın", "title": "Ticaret ve Şirketler Hukuku" },
-      "member4": { "name": "Av. Ayşe Korkmaz", "title": "İş ve Gayrimenkul Hukuku" }
+      "member1": { "name": "Av. Mümtaz Köse", "title": "Avukat" },
+      "member2": { "name": "Av. Furkan Yağcı", "title": "Avukat" }
     }
   },
   "process": {
@@ -92,6 +100,30 @@
       "step4": {
         "title": "Sonuç ve Raporlama",
         "body": "Süreç sonunda net ve şeffaf bir şekilde sonucu sizinle paylaşırız."
+      }
+    }
+  },
+  "faq": {
+    "items": {
+      "f1": {
+        "question": "İlk görüşme ücretli mi?",
+        "answer": "İlk görüşmede durumunuzu birlikte değerlendirir, izlenecek hukuki süreç hakkında sizi bilgilendiririz. Ücretlendirme dosyanın niteliğine göre görüşme sonrasında netleşir."
+      },
+      "f2": {
+        "question": "Hangi hukuk alanlarında hizmet veriyorsunuz?",
+        "answer": "Ceza, aile, iş, ticaret, gayrimenkul, icra-iflas, miras ve sözleşmeler hukuku başta olmak üzere geniş bir yelpazede danışmanlık ve dava takibi hizmeti sunuyoruz."
+      },
+      "f3": {
+        "question": "Randevu nasıl alabilirim?",
+        "answer": "İletişim sayfamızdaki formu doldurarak ya da telefon/e-posta ile bize ulaşarak kolayca randevu talebinde bulunabilirsiniz."
+      },
+      "f4": {
+        "question": "Dava sürecim ne kadar sürer?",
+        "answer": "Süre; dosyanın niteliğine, mahkeme yoğunluğuna ve sürecin seyrine göre değişir. İlk görüşmede size mümkün olduğunca gerçekçi bir zaman çizelgesi sunarız."
+      },
+      "f5": {
+        "question": "Şehir dışından hizmet alabilir miyim?",
+        "answer": "Evet, birçok sürecimizi çevrimiçi görüşme, e-posta ve kargo yoluyla uzaktan da yürütebiliyoruz."
       }
     }
   },
@@ -211,6 +243,7 @@
     "title": "Galeri",
     "subtitle": "Ofisimizden, ekibimizden ve etkinliklerimizden kareler.",
     "empty": "Henüz galeri görseli eklenmemiş.",
+    "imageAlt": "Atalya Hukuk Bürosu galeri fotoğrafı",
     "filterAll": "Tümü",
     "categories": {
       "ofis": "Ofis",

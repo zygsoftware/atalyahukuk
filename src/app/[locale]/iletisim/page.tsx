@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ContactForm } from "@/components/site/ContactForm";
 import { getSiteSettings } from "@/lib/data/site-settings";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -12,7 +14,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
-  return { title: t("title") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: buildAlternates(locale, "/iletisim"),
+  };
 }
 
 export default async function ContactPage({
@@ -47,6 +53,7 @@ export default async function ContactPage({
             title={t("title")}
             subtitle={t("subtitle")}
             light
+            level={1}
           />
         </Container>
       </section>
@@ -87,6 +94,16 @@ export default async function ContactPage({
                 <dd className="mt-1 text-ink/70">{hours}</dd>
               </div>
             </dl>
+
+            <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/stock/atalya-hukuk-burosu-antalya-ofis.jpg"
+                alt="Atalya Hukuk Bürosu Antalya iletişim ve danışmanlık ofisi"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div className="rounded-2xl border border-bordo-100 bg-white p-7 sm:p-9">

@@ -4,6 +4,7 @@ import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PostCard } from "@/components/site/PostCard";
 import { getPublishedPosts } from "@/lib/data/posts";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -12,7 +13,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
-  return { title: t("title") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: buildAlternates(locale, "/blog"),
+  };
 }
 
 export default async function BlogPage({
@@ -37,6 +42,7 @@ export default async function BlogPage({
             title={t("title")}
             subtitle={t("subtitle")}
             light
+            level={1}
           />
         </Container>
       </section>

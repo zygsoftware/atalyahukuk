@@ -7,6 +7,8 @@ export const metadata = { title: "Panel" };
 export default async function AdminDashboardPage() {
   const staff = await requireStaff();
   const supabase = await createClient();
+  const now = new Date();
+  const in7Days = new Date(now.getTime() + 7 * 86400000);
 
   const [
     postsCount,
@@ -14,6 +16,7 @@ export default async function AdminDashboardPage() {
     unreadMessagesCount,
     galleryCount,
     clientsCount,
+    upcomingHearingsCount,
   ] = await Promise.all([
     supabase.from("posts").select("id", { count: "exact", head: true }),
     supabase
@@ -33,6 +36,14 @@ export default async function AdminDashboardPage() {
           .from("clients")
           .select("id", { count: "exact", head: true })
           .eq("status", "aktif")
+      : Promise.resolve({ count: null }),
+    staff.role === "admin"
+      ? supabase
+          .from("hearings")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "planlandi")
+          .gte("hearing_date", now.toISOString())
+          .lt("hearing_date", in7Days.toISOString())
       : Promise.resolve({ count: null }),
   ]);
 
@@ -59,6 +70,11 @@ export default async function AdminDashboardPage() {
             label: "Aktif Müvekkil",
             value: clientsCount.count ?? 0,
             href: "/admin/muvekkiller",
+          },
+          {
+            label: "Yaklaşan Duruşma (7 gün)",
+            value: upcomingHearingsCount.count ?? 0,
+            href: "/admin/takvim",
           },
         ]
       : []),

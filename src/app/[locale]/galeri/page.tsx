@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -6,6 +7,7 @@ import { GalleryClient } from "@/components/site/GalleryClient";
 import { getActiveGalleryImages } from "@/lib/data/gallery";
 import { GALLERY_CATEGORIES } from "@/lib/constants";
 import type { GalleryCategory } from "@/lib/supabase/types";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -14,7 +16,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "gallery" });
-  return { title: t("title"), description: t("subtitle") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: buildAlternates(locale, "/galeri"),
+  };
 }
 
 export default async function GalleryPage({
@@ -43,13 +49,22 @@ export default async function GalleryPage({
   return (
     <>
       <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
-        <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
-        <Container className="relative">
+        <Image
+          src="/images/stock/hukuk-burosu-ekip-calisma-ortami.jpg"
+          alt="Atalya Hukuk Bürosu ekip çalışma ortamı galerisi"
+          fill
+          sizes="100vw"
+          className="absolute inset-0 z-0 object-cover opacity-25"
+        />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-bordo-950/90 via-bordo-950/85 to-bordo-950" />
+        <div className="pointer-events-none absolute -right-20 -top-24 z-0 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
+        <Container className="relative z-10">
           <SectionHeading
             eyebrow={t("eyebrow")}
             title={t("title")}
             subtitle={t("subtitle")}
             light
+            level={1}
           />
         </Container>
       </section>
@@ -63,6 +78,7 @@ export default async function GalleryPage({
               images={items}
               categoryLabels={categoryLabels}
               allLabel={t("filterAll")}
+              fallbackAlt={t("imageAlt")}
             />
           )}
         </Container>

@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "Atalya Law Firm",
     "titleTemplate": "%s | Atalya Law Firm",
-    "defaultDescription": "Atalya Law Firm provides reliable and effective legal counsel across criminal, family, labor, commercial and real estate law, among other areas."
+    "defaultDescription": "Atalya Law Firm, based in Antalya, provides reliable and effective legal counsel across criminal, family, labor, commercial and real estate law, among other areas."
   },
   "nav": {
     "home": "Home",
@@ -47,6 +47,8 @@
     "teamSubtitle": "Meet our team of expert attorneys.",
     "testimonialsTitle": "What Our Clients Say",
     "testimonialsSubtitle": "Experiences from clients who trust us.",
+    "faqTitle": "Frequently Asked Questions",
+    "faqSubtitle": "Find answers to what you're wondering about here.",
     "ctaTitle": "Need Legal Support?",
     "ctaSubtitle": "Get in touch with us so we can evaluate your situation.",
     "ctaButton": "Contact Us Now"
@@ -54,11 +56,19 @@
   "about": {
     "eyebrow": "About Us",
     "title": "Atalya Law Firm",
-    "intro": "Atalya Law Firm was founded to provide reliable, solution-oriented and transparent legal counsel to clients across every area of law. With our experienced team of attorneys, we defend the rights of our individual and corporate clients as effectively as possible.",
+    "metaDescription": "Atalya Law Firm, based in Antalya, provides reliable legal counsel across criminal, family, labor, commercial and real estate law, among other areas.",
+    "intro": "Atalya Law Firm is based in Antalya and provides individual and corporate clients with reliable, solution-oriented and transparent legal counsel across a wide range of practice areas. With our experienced team of attorneys, we defend our clients' rights as effectively as possible in criminal, family, labor, commercial, real estate, enforcement & bankruptcy, inheritance and contract law, among others.",
+    "approachTitle": "Our Approach",
+    "approachBody": "We handle every case on its own merits and maintain clear, regular communication with our clients throughout the process. We keep you informed at every stage and lay out the risks and options clearly. Our goal isn't just to conclude a case — it's to build solid, sustainable legal solutions that protect our clients' rights from the very start.",
+    "localTitle": "Trusted Legal Support in Antalya",
+    "localBody": "Based in Antalya, our firm serves individual and corporate clients across Muratpaşa, Konyaaltı, Kepez, Döşemealtı and the surrounding districts. Well-versed in the region's dense legal needs in tourism, construction, real estate and commerce, our team closely follows local dynamics to provide practical, well-targeted solutions. For clients reaching us from outside Antalya or abroad, we can also run our processes smoothly through online meetings and digital document management.",
+    "expertiseTitle": "Our Areas of Expertise",
+    "expertiseBody": "From criminal cases to family law, from commercial disputes to real estate transactions, we stand by our clients across a wide range of services. You can find detailed information about each of our practice areas on our Services page.",
+    "expertiseCta": "Explore Our Services",
     "missionTitle": "Our Mission",
     "missionBody": "To facilitate access to justice through carefully tailored legal strategies for every client.",
     "visionTitle": "Our Vision",
-    "visionBody": "To be the preferred law firm in our region, built on trust, transparency and expertise.",
+    "visionBody": "To be the preferred law firm in and around Antalya, built on trust, transparency and expertise.",
     "valuesTitle": "Our Values",
     "value1": "Integrity and Transparency",
     "value2": "Client Focus",
@@ -69,10 +79,8 @@
   },
   "team": {
     "members": {
-      "member1": { "name": "Elif Yıldız, Esq.", "title": "Founding Partner, Family & Inheritance Law" },
-      "member2": { "name": "Mert Kaya, Esq.", "title": "Criminal Law" },
-      "member3": { "name": "Deniz Aydın, Esq.", "title": "Commercial & Corporate Law" },
-      "member4": { "name": "Ayşe Korkmaz, Esq.", "title": "Labor & Real Estate Law" }
+      "member1": { "name": "Mümtaz Köse, Esq.", "title": "Attorney" },
+      "member2": { "name": "Furkan Yağcı, Esq.", "title": "Attorney" }
     }
   },
   "process": {
@@ -92,6 +100,30 @@
       "step4": {
         "title": "Outcome & Reporting",
         "body": "At the end of the process, we share the outcome with you clearly and transparently."
+      }
+    }
+  },
+  "faq": {
+    "items": {
+      "f1": {
+        "question": "Is the initial consultation paid?",
+        "answer": "In the initial meeting, we assess your situation together and inform you about the legal process ahead. Fees are clarified after the meeting based on the nature of the case."
+      },
+      "f2": {
+        "question": "What areas of law do you practice?",
+        "answer": "We offer advisory and litigation services across a wide range of areas, primarily criminal, family, labor, commercial, real estate, enforcement & bankruptcy, inheritance, and contract law."
+      },
+      "f3": {
+        "question": "How can I book an appointment?",
+        "answer": "You can easily request an appointment by filling out the form on our Contact page, or by reaching us via phone or email."
+      },
+      "f4": {
+        "question": "How long will my case take?",
+        "answer": "Duration varies depending on the nature of the case and the court's workload. We provide as realistic a timeline as possible during the initial meeting."
+      },
+      "f5": {
+        "question": "Can I get service if I'm outside the city?",
+        "answer": "Yes, we can handle many of our processes remotely via online meetings, email, and courier."
       }
     }
   },
@@ -211,6 +243,7 @@
     "title": "Gallery",
     "subtitle": "Moments from our office, our team, and our events.",
     "empty": "No gallery images have been added yet.",
+    "imageAlt": "Atalya Law Firm gallery photo",
     "filterAll": "All",
     "categories": {
       "ofis": "Office",

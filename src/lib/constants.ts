@@ -28,13 +28,10 @@ export const SERVICE_SLUGS = [
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 
-export const TEAM_MEMBER_KEYS = [
-  "member1",
-  "member2",
-  "member3",
-  "member4",
-] as const;
+export const TEAM_MEMBER_KEYS = ["member1", "member2"] as const;
 
 export const PROCESS_STEP_KEYS = ["step1", "step2", "step3", "step4"] as const;
 
 export const TESTIMONIAL_KEYS = ["t1", "t2", "t3"] as const;
+
+export const FAQ_KEYS = ["f1", "f2", "f3", "f4", "f5"] as const;

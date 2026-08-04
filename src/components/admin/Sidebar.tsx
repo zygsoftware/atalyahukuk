@@ -33,6 +33,12 @@ const NAV = [
     roles: ["admin", "editor"],
   },
   {
+    href: "/admin/takvim",
+    label: "Takvim",
+    exact: false,
+    roles: ["admin"],
+  },
+  {
     href: "/admin/muvekkiller",
     label: "Müvekkiller",
     exact: false,

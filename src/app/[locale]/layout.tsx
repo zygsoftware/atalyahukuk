@@ -7,6 +7,7 @@ import { inter, playfair } from "@/lib/fonts";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { JsonLd } from "@/components/site/JsonLd";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -63,6 +64,15 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: SITE_NAME,
+            url: SITE_URL,
+            inLanguage: locale,
+          }}
+        />
         <NextIntlClientProvider>
           <Header />
           <main className="flex-1">{children}</main>

@@ -22,7 +22,7 @@ export function PostCard({
   return (
     <Link
       href={{ pathname: "/blog/[slug]", params: { slug } }}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-bordo-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-bordo-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-200 hover:shadow-xl hover:shadow-bordo-900/10"
     >
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-bordo-50">
         {coverImageUrl ? (
@@ -51,8 +51,11 @@ export function PostCard({
             {excerpt}
           </p>
         )}
-        <span className="mt-4 text-sm font-medium text-bordo-500">
-          {readMoreLabel} →
+        <span className="mt-4 inline-flex items-center text-sm font-medium text-bordo-500 transition-colors group-hover:text-gold-600">
+          {readMoreLabel}
+          <span className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
         </span>
       </div>
     </Link>

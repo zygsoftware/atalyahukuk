@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Link } from "@/i18n/navigation";
 import { getActiveAnnouncements } from "@/lib/data/announcements";
 import { formatDate } from "@/lib/utils";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -13,7 +14,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "announcements" });
-  return { title: t("title") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: buildAlternates(locale, "/duyurular"),
+  };
 }
 
 export default async function AnnouncementsPage({
@@ -38,6 +43,7 @@ export default async function AnnouncementsPage({
             title={t("title")}
             subtitle={t("subtitle")}
             light
+            level={1}
           />
         </Container>
       </section>

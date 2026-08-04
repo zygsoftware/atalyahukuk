@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CheckCircle2 } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { Link, getPathname } from "@/i18n/navigation";
 import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ServiceCard } from "@/components/site/ServiceCard";
 import { SERVICE_SLUGS, type ServiceSlug, SITE_URL } from "@/lib/constants";
 import { SERVICE_ICONS } from "@/lib/service-icons";
+import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import { buildAlternates } from "@/lib/seo";
 
 export function generateStaticParams() {
   return SERVICE_SLUGS.map((slug) => ({ slug }));
@@ -29,6 +31,10 @@ export async function generateMetadata({
   return {
     title: t(`items.${slug}.title`),
     description: t(`items.${slug}.shortDescription`),
+    alternates: buildAlternates(locale, {
+      pathname: "/hizmetler/[slug]",
+      params: { slug },
+    }),
   };
 }
 
@@ -46,6 +52,22 @@ export default async function ServiceDetailPage({
   const benefits = t.raw(`items.${slug}.benefits`) as string[];
   const relatedSlugs = SERVICE_SLUGS.filter((s) => s !== slug).slice(0, 3);
 
+  const tNav = await getTranslations("nav");
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: tNav("home"), path: getPathname({ locale, href: "/" }) },
+    {
+      name: tNav("services"),
+      path: getPathname({ locale, href: "/hizmetler" }),
+    },
+    {
+      name: t(`items.${slug}.title`),
+      path: getPathname({
+        locale,
+        href: { pathname: "/hizmetler/[slug]", params: { slug } },
+      }),
+    },
+  ]);
+
   return (
     <>
       <JsonLd
@@ -61,6 +83,7 @@ export default async function ServiceDetailPage({
           description: t(`items.${slug}.description`),
         }}
       />
+      <JsonLd data={breadcrumbJsonLd} />
 
       <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
         <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />

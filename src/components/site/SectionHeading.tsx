@@ -6,6 +6,7 @@ export function SectionHeading({
   subtitle,
   align = "left",
   light = false,
+  level = 2,
   className,
 }: {
   eyebrow?: string;
@@ -13,8 +14,11 @@ export function SectionHeading({
   subtitle?: string;
   align?: "left" | "center";
   light?: boolean;
+  level?: 1 | 2;
   className?: string;
 }) {
+  const Heading = level === 1 ? "h1" : "h2";
+
   return (
     <div
       className={cn(
@@ -33,14 +37,14 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2
+      <Heading
         className={cn(
           "mt-3 font-serif text-3xl sm:text-4xl",
           light ? "text-cream" : "text-bordo-950",
         )}
       >
         {title}
-      </h2>
+      </Heading>
       {subtitle && (
         <p
           className={cn(

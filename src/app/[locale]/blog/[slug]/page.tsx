@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { Link, getPathname } from "@/i18n/navigation";
 import { Container } from "@/components/site/Container";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getPublishedPostBySlug, getPublishedPostSlugs } from "@/lib/data/posts";
 import { formatDate } from "@/lib/utils";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
+import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateStaticParams() {
   const slugs = await getPublishedPostSlugs();
@@ -33,6 +35,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: buildAlternates(locale, {
+      pathname: "/blog/[slug]",
+      params: { slug },
+    }),
     openGraph: post.cover_image_url
       ? { images: [{ url: post.cover_image_url }] }
       : undefined,
@@ -57,6 +63,19 @@ export default async function BlogDetailPage({
   const content =
     locale === "tr" ? post.content_tr : (post.content_en ?? post.content_tr);
 
+  const tNav = await getTranslations("nav");
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: tNav("home"), path: getPathname({ locale, href: "/" }) },
+    { name: tNav("blog"), path: getPathname({ locale, href: "/blog" }) },
+    {
+      name: title,
+      path: getPathname({
+        locale,
+        href: { pathname: "/blog/[slug]", params: { slug } },
+      }),
+    },
+  ]);
+
   return (
     <>
       <JsonLd
@@ -74,6 +93,7 @@ export default async function BlogDetailPage({
           },
         }}
       />
+      <JsonLd data={breadcrumbJsonLd} />
 
       <article className="py-16 sm:py-20">
         <Container className="max-w-3xl">

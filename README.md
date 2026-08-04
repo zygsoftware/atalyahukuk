@@ -123,6 +123,36 @@ Logo görselinden örneklenen renkler `src/app/globals.css` içinde tanımlı:
 - Krem (arka plan): `#FAF8F5`
 - Antrasit (metin): `#241F1C`
 
+## Görseller
+
+`public/images/stock/` altındaki fotoğraflar Pexels'ten (ücretsiz, ticari
+kullanıma uygun, atıf gerektirmez) seçildi — sahte firma tabelası/diploma
+içeren kareler elendi. Bunlar **yer tutucudur**; gerçek ofis/ekip
+fotoğraflarınız hazır olduğunda aynı dosya adlarının üzerine yazarak (veya
+ilgili sayfalardaki `src` yollarını değiştirerek) kolayca değiştirebilirsiniz.
+
+`supabase/seed_gallery_sample.sql` çalıştırılırsa galeriye bu fotoğraflardan
+3 örnek eklenir — istemezseniz atlayın, admin panelden istediğiniz an
+silinebilir.
+
+## SEO
+
+- Her sayfada başlık/açıklama, Open Graph (dinamik marka görseli
+  `opengraph-image.tsx` ile üretilir), JSON-LD (LegalService, Article,
+  Service, BreadcrumbList) ve `sitemap.xml`/`robots.txt` mevcut.
+- Ana sayfadaki `LegalService` şeması `site_settings` tablosundaki
+  telefon/e-posta/adres/sosyal medya bilgilerini otomatik çeker — bu alanları
+  doldurdukça şema da zenginleşir.
+- **Önemli**: Bunlar "teknik SEO" — Google'ın sayfayı doğru anlaması ve
+  dizine eklemesi için gereken altyapı. Lighthouse SEO skoru bu sayede
+  yüksek çıkar (95+ gerçekçi bir hedef). Ama **Google aramasında üst
+  sıralarda çıkmak** başka bir şey — bu; zamanla yayınlanan gerçek içerik
+  (blog yazıları, duyurular), gerçek işletme bilgileri (Google İşletme
+  Profili, adres/telefon tutarlılığı), müşteri yorumları ve diğer sitelerden
+  gelen bağlantılara (backlink) bağlıdır. Teknik altyapı bunun ön koşulu
+  ama tek başına garanti etmez — siteniz yayına girip gerçek içerik
+  eklendikçe sıralama zamanla oluşur.
+
 ## Notlar
 
 - Blog/duyuru/hizmet sayfaları hem `/tr` hem `/en` altında farklı URL
