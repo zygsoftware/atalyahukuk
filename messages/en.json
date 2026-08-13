@@ -12,7 +12,8 @@
     "blog": "Blog",
     "announcements": "Announcements",
     "contact": "Contact",
-    "callToAction": "Free Initial Consultation"
+    "callToAction": "Free Initial Consultation",
+    "menu": "Menu"
   },
   "home": {
     "heroEyebrow": "Atalya Law Firm",
@@ -245,6 +246,9 @@
     "empty": "No gallery images have been added yet.",
     "imageAlt": "Atalya Law Firm gallery photo",
     "filterAll": "All",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
     "categories": {
       "ofis": "Office",
       "ekip": "Team",

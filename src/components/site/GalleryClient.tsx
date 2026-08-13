@@ -17,11 +17,17 @@ export function GalleryClient({
   categoryLabels,
   allLabel,
   fallbackAlt,
+  closeLabel,
+  previousLabel,
+  nextLabel,
 }: {
   images: GalleryImageItem[];
   categoryLabels: Record<GalleryCategory, string>;
   allLabel: string;
   fallbackAlt: string;
+  closeLabel: string;
+  previousLabel: string;
+  nextLabel: string;
 }) {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory | "all">(
     "all",
@@ -128,7 +134,7 @@ export function GalleryClient({
           <button
             type="button"
             onClick={() => setLightboxIndex(null)}
-            aria-label="Kapat"
+            aria-label={closeLabel}
             className="absolute right-5 top-5 text-3xl leading-none text-cream/80 hover:text-cream"
           >
             &times;
@@ -144,7 +150,7 @@ export function GalleryClient({
                     i === null ? null : (i - 1 + filtered.length) % filtered.length,
                   );
                 }}
-                aria-label="Önceki"
+                aria-label={previousLabel}
                 className="absolute left-3 top-1/2 -translate-y-1/2 text-4xl text-cream/70 hover:text-cream sm:left-6"
               >
                 &#8249;
@@ -157,7 +163,7 @@ export function GalleryClient({
                     i === null ? null : (i + 1) % filtered.length,
                   );
                 }}
-                aria-label="Sonraki"
+                aria-label={nextLabel}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-4xl text-cream/70 hover:text-cream sm:right-6"
               >
                 &#8250;

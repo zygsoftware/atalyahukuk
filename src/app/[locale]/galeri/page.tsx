@@ -79,6 +79,9 @@ export default async function GalleryPage({
               categoryLabels={categoryLabels}
               allLabel={t("filterAll")}
               fallbackAlt={t("imageAlt")}
+              closeLabel={t("close")}
+              previousLabel={t("previous")}
+              nextLabel={t("next")}
             />
           )}
         </Container>

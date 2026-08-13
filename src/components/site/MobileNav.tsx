@@ -7,9 +7,11 @@ import { NAV_ITEMS } from "@/lib/constants";
 export function MobileNav({
   labels,
   ctaLabel,
+  menuLabel,
 }: {
   labels: Record<string, string>;
   ctaLabel: string;
+  menuLabel: string;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -19,7 +21,7 @@ export function MobileNav({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        aria-label="Menü"
+        aria-label={menuLabel}
         className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
       >
         <span

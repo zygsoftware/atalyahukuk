@@ -60,7 +60,11 @@ export async function Header() {
 
         <div className="flex items-center gap-3 xl:hidden">
           <LocaleSwitcher />
-          <MobileNav labels={labels} ctaLabel={t("callToAction")} />
+          <MobileNav
+            labels={labels}
+            ctaLabel={t("callToAction")}
+            menuLabel={t("menu")}
+          />
         </div>
       </div>
     </StickyHeader>
