@@ -7,6 +7,7 @@ import { inter, playfair } from "@/lib/fonts";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { JsonLd } from "@/components/site/JsonLd";
 import "../globals.css";
 
@@ -77,6 +78,7 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

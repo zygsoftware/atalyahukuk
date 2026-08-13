@@ -9,11 +9,48 @@ const ADMIN_ONLY_PREFIXES = [
   "/admin/muvekkiller",
   "/admin/kullanicilar",
   "/admin/takvim",
+  "/admin/ayarlar",
 ];
 
-const MAINTENANCE_MODE = process.env.MAINTENANCE_MODE === "true";
+// Acil durum "hard kill switch" — ortam değişkeninde true ise veritabanı
+// durumuna bakılmaksızın bakım modu zorla açılır. Normal kullanımda bu
+// false/tanımsız bırakılır ve gerçek durum admin panelindeki (Ayarlar)
+// veritabanı alanından okunur — anında etkili olur, deploy gerekmez.
+const MAINTENANCE_MODE_ENV_OVERRIDE = process.env.MAINTENANCE_MODE === "true";
 const MAINTENANCE_BYPASS_TOKEN = process.env.MAINTENANCE_BYPASS_TOKEN;
 const BYPASS_COOKIE = "atalya_bypass";
+
+let cachedMaintenanceMode: { value: boolean; fetchedAt: number } | null = null;
+const MAINTENANCE_CACHE_TTL_MS = 15_000;
+
+async function isMaintenanceModeOn(): Promise<boolean> {
+  if (MAINTENANCE_MODE_ENV_OVERRIDE) return true;
+
+  if (
+    cachedMaintenanceMode &&
+    Date.now() - cachedMaintenanceMode.fetchedAt < MAINTENANCE_CACHE_TTL_MS
+  ) {
+    return cachedMaintenanceMode.value;
+  }
+
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/site_settings?id=eq.1&select=maintenance_mode`,
+      {
+        headers: {
+          apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+        },
+      },
+    );
+    const data = (await res.json()) as { maintenance_mode?: boolean }[];
+    const value = data?.[0]?.maintenance_mode === true;
+    cachedMaintenanceMode = { value, fetchedAt: Date.now() };
+    return value;
+  } catch {
+    return false;
+  }
+}
 
 async function handleAdmin(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -72,9 +109,9 @@ export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (
-    MAINTENANCE_MODE &&
     !isExemptFromMaintenance(pathname) &&
-    !hasValidBypass(request)
+    !hasValidBypass(request) &&
+    (await isMaintenanceModeOn())
   ) {
     const url = request.nextUrl.clone();
     url.pathname = "/maintenance";

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { inter, playfair } from "@/lib/fonts";
 import { SITE_NAME } from "@/lib/constants";
+import { getSiteSettings } from "@/lib/data/site-settings";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -9,7 +10,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function MaintenancePage() {
+export default async function MaintenancePage() {
+  const settings = await getSiteSettings();
+  const phone = settings?.phone ?? "+90 (000) 000 00 00";
+  const email = settings?.email ?? "info@atalyahukuk.com";
+  const phoneHref = `tel:+${phone.replace(/\D/g, "").replace(/^0/, "90")}`;
+
   return (
     <html lang="tr" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
@@ -59,14 +65,11 @@ export default function MaintenancePage() {
             </p>
 
             <div className="mt-10 flex flex-col items-center gap-2 text-sm text-cream/60">
-              <a href="tel:+900000000000" className="hover:text-cream">
-                +90 (000) 000 00 00
+              <a href={phoneHref} className="hover:text-cream">
+                {phone}
               </a>
-              <a
-                href="mailto:info@atalyahukuk.com"
-                className="hover:text-cream"
-              >
-                info@atalyahukuk.com
+              <a href={`mailto:${email}`} className="hover:text-cream">
+                {email}
               </a>
             </div>
           </div>

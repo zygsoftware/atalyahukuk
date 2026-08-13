@@ -4,6 +4,10 @@
     "titleTemplate": "%s | Atalya Law Firm",
     "defaultDescription": "Atalya Law Firm, based in Antalya, provides reliable and effective legal counsel across criminal, family, labor, commercial and real estate law, among other areas."
   },
+  "whatsapp": {
+    "ariaLabel": "Chat on WhatsApp",
+    "prefilledMessage": "Hello, I'd like to get information from Atalya Hukuk Bürosu."
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",

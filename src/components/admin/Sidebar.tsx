@@ -50,6 +50,12 @@ const NAV = [
     exact: false,
     roles: ["admin"],
   },
+  {
+    href: "/admin/ayarlar",
+    label: "Ayarlar",
+    exact: false,
+    roles: ["admin"],
+  },
 ] as const;
 
 export function Sidebar({ role }: { role: ProfileRole }) {
