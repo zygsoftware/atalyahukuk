@@ -84,8 +84,8 @@
   },
   "team": {
     "members": {
-      "member1": { "name": "Av. Mümtaz Köse", "title": "Avukat" },
-      "member2": { "name": "Av. Furkan Yağcı", "title": "Avukat" }
+      "member1": { "name": "Av. Mümtaz Köse", "title": "Kurucu Avukat" },
+      "member2": { "name": "Av. Furkan Yağcı", "title": "Kurucu Avukat" }
     }
   },
   "process": {

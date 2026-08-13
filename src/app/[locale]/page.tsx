@@ -14,6 +14,7 @@ import { JsonLd } from "@/components/site/JsonLd";
 import {
   SERVICE_SLUGS,
   TEAM_MEMBER_KEYS,
+  TEAM_PHOTOS,
   PROCESS_STEP_KEYS,
   TESTIMONIAL_KEYS,
   FAQ_KEYS,
@@ -343,6 +344,7 @@ export default async function HomePage({
                 key={key}
                 name={tTeam(`members.${key}.name`)}
                 title={tTeam(`members.${key}.title`)}
+                photoUrl={TEAM_PHOTOS[key]}
               />
             ))}
           </div>

@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { TeamCard } from "@/components/site/TeamCard";
 import { Reveal } from "@/components/site/Reveal";
 import { Link } from "@/i18n/navigation";
-import { TEAM_MEMBER_KEYS } from "@/lib/constants";
+import { TEAM_MEMBER_KEYS, TEAM_PHOTOS } from "@/lib/constants";
 import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -87,6 +87,16 @@ export default async function AboutPage({
             </p>
           </div>
 
+          <div className="relative mt-14 aspect-[16/9] overflow-hidden rounded-2xl">
+            <Image
+              src="/images/stock/hukuk-sozlesme-imza-belge.jpg"
+              alt="Hukuki sözleşme ve belge imza süreci"
+              fill
+              sizes="(min-width: 1024px) 768px, 100vw"
+              className="object-cover"
+            />
+          </div>
+
           <div className="mt-14">
             <h2 className="font-serif text-2xl text-bordo-950">
               {t("expertiseTitle")}
@@ -155,11 +165,26 @@ export default async function AboutPage({
                 key={key}
                 name={tTeam(`members.${key}.name`)}
                 title={tTeam(`members.${key}.title`)}
+                photoUrl={TEAM_PHOTOS[key]}
               />
             ))}
           </div>
         </Container>
         </Reveal>
+      </section>
+
+      <section className="pb-16 sm:pb-20">
+        <Container className="max-w-4xl">
+          <div className="relative aspect-[21/9] overflow-hidden rounded-3xl">
+            <Image
+              src="/images/stock/musteri-danisman-belge-inceleme.jpg"
+              alt="Müvekkil ve danışman birlikte dosya inceliyor"
+              fill
+              sizes="(min-width: 1024px) 900px, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </Container>
       </section>
     </>
   );

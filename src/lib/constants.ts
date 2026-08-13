@@ -30,6 +30,11 @@ export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 
 export const TEAM_MEMBER_KEYS = ["member1", "member2"] as const;
 
+// Gerçek ekip fotoğrafları eklendiğinde buraya /images/team/... yolu yazılır.
+// Boş bırakılan üyeler için TeamCard baş harfli avatar gösterir.
+export const TEAM_PHOTOS: Partial<Record<(typeof TEAM_MEMBER_KEYS)[number], string>> =
+  {};
+
 export const PROCESS_STEP_KEYS = ["step1", "step2", "step3", "step4"] as const;
 
 export const TESTIMONIAL_KEYS = ["t1", "t2", "t3"] as const;
