@@ -30,13 +30,15 @@ export async function Footer() {
       <Container className="grid gap-10 py-14 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <Image
-              src="/logo-mark.png"
-              alt="Atalya Hukuk Bürosu"
-              width={40}
-              height={40}
-              className="h-10 w-10"
-            />
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream p-1.5 shadow-sm">
+              <Image
+                src="/logo-mark.png"
+                alt="Atalya Hukuk Bürosu"
+                width={40}
+                height={40}
+                className="h-full w-full"
+              />
+            </div>
             <span className="font-serif text-lg tracking-wide text-gold-300">
               ATALYA
             </span>

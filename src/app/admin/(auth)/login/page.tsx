@@ -7,13 +7,15 @@ export default function AdminLoginPage() {
   return (
     <div className="w-full max-w-sm">
       <div className="flex flex-col items-center text-center">
-        <Image
-          src="/logo-mark.png"
-          alt="Atalya Hukuk Bürosu"
-          width={56}
-          height={56}
-          className="h-14 w-14"
-        />
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-cream p-2 shadow-lg shadow-black/20">
+          <Image
+            src="/logo-mark.png"
+            alt="Atalya Hukuk Bürosu"
+            width={56}
+            height={56}
+            className="h-full w-full"
+          />
+        </div>
         <h1 className="mt-4 font-serif text-2xl text-cream">
           Yönetim Paneli
         </h1>
