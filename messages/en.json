@@ -297,7 +297,9 @@
     "addressPlaceholder": "[Address to be updated from the admin panel]",
     "phonePlaceholder": "+90 (___) ___ __ __",
     "emailPlaceholder": "info@atalyahukuk.com",
-    "hoursPlaceholder": "Monday - Friday, 9:00 AM - 6:00 PM"
+    "hoursPlaceholder": "Monday - Friday, 9:00 AM - 6:00 PM",
+    "mapTitle": "Atalya Hukuk Bürosu location",
+    "openInMaps": "Open in Google Maps"
   },
   "footer": {
     "tagline": "Defending your rights with confidence.",

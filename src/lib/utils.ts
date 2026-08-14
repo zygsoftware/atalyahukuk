@@ -41,3 +41,16 @@ export function formatDate(date: string, locale: string): string {
     day: "numeric",
   }).format(new Date(date));
 }
+
+/** Türkiye telefon numaralarını "905056004607" gibi ülke kodlu, sadece rakamlı hale getirir. */
+export function toE164Digits(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.startsWith("90")) return digits;
+  if (digits.startsWith("0")) return `90${digits.slice(1)}`;
+  return `90${digits}`;
+}
+
+/** Boşluk/parantez içeren görüntü metnini geçerli bir tel: bağlantısına çevirir. */
+export function toTelHref(phone: string): string {
+  return `tel:+${toE164Digits(phone)}`;
+}

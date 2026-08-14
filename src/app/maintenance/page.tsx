@@ -3,6 +3,7 @@ import Image from "next/image";
 import { inter, playfair } from "@/lib/fonts";
 import { SITE_NAME } from "@/lib/constants";
 import { getSiteSettings } from "@/lib/data/site-settings";
+import { toTelHref } from "@/lib/utils";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default async function MaintenancePage() {
   const settings = await getSiteSettings();
   const phone = settings?.phone ?? "+90 (000) 000 00 00";
   const email = settings?.email ?? "info@atalyahukuk.com";
-  const phoneHref = `tel:+${phone.replace(/\D/g, "").replace(/^0/, "90")}`;
+  const phoneHref = toTelHref(phone);
 
   return (
     <html lang="tr" className={`${inter.variable} ${playfair.variable}`}>

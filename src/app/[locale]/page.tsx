@@ -8,6 +8,7 @@ import { ServiceCard } from "@/components/site/ServiceCard";
 import { PostCard } from "@/components/site/PostCard";
 import { TeamCard } from "@/components/site/TeamCard";
 import { HeroSlider } from "@/components/site/HeroSlider";
+import { ProcessTimeline } from "@/components/site/ProcessTimeline";
 import { TestimonialCard } from "@/components/site/TestimonialCard";
 import { FaqAccordion } from "@/components/site/FaqAccordion";
 import { Reveal } from "@/components/site/Reveal";
@@ -287,23 +288,13 @@ export default async function HomePage({
             subtitle={t("processSubtitle")}
             className="mx-auto"
           />
-          <div className="relative mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="pointer-events-none absolute top-7 right-0 left-0 hidden border-t border-dashed border-gold-300 lg:block" />
-            {PROCESS_STEP_KEYS.map((key, index) => (
-              <div key={key} className="relative text-center">
-                <div className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cream ring-2 ring-bordo-500">
-                  <span className="font-serif text-xl text-bordo-500">
-                    {index + 1}
-                  </span>
-                </div>
-                <h3 className="mt-5 font-serif text-lg text-bordo-950">
-                  {tProcess(`steps.${key}.title`)}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink/65">
-                  {tProcess(`steps.${key}.body`)}
-                </p>
-              </div>
-            ))}
+          <div className="mt-14">
+            <ProcessTimeline
+              steps={PROCESS_STEP_KEYS.map((key) => ({
+                title: tProcess(`steps.${key}.title`),
+                body: tProcess(`steps.${key}.body`),
+              }))}
+            />
           </div>
         </Container>
         </Reveal>

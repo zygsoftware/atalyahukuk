@@ -1,12 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getSiteSettings } from "@/lib/data/site-settings";
-
-function toWhatsAppNumber(phone: string) {
-  const digits = phone.replace(/\D/g, "");
-  if (digits.startsWith("90")) return digits;
-  if (digits.startsWith("0")) return `90${digits.slice(1)}`;
-  return `90${digits}`;
-}
+import { toE164Digits } from "@/lib/utils";
 
 export async function WhatsAppButton() {
   const [settings, t] = await Promise.all([
@@ -16,7 +10,7 @@ export async function WhatsAppButton() {
 
   if (!settings?.phone) return null;
 
-  const number = toWhatsAppNumber(settings.phone);
+  const number = toE164Digits(settings.phone);
   const message = encodeURIComponent(t("prefilledMessage"));
 
   return (

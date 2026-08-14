@@ -4,6 +4,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { NAV_ITEMS } from "@/lib/constants";
 import { getSiteSettings } from "@/lib/data/site-settings";
+import { toTelHref } from "@/lib/utils";
 import { Container } from "./Container";
 
 export async function Footer() {
@@ -94,7 +95,7 @@ export async function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-cream/70">
             <li>{address}</li>
             <li>
-              <a href={`tel:${phone}`} className="hover:text-cream">
+              <a href={toTelHref(phone)} className="hover:text-cream">
                 {phone}
               </a>
             </li>

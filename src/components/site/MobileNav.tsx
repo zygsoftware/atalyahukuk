@@ -22,7 +22,7 @@ export function MobileNav({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={menuLabel}
-        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
+        className="flex h-11 w-11 flex-col items-center justify-center gap-1.5"
       >
         <span
           className={`h-0.5 w-6 bg-ink transition ${open ? "translate-y-2 rotate-45" : ""}`}

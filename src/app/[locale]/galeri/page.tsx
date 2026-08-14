@@ -56,8 +56,11 @@ export default async function GalleryPage({
           sizes="100vw"
           className="absolute inset-0 z-0 object-cover opacity-25"
         />
-        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-bordo-950/90 via-bordo-950/85 to-bordo-950" />
-        <div className="pointer-events-none absolute -right-20 -top-24 z-0 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-bordo-950/90 via-bordo-950/85 to-bordo-950" />
+        <div className="pointer-events-none absolute -left-8 top-8 z-0 h-24 w-24 -rotate-12 rounded-xl border border-gold-400/20 sm:h-32 sm:w-32" />
+        <div className="pointer-events-none absolute left-24 top-32 z-0 h-14 w-14 rotate-6 rounded-lg border border-cream/15 sm:h-20 sm:w-20" />
+        <div className="pointer-events-none absolute right-8 bottom-4 z-0 h-16 w-16 rotate-12 rounded-xl border border-gold-400/20 sm:h-24 sm:w-24" />
+        <div className="pointer-events-none absolute -bottom-24 -left-16 z-0 h-72 w-72 rounded-full bg-gold-600/15 blur-3xl" />
         <Container className="relative z-10">
           <SectionHeading
             eyebrow={t("eyebrow")}

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ContactForm } from "@/components/site/ContactForm";
 import { getSiteSettings } from "@/lib/data/site-settings";
 import { buildAlternates } from "@/lib/seo";
+import { toTelHref } from "@/lib/utils";
 
 export async function generateMetadata({
   params,
@@ -76,7 +76,7 @@ export default async function ContactPage({
                   {t("phoneLabel")}
                 </dt>
                 <dd className="mt-1 text-ink/70">
-                  <a href={`tel:${phone}`}>{phone}</a>
+                  <a href={toTelHref(phone)}>{phone}</a>
                 </dd>
               </div>
               <div>
@@ -95,15 +95,23 @@ export default async function ContactPage({
               </div>
             </dl>
 
-            <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image
-                src="/images/stock/atalya-hukuk-burosu-antalya-ofis.jpg"
-                alt="Atalya Hukuk Bürosu Antalya iletişim ve danışmanlık ofisi"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
+            <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl border border-bordo-100">
+              <iframe
+                src={`https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`}
+                title={t("mapTitle")}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 h-full w-full grayscale-[15%]"
               />
             </div>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center text-sm font-semibold text-bordo-500 transition hover:text-gold-600"
+            >
+              {t("openInMaps")} →
+            </a>
           </div>
 
           <div className="rounded-2xl border border-bordo-100 bg-white p-7 sm:p-9">

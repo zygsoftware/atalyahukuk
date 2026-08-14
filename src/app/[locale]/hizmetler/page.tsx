@@ -40,8 +40,10 @@ export default async function ServicesPage({
           sizes="100vw"
           className="absolute inset-0 z-0 object-cover opacity-25"
         />
-        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-bordo-950/90 via-bordo-950/85 to-bordo-950" />
-        <div className="pointer-events-none absolute -right-20 -top-24 z-0 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-bordo-950/90 via-bordo-950/85 to-bordo-950" />
+        <div className="pointer-events-none absolute -right-10 top-10 z-0 h-36 w-36 rotate-12 rounded-3xl border border-gold-400/25 sm:h-52 sm:w-52" />
+        <div className="pointer-events-none absolute right-16 top-24 z-0 h-20 w-20 -rotate-6 rounded-2xl border border-gold-400/15 sm:h-28 sm:w-28" />
+        <div className="pointer-events-none absolute -bottom-28 -right-10 z-0 h-72 w-72 rounded-full bg-bordo-500/25 blur-3xl" />
         <Container className="relative z-10">
           <SectionHeading
             eyebrow={t("eyebrow")}

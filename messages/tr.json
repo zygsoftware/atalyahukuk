@@ -297,7 +297,9 @@
     "addressPlaceholder": "[Adres bilgisi yönetim panelinden güncellenecek]",
     "phonePlaceholder": "+90 (___) ___ __ __",
     "emailPlaceholder": "info@atalyahukuk.com",
-    "hoursPlaceholder": "Pazartesi - Cuma, 09:00 - 18:00"
+    "hoursPlaceholder": "Pazartesi - Cuma, 09:00 - 18:00",
+    "mapTitle": "Atalya Hukuk Bürosu konumu",
+    "openInMaps": "Google Haritalar'da Aç"
   },
   "footer": {
     "tagline": "Haklarınızı güvenle savunuyoruz.",
