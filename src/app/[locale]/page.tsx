@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ServiceCard } from "@/components/site/ServiceCard";
 import { PostCard } from "@/components/site/PostCard";
 import { TeamCard } from "@/components/site/TeamCard";
+import { HeroSlider } from "@/components/site/HeroSlider";
 import { TestimonialCard } from "@/components/site/TestimonialCard";
 import { FaqAccordion } from "@/components/site/FaqAccordion";
 import { Reveal } from "@/components/site/Reveal";
@@ -164,26 +165,26 @@ export default async function HomePage({
             className="relative mx-auto w-full max-w-sm animate-hero-in"
             style={{ animationDelay: "150ms" }}
           >
-            <div className="pointer-events-none absolute -inset-7 rounded-full border border-gold-400/25" />
-            <div className="pointer-events-none absolute -inset-3 rounded-full border border-gold-400/40" />
-            <div className="relative flex aspect-square items-center justify-center rounded-full bg-cream shadow-[0_25px_60px_-15px_rgba(0,0,0,0.55)] ring-1 ring-gold-400/50">
-              <Image
-                src="/logo-mark.png"
-                alt={SITE_NAME}
-                width={320}
-                height={320}
-                priority
-                className="relative w-[62%]"
-              />
-            </div>
-            <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 flex-col items-center rounded-2xl bg-gold-500 px-7 py-3.5 text-center shadow-xl sm:-right-4 sm:left-auto sm:translate-x-0">
-              <p className="font-serif text-2xl leading-none text-bordo-950">
-                10+
-              </p>
-              <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-bordo-900">
-                {t("statsExperience")}
-              </p>
-            </div>
+            <HeroSlider
+              slides={[
+                { type: "logo", src: "/logo-mark.png", alt: SITE_NAME },
+                {
+                  type: "photo",
+                  src: "/images/stock/atalya-hukuk-burosu-musteri-gorusmesi.jpg",
+                  alt: "Atalya Hukuk Bürosu ekibi müvekkil görüşmesinde",
+                },
+                {
+                  type: "photo",
+                  src: "/images/stock/musteri-danisman-belge-inceleme.jpg",
+                  alt: "Müvekkil ve danışman birlikte dosya inceliyor",
+                },
+                {
+                  type: "photo",
+                  src: "/images/stock/hukuk-sozlesme-imza-belge.jpg",
+                  alt: "Hukuki sözleşme ve belge imza süreci",
+                },
+              ]}
+            />
           </div>
         </Container>
 
