@@ -8,6 +8,11 @@
     "ariaLabel": "Chat on WhatsApp",
     "prefilledMessage": "Hello, I'd like to get information from Atalya Hukuk Bürosu."
   },
+  "cookieConsent": {
+    "message": "We use cookies to improve our site and understand visitor statistics. If you accept, Google Analytics will be enabled.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",
