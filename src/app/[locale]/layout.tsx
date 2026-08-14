@@ -31,9 +31,9 @@ export async function generateMetadata({
     },
     description: t("defaultDescription"),
     alternates: {
-      canonical: `/${locale}`,
+      canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
       languages: {
-        tr: "/tr",
+        tr: "/",
         en: "/en",
       },
     },

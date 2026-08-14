@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    // Varsayılan dil (TR) artık /tr önekiyle değil doğrudan / üzerinden
+    // sunuluyor (localePrefix: "as-needed"). Daha önce paylaşılmış veya
+    // Google tarafından taranmış /tr/... linklerinin SEO değerini
+    // korumak için kalıcı yönlendirme.
+    return [
+      { source: "/tr", destination: "/", permanent: true },
+      { source: "/tr/:path*", destination: "/:path*", permanent: true },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
