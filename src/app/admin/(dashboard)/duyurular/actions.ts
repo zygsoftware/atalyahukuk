@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import { requireStaff } from "@/lib/supabase/auth-helpers";
 import { createClient } from "@/lib/supabase/server";
 
@@ -24,6 +25,8 @@ export async function createAnnouncement(formData: FormData) {
   const { error } = await supabase.from("announcements").insert(fields);
   if (error) throw new Error(error.message);
 
+  revalidatePath("/", "layout");
+  revalidatePath("/sitemap.xml");
   redirect("/admin/duyurular");
 }
 
@@ -38,6 +41,8 @@ export async function updateAnnouncement(id: string, formData: FormData) {
     .eq("id", id);
   if (error) throw new Error(error.message);
 
+  revalidatePath("/", "layout");
+  revalidatePath("/sitemap.xml");
   redirect("/admin/duyurular");
 }
 
@@ -45,4 +50,6 @@ export async function deleteAnnouncement(id: string) {
   await requireStaff();
   const supabase = await createClient();
   await supabase.from("announcements").delete().eq("id", id);
+  revalidatePath("/", "layout");
+  revalidatePath("/sitemap.xml");
 }

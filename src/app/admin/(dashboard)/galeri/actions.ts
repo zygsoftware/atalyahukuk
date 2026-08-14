@@ -25,6 +25,7 @@ export async function createGalleryImage(formData: FormData) {
 
   if (error) throw new Error(error.message);
 
+  revalidatePath("/", "layout");
   redirect("/admin/galeri");
 }
 
@@ -36,6 +37,7 @@ export async function toggleGalleryImageActive(id: string, isActive: boolean) {
     .update({ is_active: isActive })
     .eq("id", id);
   revalidatePath("/admin/galeri");
+  revalidatePath("/", "layout");
 }
 
 export async function deleteGalleryImage(id: string) {
@@ -43,4 +45,5 @@ export async function deleteGalleryImage(id: string) {
   const supabase = await createClient();
   await supabase.from("gallery_images").delete().eq("id", id);
   revalidatePath("/admin/galeri");
+  revalidatePath("/", "layout");
 }

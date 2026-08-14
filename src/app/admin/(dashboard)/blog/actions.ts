@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import { requireStaff } from "@/lib/supabase/auth-helpers";
 import { createClient } from "@/lib/supabase/server";
 import type { PostStatus } from "@/lib/supabase/types";
@@ -37,6 +38,8 @@ export async function createPost(formData: FormData) {
     throw new Error(error.message);
   }
 
+  revalidatePath("/", "layout");
+  revalidatePath("/sitemap.xml");
   redirect("/admin/blog");
 }
 
@@ -68,6 +71,8 @@ export async function updatePost(id: string, formData: FormData) {
     throw new Error(error.message);
   }
 
+  revalidatePath("/", "layout");
+  revalidatePath("/sitemap.xml");
   redirect("/admin/blog");
 }
 
@@ -75,4 +80,6 @@ export async function deletePost(id: string) {
   await requireStaff();
   const supabase = await createClient();
   await supabase.from("posts").delete().eq("id", id);
+  revalidatePath("/", "layout");
+  revalidatePath("/sitemap.xml");
 }
