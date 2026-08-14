@@ -10,7 +10,9 @@ import { PostCard } from "@/components/site/PostCard";
 import { TeamCard } from "@/components/site/TeamCard";
 import { HeroSlider } from "@/components/site/HeroSlider";
 import { ProcessTimeline } from "@/components/site/ProcessTimeline";
-import { TestimonialCard } from "@/components/site/TestimonialCard";
+import { GoogleReviewCard } from "@/components/site/GoogleReviewCard";
+import { GoogleGIcon } from "@/components/site/SocialIcons";
+import { Star } from "lucide-react";
 import { FaqAccordion } from "@/components/site/FaqAccordion";
 import { Reveal } from "@/components/site/Reveal";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -19,12 +21,12 @@ import {
   TEAM_MEMBER_KEYS,
   TEAM_PHOTOS,
   PROCESS_STEP_KEYS,
-  TESTIMONIAL_KEYS,
   FAQ_KEYS,
 } from "@/lib/constants";
 import { getPublishedPosts } from "@/lib/data/posts";
 import { getActiveGalleryImages } from "@/lib/data/gallery";
 import { getSiteSettings } from "@/lib/data/site-settings";
+import { getGoogleReviews } from "@/lib/data/google-reviews";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import { buildAlternates } from "@/lib/seo";
 
@@ -57,24 +59,24 @@ export default async function HomePage({
     tBlog,
     tTeam,
     tProcess,
-    tTestimonials,
     tGallery,
     tFaq,
     posts,
     galleryImages,
     settings,
+    googleReviews,
   ] = await Promise.all([
     getTranslations("home"),
     getTranslations("services"),
     getTranslations("blog"),
     getTranslations("team"),
     getTranslations("process"),
-    getTranslations("testimonials"),
     getTranslations("gallery"),
     getTranslations("faq"),
     getPublishedPosts(),
     getActiveGalleryImages(),
     getSiteSettings(),
+    getGoogleReviews(),
   ]);
 
   const featuredServices = SERVICE_SLUGS.slice(0, 6);
@@ -107,6 +109,14 @@ export default async function HomePage({
           sameAs: [settings?.instagram_url, settings?.linkedin_url].filter(
             Boolean,
           ),
+          aggregateRating:
+            googleReviews.rating && googleReviews.userRatingCount
+              ? {
+                  "@type": "AggregateRating",
+                  ratingValue: googleReviews.rating,
+                  reviewCount: googleReviews.userRatingCount,
+                }
+              : undefined,
         }}
       />
       <JsonLd
@@ -372,29 +382,63 @@ export default async function HomePage({
         </Reveal>
       </section>
 
-      {/* Müvekkil yorumları */}
-      <section className="bg-bordo-50/60 py-20 sm:py-24">
-        <Reveal>
-        <Container>
-          <SectionHeading
-            align="center"
-            title={t("testimonialsTitle")}
-            subtitle={t("testimonialsSubtitle")}
-            className="mx-auto"
-          />
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {TESTIMONIAL_KEYS.map((key) => (
-              <TestimonialCard
-                key={key}
-                quote={tTestimonials(`items.${key}.quote`)}
-                name={tTestimonials(`items.${key}.name`)}
-                role={tTestimonials(`items.${key}.role`)}
-              />
-            ))}
-          </div>
-        </Container>
-        </Reveal>
-      </section>
+      {/* Müvekkil yorumları — gerçek Google yorumları (yalnızca 5 yıldız) */}
+      {googleReviews.reviews.length > 0 && (
+        <section className="bg-bordo-50/60 py-20 sm:py-24">
+          <Reveal>
+          <Container>
+            <SectionHeading
+              align="center"
+              title={t("testimonialsTitle")}
+              subtitle={t("testimonialsSubtitle")}
+              className="mx-auto"
+            />
+            {googleReviews.rating && (
+              <div className="mt-6 flex items-center justify-center gap-2 text-sm text-ink/70">
+                <GoogleGIcon className="h-4 w-4" />
+                <span className="font-semibold text-bordo-950">
+                  {googleReviews.rating.toFixed(1)}
+                </span>
+                <div className="flex items-center gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-3.5 w-3.5 fill-gold-400 text-gold-400"
+                    />
+                  ))}
+                </div>
+                {googleReviews.userRatingCount && (
+                  <span>
+                    ({googleReviews.userRatingCount} değerlendirme)
+                  </span>
+                )}
+              </div>
+            )}
+            <div className="mt-10 grid gap-6 sm:grid-cols-3">
+              {googleReviews.reviews.slice(0, 6).map((review) => (
+                <GoogleReviewCard
+                  key={`${review.authorName}-${review.publishTime}`}
+                  review={review}
+                />
+              ))}
+            </div>
+            {googleReviews.mapsUri && (
+              <div className="mt-10 text-center">
+                <a
+                  href={googleReviews.mapsUri}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-bordo-500 transition hover:text-gold-600"
+                >
+                  <GoogleGIcon className="h-4 w-4" />
+                  Google&rsquo;da Tüm Yorumları Gör →
+                </a>
+              </div>
+            )}
+          </Container>
+          </Reveal>
+        </section>
+      )}
 
       {/* SSS */}
       <section className="py-20 sm:py-24">

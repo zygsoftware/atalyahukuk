@@ -132,25 +132,6 @@
       }
     }
   },
-  "testimonials": {
-    "items": {
-      "t1": {
-        "quote": "I felt supported at every stage of the process — their approach is transparent and reassuring.",
-        "name": "M.K.",
-        "role": "Commercial Law Client"
-      },
-      "t2": {
-        "quote": "I'm truly grateful for the sensitivity and professionalism they showed during my divorce process.",
-        "name": "A.Y.",
-        "role": "Family Law Client"
-      },
-      "t3": {
-        "quote": "They resolved a complex enforcement case much faster and more smoothly than I expected.",
-        "name": "S.D.",
-        "role": "Corporate Client"
-      }
-    }
-  },
   "services": {
     "eyebrow": "Our Services",
     "title": "Our Practice Areas",

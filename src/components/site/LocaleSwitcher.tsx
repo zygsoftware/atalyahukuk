@@ -27,7 +27,7 @@ export function LocaleSwitcher() {
           className={
             locale === loc
               ? "rounded-full bg-bordo-500 px-3 py-2 text-cream"
-              : "rounded-full px-3 py-2 text-ink/60 hover:text-bordo-500"
+              : "rounded-full px-3 py-2 text-ink/80 hover:text-bordo-500"
           }
         >
           {loc.toUpperCase()}

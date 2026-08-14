@@ -132,25 +132,6 @@
       }
     }
   },
-  "testimonials": {
-    "items": {
-      "t1": {
-        "quote": "Sürecin her aşamasında yanımda olduklarını hissettim, güven veren ve şeffaf bir yaklaşımları var.",
-        "name": "M.K.",
-        "role": "Ticaret Hukuku Müvekkili"
-      },
-      "t2": {
-        "quote": "Boşanma sürecimde gösterdikleri hassasiyet ve profesyonellik için gerçekten teşekkür ederim.",
-        "name": "A.Y.",
-        "role": "Aile Hukuku Müvekkili"
-      },
-      "t3": {
-        "quote": "Karmaşık bir icra sürecini beklediğimden çok daha hızlı ve sorunsuz sonuçlandırdılar.",
-        "name": "S.D.",
-        "role": "Kurumsal Müvekkil"
-      }
-    }
-  },
   "services": {
     "eyebrow": "Hizmetlerimiz",
     "title": "Hukuki Hizmet Alanlarımız",
