@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale, getLocale } from "next-intl/server";
+import { Award, MessagesSquare, ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -290,9 +291,17 @@ export default async function HomePage({
           />
           <div className="mt-14">
             <ProcessTimeline
-              steps={PROCESS_STEP_KEYS.map((key) => ({
+              steps={PROCESS_STEP_KEYS.map((key, i) => ({
                 title: tProcess(`steps.${key}.title`),
                 body: tProcess(`steps.${key}.body`),
+                icon: (
+                  [
+                    "message-circle",
+                    "file-search",
+                    "clipboard-list",
+                    "check-circle",
+                  ] as const
+                )[i],
               }))}
             />
           </div>
@@ -301,24 +310,35 @@ export default async function HomePage({
       </section>
 
       {/* Neden biz */}
-      <section className="bg-bordo-50/60 py-20 sm:py-24">
+      <section className="relative overflow-hidden bg-bordo-950 py-20 sm:py-24">
+        <div className="pointer-events-none absolute -top-16 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-gold-600/10 blur-3xl" />
         <Reveal>
-        <Container>
+        <Container className="relative">
           <SectionHeading
             align="center"
             title={t("whyUsTitle")}
             className="mx-auto"
+            light
           />
-          <div className="mt-12 grid gap-8 sm:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-bordo-500 font-serif text-xl text-cream">
-                  {i}
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {(
+              [
+                [Award, 1],
+                [MessagesSquare, 2],
+                [ShieldCheck, 3],
+              ] as const
+            ).map(([Icon, i]) => (
+              <div
+                key={i}
+                className="group rounded-2xl border border-cream/10 bg-cream/[0.04] p-7 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-400/40 hover:bg-cream/[0.07]"
+              >
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-300 ring-1 ring-gold-400/30 transition-all duration-300 group-hover:scale-110 group-hover:bg-gold-500 group-hover:text-bordo-950">
+                  <Icon className="h-6 w-6" strokeWidth={1.6} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg text-bordo-950">
+                <h3 className="mt-5 font-serif text-lg text-cream">
                   {t(`whyUsItem${i}Title` as "whyUsItem1Title")}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                <p className="mt-2 text-sm leading-relaxed text-cream/65">
                   {t(`whyUsItem${i}Body` as "whyUsItem1Body")}
                 </p>
               </div>
