@@ -164,6 +164,7 @@ export interface Database {
           working_hours_en: string | null;
           instagram_url: string | null;
           linkedin_url: string | null;
+          facebook_url: string | null;
           maintenance_mode: boolean;
           updated_at: string;
         };

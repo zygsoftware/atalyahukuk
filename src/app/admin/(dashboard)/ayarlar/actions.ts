@@ -15,6 +15,7 @@ export async function updateSiteSettings(formData: FormData) {
     address_en: (formData.get("address_en") as string) || null,
     working_hours_tr: (formData.get("working_hours_tr") as string) || null,
     working_hours_en: (formData.get("working_hours_en") as string) || null,
+    facebook_url: (formData.get("facebook_url") as string) || null,
     instagram_url: (formData.get("instagram_url") as string) || null,
     linkedin_url: (formData.get("linkedin_url") as string) || null,
     maintenance_mode: formData.get("maintenance_mode") === "on",

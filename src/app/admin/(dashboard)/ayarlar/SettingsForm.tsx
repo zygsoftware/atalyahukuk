@@ -18,6 +18,7 @@ export function SettingsForm({
   const [addressEn, setAddressEn] = useState(initial.address_en ?? "");
   const [hoursTr, setHoursTr] = useState(initial.working_hours_tr ?? "");
   const [hoursEn, setHoursEn] = useState(initial.working_hours_en ?? "");
+  const [facebook, setFacebook] = useState(initial.facebook_url ?? "");
   const [instagram, setInstagram] = useState(initial.instagram_url ?? "");
   const [linkedin, setLinkedin] = useState(initial.linkedin_url ?? "");
   const [maintenanceMode, setMaintenanceMode] = useState(
@@ -39,6 +40,7 @@ export function SettingsForm({
     formData.set("address_en", addressEn);
     formData.set("working_hours_tr", hoursTr);
     formData.set("working_hours_en", hoursEn);
+    formData.set("facebook_url", facebook);
     formData.set("instagram_url", instagram);
     formData.set("linkedin_url", linkedin);
     if (maintenanceMode) formData.set("maintenance_mode", "on");
@@ -171,6 +173,17 @@ export function SettingsForm({
       <div>
         <h2 className="font-serif text-lg text-bordo-950">Sosyal Medya</h2>
         <div className="mt-4 grid gap-6 sm:grid-cols-2">
+          <div>
+            <label className="text-sm font-medium text-ink/80">
+              Facebook URL
+            </label>
+            <input
+              value={facebook}
+              onChange={(e) => setFacebook(e.target.value)}
+              placeholder="https://facebook.com/..."
+              className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+            />
+          </div>
           <div>
             <label className="text-sm font-medium text-ink/80">
               Instagram URL

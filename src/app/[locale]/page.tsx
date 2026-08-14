@@ -106,7 +106,11 @@ export default async function HomePage({
             addressLocality: "Antalya",
             addressCountry: "TR",
           },
-          sameAs: [settings?.instagram_url, settings?.linkedin_url].filter(
+          sameAs: [
+            settings?.facebook_url,
+            settings?.instagram_url,
+            settings?.linkedin_url,
+          ].filter(
             Boolean,
           ),
           aggregateRating:
