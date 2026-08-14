@@ -167,21 +167,29 @@ export default async function HomePage({
           >
             <HeroSlider
               slides={[
-                { type: "logo", src: "/logo-mark.png", alt: SITE_NAME },
+                {
+                  type: "logo",
+                  src: "/logo-mark.png",
+                  alt: SITE_NAME,
+                  radius: "50%",
+                },
                 {
                   type: "photo",
                   src: "/images/stock/atalya-hukuk-burosu-musteri-gorusmesi.jpg",
                   alt: "Atalya Hukuk Bürosu ekibi müvekkil görüşmesinde",
+                  radius: "3rem",
                 },
                 {
                   type: "photo",
                   src: "/images/stock/musteri-danisman-belge-inceleme.jpg",
                   alt: "Müvekkil ve danışman birlikte dosya inceliyor",
+                  radius: "60% 40% 55% 45% / 55% 45% 60% 40%",
                 },
                 {
                   type: "photo",
                   src: "/images/stock/hukuk-sozlesme-imza-belge.jpg",
                   alt: "Hukuki sözleşme ve belge imza süreci",
+                  radius: "1rem 4rem 1rem 4rem",
                 },
               ]}
             />
