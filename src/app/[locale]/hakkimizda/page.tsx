@@ -55,8 +55,8 @@ export default async function AboutPage({
         <Container className="max-w-4xl">
           <div className="relative aspect-[21/9] overflow-hidden rounded-3xl">
             <Image
-              src="/images/stock/atalya-hukuk-burosu-antalya-ofis.jpg"
-              alt="Atalya Hukuk Bürosu Antalya ofisinde müvekkil görüşmesi"
+              src="/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg"
+              alt="Atalya Hukuk Bürosu Antalya ofisi"
               fill
               sizes="(min-width: 1024px) 900px, 100vw"
               className="object-cover"
@@ -89,8 +89,8 @@ export default async function AboutPage({
 
           <div className="relative mt-14 aspect-[16/9] overflow-hidden rounded-2xl">
             <Image
-              src="/images/stock/hukuk-sozlesme-imza-belge.jpg"
-              alt="Hukuki sözleşme ve belge imza süreci"
+              src="/images/ofis/mumtaz-kose.jpg"
+              alt="Atalya Hukuk Bürosu avukatı"
               fill
               sizes="(min-width: 1024px) 768px, 100vw"
               className="object-cover"
@@ -177,8 +177,8 @@ export default async function AboutPage({
         <Container className="max-w-4xl">
           <div className="relative aspect-[21/9] overflow-hidden rounded-3xl">
             <Image
-              src="/images/stock/musteri-danisman-belge-inceleme.jpg"
-              alt="Müvekkil ve danışman birlikte dosya inceliyor"
+              src="/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg"
+              alt="Atalya Hukuk Bürosu çalışma ortamı"
               fill
               sizes="(min-width: 1024px) 900px, 100vw"
               className="object-cover"

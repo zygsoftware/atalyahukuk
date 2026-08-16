@@ -34,8 +34,8 @@ export default async function ServicesPage({
     <>
       <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
         <Image
-          src="/images/stock/hukuk-hizmetleri-adalet-terazisi.jpg"
-          alt="Atalya Hukuk Bürosu hukuki hizmet alanları — adalet terazisi"
+          src="/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg"
+          alt="Atalya Hukuk Bürosu ofisi"
           fill
           sizes="100vw"
           className="absolute inset-0 z-0 object-cover opacity-25"

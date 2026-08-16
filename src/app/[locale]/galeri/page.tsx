@@ -50,8 +50,8 @@ export default async function GalleryPage({
     <>
       <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
         <Image
-          src="/images/stock/hukuk-burosu-ekip-calisma-ortami.jpg"
-          alt="Atalya Hukuk Bürosu ekip çalışma ortamı galerisi"
+          src="/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg"
+          alt="Atalya Hukuk Bürosu ofisi galerisi"
           fill
           sizes="100vw"
           className="absolute inset-0 z-0 object-cover opacity-25"
