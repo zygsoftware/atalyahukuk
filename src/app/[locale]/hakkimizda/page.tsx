@@ -87,16 +87,6 @@ export default async function AboutPage({
             </p>
           </div>
 
-          <div className="relative mt-14 aspect-[16/9] overflow-hidden rounded-2xl">
-            <Image
-              src="/images/ofis/mumtaz-kose.jpg"
-              alt="Atalya Hukuk Bürosu avukatı"
-              fill
-              sizes="(min-width: 1024px) 768px, 100vw"
-              className="object-cover"
-            />
-          </div>
-
           <div className="mt-14">
             <h2 className="font-serif text-2xl text-bordo-950">
               {t("expertiseTitle")}
