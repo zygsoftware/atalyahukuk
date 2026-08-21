@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CheckCircle2 } from "lucide-react";
@@ -7,7 +8,12 @@ import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ServiceCard } from "@/components/site/ServiceCard";
-import { SERVICE_SLUGS, type ServiceSlug, SITE_URL } from "@/lib/constants";
+import {
+  SERVICE_IMAGES,
+  SERVICE_SLUGS,
+  type ServiceSlug,
+  SITE_URL,
+} from "@/lib/constants";
 import { SERVICE_ICONS } from "@/lib/service-icons";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 import { buildAlternates } from "@/lib/seo";
@@ -86,8 +92,17 @@ export default async function ServiceDetailPage({
       <JsonLd data={breadcrumbJsonLd} />
 
       <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
-        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
-        <Container className="relative">
+        <Image
+          src={SERVICE_IMAGES[slug]}
+          alt={t(`items.${slug}.title`)}
+          fill
+          sizes="100vw"
+          priority
+          className="absolute inset-0 z-0 object-cover opacity-25"
+        />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-bordo-950/90 via-bordo-950/85 to-bordo-950" />
+        <div className="pointer-events-none absolute -right-20 -top-20 z-0 h-72 w-72 rounded-full bg-gold-600/10 blur-3xl" />
+        <Container className="relative z-10">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-300 ring-1 ring-gold-400/30">
             <Icon className="h-7 w-7" strokeWidth={1.75} />
           </div>
@@ -103,7 +118,17 @@ export default async function ServiceDetailPage({
       <section className="py-16 sm:py-20">
         <Container className="grid gap-14 lg:grid-cols-[1.3fr_1fr]">
           <div>
-            <p className="text-lg leading-relaxed text-ink/75">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
+              <Image
+                src={SERVICE_IMAGES[slug]}
+                alt={t(`items.${slug}.title`)}
+                fill
+                sizes="(min-width: 1024px) 700px, 100vw"
+                className="object-cover"
+              />
+            </div>
+
+            <p className="mt-10 text-lg leading-relaxed text-ink/75">
               {t(`items.${slug}.description`)}
             </p>
 

@@ -28,6 +28,18 @@ export const SERVICE_SLUGS = [
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 
+// Hizmet detay sayfası hero görselleri.
+export const SERVICE_IMAGES: Record<ServiceSlug, string> = {
+  "ceza-hukuku": "/images/hizmet/ceza-hukuku.jpg",
+  "aile-hukuku": "/images/hizmet/aile-hukuku.jpg",
+  "is-hukuku": "/images/hizmet/is-hukuku.jpg",
+  "ticaret-hukuku": "/images/hizmet/ticaret-hukuku.jpg",
+  "gayrimenkul-hukuku": "/images/hizmet/gayrimenkul-hukuku.jpg",
+  "icra-iflas-hukuku": "/images/hizmet/icra-iflas-hukuku.jpg",
+  "miras-hukuku": "/images/hizmet/miras-hukuku.jpg",
+  "sozlesmeler-hukuku": "/images/hizmet/sozlesmeler-hukuku.jpg",
+};
+
 export const TEAM_MEMBER_KEYS = ["member1", "member2"] as const;
 
 // Gerçek ekip fotoğrafları eklendiğinde buraya /images/ofis/... yolu yazılır.
