@@ -205,22 +205,6 @@ export default async function HomePage({
             />
           </div>
         </Container>
-
-        <Container className="relative grid grid-cols-2 gap-6 border-t border-cream/10 py-10 sm:grid-cols-4">
-          {[
-            [t("statsExperience"), "10+"],
-            [t("statsCases"), "500+"],
-            [t("statsClients"), "300+"],
-            [t("statsAreas"), "8"],
-          ].map(([label, value]) => (
-            <div key={label} className="text-center sm:text-left">
-              <p className="font-serif text-3xl text-gold-300">{value}</p>
-              <p className="mt-1 text-xs uppercase tracking-wide text-cream/60">
-                {label}
-              </p>
-            </div>
-          ))}
-        </Container>
       </section>
 
       {/* Hakkımızda teaser */}
