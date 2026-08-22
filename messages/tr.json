@@ -86,7 +86,8 @@
   "team": {
     "members": {
       "member1": { "name": "Av. Mümtaz Köse", "title": "Kurucu Avukat" },
-      "member2": { "name": "Av. Furkan Yağcı", "title": "Kurucu Avukat" }
+      "member2": { "name": "Av. Furkan Yağcı", "title": "Kurucu Avukat" },
+      "member3": { "name": "Gürkan Yavuz", "title": "Bilgi İşlem Uzmanı" }
     }
   },
   "process": {

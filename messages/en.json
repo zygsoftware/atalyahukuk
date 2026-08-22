@@ -86,7 +86,8 @@
   "team": {
     "members": {
       "member1": { "name": "Mümtaz Köse, Esq.", "title": "Founding Attorney" },
-      "member2": { "name": "Furkan Yağcı, Esq.", "title": "Founding Attorney" }
+      "member2": { "name": "Furkan Yağcı, Esq.", "title": "Founding Attorney" },
+      "member3": { "name": "Gürkan Yavuz", "title": "IT Specialist" }
     }
   },
   "process": {

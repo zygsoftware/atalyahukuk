@@ -149,7 +149,7 @@ export default async function AboutPage({
             subtitle={t("teamBody")}
             className="mx-auto"
           />
-          <div className="mx-auto mt-12 grid max-w-xl gap-6 sm:grid-cols-2">
+          <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-3">
             {TEAM_MEMBER_KEYS.map((key) => (
               <TeamCard
                 key={key}
