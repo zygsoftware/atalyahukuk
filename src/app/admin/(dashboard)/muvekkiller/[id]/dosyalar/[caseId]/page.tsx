@@ -4,16 +4,25 @@ import { createClient } from "@/lib/supabase/server";
 import { DeleteButton } from "@/components/admin/DeleteButton";
 import { HearingStatusSelect } from "@/components/admin/HearingStatusSelect";
 import { CaseForm } from "../CaseForm";
+import { DocumentForm } from "./DocumentForm";
 import {
   updateCase,
   deleteCase,
   createHearing,
   setHearingStatusForm,
   deleteHearing,
+  addCaseDocument,
+  deleteCaseDocument,
 } from "../actions";
 import { TR_TIME_ZONE } from "@/lib/timezone";
 
 export const metadata = { title: "Dosya Detayı" };
+
+function formatFileSize(bytes: number | null) {
+  if (!bytes) return null;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
 
 export default async function CaseDetailPage({
   params,
@@ -23,7 +32,7 @@ export default async function CaseDetailPage({
   const { id, caseId } = await params;
   const supabase = await createClient();
 
-  const [{ data: client }, { data: caseRow }, { data: hearings }] =
+  const [{ data: client }, { data: caseRow }, { data: hearings }, { data: documents }] =
     await Promise.all([
       supabase.from("clients").select("id, full_name").eq("id", id).single(),
       supabase.from("cases").select("*").eq("id", caseId).single(),
@@ -32,9 +41,23 @@ export default async function CaseDetailPage({
         .select("*")
         .eq("case_id", caseId)
         .order("hearing_date", { ascending: true }),
+      supabase
+        .from("case_documents")
+        .select("*")
+        .eq("case_id", caseId)
+        .order("created_at", { ascending: false }),
     ]);
 
   if (!client || !caseRow || caseRow.client_id !== client.id) notFound();
+
+  const documentsWithUrls = await Promise.all(
+    (documents ?? []).map(async (doc) => {
+      const { data: signed } = await supabase.storage
+        .from("case-documents")
+        .createSignedUrl(doc.file_path, 3600);
+      return { ...doc, signedUrl: signed?.signedUrl ?? null };
+    }),
+  );
 
   return (
     <div>
@@ -150,6 +173,59 @@ export default async function CaseDetailPage({
             </button>
           </div>
         </form>
+      </div>
+
+      <div className="mt-12 max-w-2xl">
+        <h2 className="font-serif text-xl text-bordo-950">Evraklar</h2>
+
+        <div className="mt-4 divide-y divide-bordo-100 rounded-xl border border-bordo-100 bg-white">
+          {documentsWithUrls.length === 0 ? (
+            <p className="px-5 py-6 text-sm text-ink/60">
+              Bu dosyaya ait evrak bulunmuyor.
+            </p>
+          ) : (
+            documentsWithUrls.map((doc) => (
+              <div
+                key={doc.id}
+                className="flex items-center justify-between gap-3 px-5 py-4"
+              >
+                <div>
+                  {doc.signedUrl ? (
+                    <a
+                      href={doc.signedUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-bordo-500 hover:underline"
+                    >
+                      {doc.name}
+                    </a>
+                  ) : (
+                    <p className="text-sm font-semibold text-ink">
+                      {doc.name}
+                    </p>
+                  )}
+                  <p className="mt-0.5 text-xs text-ink/60">
+                    {[
+                      formatFileSize(doc.file_size),
+                      new Date(doc.created_at).toLocaleDateString("tr-TR"),
+                    ]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                </div>
+                <DeleteButton
+                  action={deleteCaseDocument.bind(null, id, caseId, doc.id)}
+                  confirmMessage="Bu evrakı silmek istediğinizden emin misiniz?"
+                />
+              </div>
+            ))
+          )}
+        </div>
+
+        <DocumentForm
+          caseId={caseId}
+          onSubmit={addCaseDocument.bind(null, id, caseId)}
+        />
       </div>
     </div>
   );

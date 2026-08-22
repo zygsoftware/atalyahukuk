@@ -120,3 +120,52 @@ export async function deleteHearing(
   await supabase.from("hearings").delete().eq("id", hearingId);
   redirect(`/admin/muvekkiller/${clientId}/dosyalar/${caseId}`);
 }
+
+export async function addCaseDocument(
+  clientId: string,
+  caseId: string,
+  formData: FormData,
+) {
+  const staff = await requireAdmin();
+  const name = String(formData.get("name") ?? "").trim();
+  const filePath = String(formData.get("file_path") ?? "").trim();
+  const fileSizeRaw = formData.get("file_size") as string;
+
+  if (!name || !filePath) {
+    throw new Error("Evrak adı ve dosya zorunludur.");
+  }
+
+  const supabase = await createClient();
+  const { error } = await supabase.from("case_documents").insert({
+    case_id: caseId,
+    name,
+    file_path: filePath,
+    file_size: fileSizeRaw ? Number(fileSizeRaw) : null,
+    uploaded_by: staff.id,
+  });
+  if (error) throw new Error(error.message);
+
+  redirect(`/admin/muvekkiller/${clientId}/dosyalar/${caseId}`);
+}
+
+export async function deleteCaseDocument(
+  clientId: string,
+  caseId: string,
+  documentId: string,
+) {
+  await requireAdmin();
+  const supabase = await createClient();
+
+  const { data: doc } = await supabase
+    .from("case_documents")
+    .select("file_path")
+    .eq("id", documentId)
+    .single();
+
+  if (doc?.file_path) {
+    await supabase.storage.from("case-documents").remove([doc.file_path]);
+  }
+  await supabase.from("case_documents").delete().eq("id", documentId);
+
+  redirect(`/admin/muvekkiller/${clientId}/dosyalar/${caseId}`);
+}

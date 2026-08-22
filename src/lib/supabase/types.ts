@@ -262,6 +262,30 @@ export interface Database {
         Update: Partial<Database["public"]["Tables"]["cases"]["Insert"]>;
         Relationships: [];
       };
+      case_documents: {
+        Row: {
+          id: string;
+          case_id: string;
+          name: string;
+          file_path: string;
+          file_size: number | null;
+          uploaded_by: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          case_id: string;
+          name: string;
+          file_path: string;
+          file_size?: number | null;
+          uploaded_by?: string | null;
+          created_at?: string;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["case_documents"]["Insert"]
+        >;
+        Relationships: [];
+      };
       hearings: {
         Row: {
           id: string;
