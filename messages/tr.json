@@ -4,9 +4,12 @@
     "titleTemplate": "%s | Atalya Hukuk Bürosu",
     "defaultDescription": "Atalya Hukuk Bürosu; Antalya merkezli olarak ceza, aile, iş, ticaret ve gayrimenkul hukuku başta olmak üzere birçok alanda güvenilir ve etkili hukuki danışmanlık sunar."
   },
-  "whatsapp": {
-    "ariaLabel": "WhatsApp'tan yazın",
-    "prefilledMessage": "Merhaba, Atalya Hukuk Bürosu'ndan bilgi almak istiyorum."
+  "floatingContact": {
+    "whatsappLabel": "WhatsApp'tan iletişime geç",
+    "whatsappAriaLabel": "WhatsApp'tan yazın",
+    "whatsappPrefilledMessage": "Merhaba, Atalya Hukuk Bürosu'ndan bilgi almak istiyorum.",
+    "emailAriaLabel": "E-posta gönderin",
+    "telegramAriaLabel": "Telegram'dan yazın"
   },
   "cookieConsent": {
     "message": "Sitemizi daha iyi hale getirmek ve ziyaretçi istatistiklerini anlamak için çerezler kullanıyoruz. Kabul ederseniz Google Analytics devreye girer.",

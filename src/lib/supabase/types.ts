@@ -193,6 +193,7 @@ export interface Database {
           instagram_url: string | null;
           linkedin_url: string | null;
           facebook_url: string | null;
+          telegram_url: string | null;
           maintenance_mode: boolean;
           updated_at: string;
         };

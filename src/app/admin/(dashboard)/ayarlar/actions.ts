@@ -18,6 +18,7 @@ export async function updateSiteSettings(formData: FormData) {
     facebook_url: (formData.get("facebook_url") as string) || null,
     instagram_url: (formData.get("instagram_url") as string) || null,
     linkedin_url: (formData.get("linkedin_url") as string) || null,
+    telegram_url: (formData.get("telegram_url") as string) || null,
     maintenance_mode: formData.get("maintenance_mode") === "on",
   };
 

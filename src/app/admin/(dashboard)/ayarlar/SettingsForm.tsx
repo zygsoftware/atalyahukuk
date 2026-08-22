@@ -21,6 +21,7 @@ export function SettingsForm({
   const [facebook, setFacebook] = useState(initial.facebook_url ?? "");
   const [instagram, setInstagram] = useState(initial.instagram_url ?? "");
   const [linkedin, setLinkedin] = useState(initial.linkedin_url ?? "");
+  const [telegram, setTelegram] = useState(initial.telegram_url ?? "");
   const [maintenanceMode, setMaintenanceMode] = useState(
     initial.maintenance_mode,
   );
@@ -43,6 +44,7 @@ export function SettingsForm({
     formData.set("facebook_url", facebook);
     formData.set("instagram_url", instagram);
     formData.set("linkedin_url", linkedin);
+    formData.set("telegram_url", telegram);
     if (maintenanceMode) formData.set("maintenance_mode", "on");
 
     startTransition(async () => {
@@ -203,6 +205,17 @@ export function SettingsForm({
               value={linkedin}
               onChange={(e) => setLinkedin(e.target.value)}
               placeholder="https://linkedin.com/..."
+              className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium text-ink/80">
+              Telegram URL
+            </label>
+            <input
+              value={telegram}
+              onChange={(e) => setTelegram(e.target.value)}
+              placeholder="https://t.me/kullaniciadi"
               className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
             />
           </div>
