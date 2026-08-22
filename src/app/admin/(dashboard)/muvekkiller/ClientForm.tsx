@@ -15,9 +15,6 @@ export function ClientForm({
   const [fullName, setFullName] = useState(initial?.full_name ?? "");
   const [phone, setPhone] = useState(initial?.phone ?? "");
   const [email, setEmail] = useState(initial?.email ?? "");
-  const [practiceArea, setPracticeArea] = useState(
-    initial?.practice_area ?? "",
-  );
   const [note, setNote] = useState(initial?.note ?? "");
   const [status, setStatus] = useState(initial?.status ?? "aktif");
   const [error, setError] = useState<string | null>(null);
@@ -31,7 +28,6 @@ export function ClientForm({
     formData.set("full_name", fullName);
     formData.set("phone", phone ?? "");
     formData.set("email", email ?? "");
-    formData.set("practice_area", practiceArea ?? "");
     formData.set("note", note ?? "");
     formData.set("status", status);
 
@@ -78,36 +74,23 @@ export function ClientForm({
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div>
-          <label className="text-sm font-medium text-ink/80">
-            Hukuk Alanı
-          </label>
-          <input
-            value={practiceArea ?? ""}
-            onChange={(e) => setPracticeArea(e.target.value)}
-            placeholder="ör. Aile Hukuku"
-            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
-          />
-        </div>
-        <div>
-          <label className="text-sm font-medium text-ink/80">Durum</label>
-          <select
-            value={status}
-            onChange={(e) =>
-              setStatus(e.target.value as "aktif" | "pasif" | "arsiv")
-            }
-            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
-          >
-            <option value="aktif">Aktif</option>
-            <option value="pasif">Pasif</option>
-            <option value="arsiv">Arşiv</option>
-          </select>
-        </div>
+      <div>
+        <label className="text-sm font-medium text-ink/80">Durum</label>
+        <select
+          value={status}
+          onChange={(e) =>
+            setStatus(e.target.value as "aktif" | "pasif" | "arsiv")
+          }
+          className="mt-2 w-full max-w-xs rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+        >
+          <option value="aktif">Aktif</option>
+          <option value="pasif">Pasif</option>
+          <option value="arsiv">Arşiv</option>
+        </select>
       </div>
 
       <div>
-        <label className="text-sm font-medium text-ink/80">Dosya Notu</label>
+        <label className="text-sm font-medium text-ink/80">Müvekkil Notu</label>
         <textarea
           rows={6}
           value={note ?? ""}

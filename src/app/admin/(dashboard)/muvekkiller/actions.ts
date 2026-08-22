@@ -10,7 +10,6 @@ function readFields(formData: FormData) {
     full_name: String(formData.get("full_name") ?? "").trim(),
     phone: (formData.get("phone") as string) || null,
     email: (formData.get("email") as string) || null,
-    practice_area: (formData.get("practice_area") as string) || null,
     note: (formData.get("note") as string) || null,
     status: (formData.get("status") as ClientStatus) || "aktif",
   };

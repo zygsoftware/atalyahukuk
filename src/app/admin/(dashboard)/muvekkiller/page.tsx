@@ -21,7 +21,7 @@ export default async function AdminClientsListPage({
 
   let query = supabase
     .from("clients")
-    .select("id, full_name, phone, email, practice_area, status, created_at")
+    .select("id, full_name, phone, email, status, created_at")
     .order("created_at", { ascending: false });
 
   if (q) {
@@ -58,7 +58,6 @@ export default async function AdminClientsListPage({
             <tr>
               <th className="px-5 py-3">Ad Soyad</th>
               <th className="px-5 py-3">İletişim</th>
-              <th className="px-5 py-3">Hukuk Alanı</th>
               <th className="px-5 py-3">Durum</th>
               <th className="px-5 py-3" />
             </tr>
@@ -76,9 +75,6 @@ export default async function AdminClientsListPage({
                 </td>
                 <td className="px-5 py-3 text-ink/60">
                   {client.phone ?? client.email ?? "—"}
-                </td>
-                <td className="px-5 py-3 text-ink/60">
-                  {client.practice_area ?? "—"}
                 </td>
                 <td className="px-5 py-3">
                   <span className="rounded-full bg-bordo-50 px-2.5 py-1 text-xs font-medium text-bordo-600">
@@ -102,7 +98,7 @@ export default async function AdminClientsListPage({
             ))}
             {(clients ?? []).length === 0 && (
               <tr>
-                <td colSpan={5} className="px-5 py-10 text-center text-ink/50">
+                <td colSpan={4} className="px-5 py-10 text-center text-ink/50">
                   Kayıtlı müvekkil bulunamadı.
                 </td>
               </tr>
