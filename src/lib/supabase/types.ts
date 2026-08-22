@@ -110,6 +110,9 @@ export interface Database {
           practice_area: string | null;
           note: string | null;
           status: ClientStatus;
+          nispi_oran: number | null;
+          maktu_tahsil_edilen_tutar: number | null;
+          maktu_tahsil_edilen_tarih: string | null;
           created_by: string | null;
           created_at: string;
           updated_at: string;
@@ -122,11 +125,36 @@ export interface Database {
           practice_area?: string | null;
           note?: string | null;
           status?: ClientStatus;
+          nispi_oran?: number | null;
+          maktu_tahsil_edilen_tutar?: number | null;
+          maktu_tahsil_edilen_tarih?: string | null;
           created_by?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["clients"]["Insert"]>;
+        Relationships: [];
+      };
+      client_installments: {
+        Row: {
+          id: string;
+          client_id: string;
+          amount: number;
+          due_date: string;
+          created_by: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          client_id: string;
+          amount: number;
+          due_date: string;
+          created_by?: string | null;
+          created_at?: string;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["client_installments"]["Insert"]
+        >;
         Relationships: [];
       };
       contact_messages: {

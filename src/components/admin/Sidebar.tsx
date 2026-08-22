@@ -45,6 +45,12 @@ const NAV = [
     roles: ["admin"],
   },
   {
+    href: "/admin/dosyalar",
+    label: "Dosyalar",
+    exact: false,
+    roles: ["admin"],
+  },
+  {
     href: "/admin/kullanicilar",
     label: "Kullanıcılar",
     exact: false,
