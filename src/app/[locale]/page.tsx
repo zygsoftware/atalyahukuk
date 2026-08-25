@@ -185,7 +185,7 @@ export default async function HomePage({
               slides={[
                 {
                   type: "logo",
-                  src: "/logo-mark.png",
+                  src: "/slider-1.png",
                   alt: SITE_NAME,
                   radius: "50%",
                 },
