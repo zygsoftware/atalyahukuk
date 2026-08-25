@@ -145,86 +145,500 @@
     "backToList": "Tüm Hizmetlere Dön",
     "contactCta": "Bu Alanda Danışmanlık Alın",
     "benefitsTitle": "Bu Alanda Sunduğumuz Hizmetler",
+    "topicsTitle": "Kapsadığımız Konular",
+    "faqTitle": "Sıkça Sorulan Sorular",
     "relatedTitle": "İlgili Hizmet Alanları",
     "items": {
       "ceza-hukuku": {
         "title": "Ceza Hukuku",
-        "shortDescription": "Soruşturma ve kovuşturma aşamalarında etkin savunma ve hukuki temsil.",
-        "description": "Ceza Hukuku ekibimiz; gözaltı, sorgu, soruşturma ve kovuşturma süreçlerinin her aşamasında müvekkillerimizin haklarını korur. Şüpheli, sanık ya da mağdur sıfatıyla yürütülen tüm ceza yargılamalarında etkin savunma stratejileri geliştiriyoruz.",
+        "shortDescription": "Gözaltı, soruşturma ve kovuşturma sürecinin her evresinde etkin savunma, hukuki temsil ve danışmanlık hizmeti sunuyoruz.",
+        "description": "Ceza Hukuku ekibimiz; gözaltı, ifade alma, soruşturma ve kovuşturma süreçlerinin her aşamasında şüpheli, sanık veya mağdur sıfatıyla müvekkillerimizin haklarını korur. Dosyanın ilk anından itibaren devreye girerek delil toplama sürecini takip eder, savunma stratejisini olayın özelliklerine göre şekillendirir ve yargılamanın tüm aşamalarında etkin temsil sağlarız.",
+        "detailBody": "Ağır ceza mahkemelerini gerektiren suçlardan ekonomik suçlara, bilişim suçlarından trafik kazalarına kadar geniş bir yelpazede tecrübe sahibiyiz. Tutuklama ve adli kontrol kararlarına itiraz, uzlaştırma süreçlerinin yönetimi ve istinaf/Yargıtay aşamalarındaki temyiz başvuruları da hizmetlerimiz arasındadır. Amacımız, yargılamanın her noktasında müvekkillerimizin adil yargılanma hakkının eksiksiz kullanılmasını sağlamaktır.",
+        "topics": [
+          "Ağır ceza davaları (kasten öldürme, yaralama, cinsel suçlar)",
+          "Uyuşturucu ve kaçakçılık suçları",
+          "Dolandırıcılık, güveni kötüye kullanma ve ekonomik suçlar",
+          "Bilişim ve siber suçlar",
+          "Trafik kazaları ve taksirle işlenen suçlar",
+          "Gözaltı, tutuklama ve adli kontrol itirazları",
+          "İstinaf ve Yargıtay temyiz süreçleri"
+        ],
         "benefits": [
-          "Gözaltı ve sorgu aşamasında hukuki destek",
-          "Soruşturma dosyasının titizlikle incelenmesi",
-          "Duruşmalarda etkin savunma ve temsil"
+          "Gözaltı ve ifade alma aşamasında hızlı hukuki destek",
+          "Soruşturma dosyasının titizlikle incelenmesi ve delil değerlendirmesi",
+          "Duruşmalarda etkin savunma ve temsil",
+          "Tutuklama ve adli kontrol kararlarına itiraz",
+          "Uzlaştırma ve etkin pişmanlık süreçlerinin yönetimi",
+          "İstinaf ve Yargıtay aşamalarında temsil"
+        ],
+        "faq": [
+          {
+            "question": "Gözaltına alındığımda ilk olarak ne yapmalıyım?",
+            "answer": "Susma hakkınızı kullanabilir ve avukat talep edebilirsiniz. Avukatla görüşmeden ifade vermemeniz, haklarınızın korunması açısından büyük önem taşır."
+          },
+          {
+            "question": "Soruşturma ve kovuşturma aşamaları arasındaki fark nedir?",
+            "answer": "Soruşturma, savcılığın suç şüphesini araştırdığı gizli aşamadır; kovuşturma ise iddianamenin kabulüyle başlayan, mahkemede yürütülen yargılama aşamasıdır."
+          },
+          {
+            "question": "Uzlaştırma süreci nasıl işler?",
+            "answer": "Kanunda uzlaştırma kapsamında sayılan suçlarda taraflar bir uzlaştırmacı aracılığıyla anlaşabilir; anlaşma sağlanırsa kamu davası açılmaz veya düşer."
+          },
+          {
+            "question": "Ceza davasında avukatla temsil edilmek zorunlu mudur?",
+            "answer": "Belirli ağırlıktaki suçlarda müdafi bulundurulması kanunen zorunludur; zorunlu olmasa dahi haklarınızın tam korunması için avukat desteği almanız önemle tavsiye edilir."
+          }
         ]
       },
       "aile-hukuku": {
         "title": "Aile Hukuku",
-        "shortDescription": "Boşanma, nafaka, velayet ve mal paylaşımı süreçlerinde hukuki destek.",
-        "description": "Boşanma, anlaşmalı/çekişmeli boşanma, nafaka, velayet, mal rejimi ve tazminat davalarında müvekkillerimizin haklarını hassasiyetle koruyor, süreci en az yıpranmayla sonuçlandırmayı hedefliyoruz.",
+        "shortDescription": "Boşanma, nafaka, velayet ve mal paylaşımı süreçlerinde hassasiyetle yürütülen hukuki danışmanlık ve dava takibi.",
+        "description": "Aile Hukuku ekibimiz; anlaşmalı ve çekişmeli boşanma, nafaka, velayet, kişisel ilişki tesisi, mal rejimi tasfiyesi ve maddi/manevi tazminat davalarında müvekkillerimizin haklarını titizlikle korur. Sürecin duygusal yükünü göz önünde bulundurarak müvekkillerimize hem hukuki hem de insani bir yaklaşımla eşlik ederiz.",
+        "detailBody": "Evlilik birliğinin sona ermesi kadar, evlat edinme, soybağı, nişanın bozulması ve aile içi şiddete karşı koruma tedbirleri gibi konularda da danışmanlık ve dava takibi sağlıyoruz. Öncelikli hedefimiz, mümkün olduğunda anlaşmalı çözümlerle süreci hızlandırmak; anlaşma sağlanamayan durumlarda ise çekişmeli süreçte müvekkillerimizin menfaatini en güçlü şekilde savunmaktır.",
+        "topics": [
+          "Anlaşmalı ve çekişmeli boşanma davaları",
+          "Nafaka (tedbir, yoksulluk, iştirak) davaları",
+          "Velayet ve kişisel ilişki tesisi",
+          "Mal rejimi tasfiyesi ve katkı payı alacağı",
+          "Maddi ve manevi tazminat talepleri",
+          "Soybağının reddi ve babalık davaları",
+          "Aile içi şiddete karşı koruma tedbirleri (6284 sayılı Kanun)"
+        ],
         "benefits": [
-          "Anlaşmalı ve çekişmeli boşanma süreçlerinde temsil",
-          "Nafaka ve velayet uyuşmazlıklarında danışmanlık",
-          "Mal paylaşımı ve tazminat taleplerinin takibi"
+          "Anlaşmalı ve çekişmeli boşanma süreçlerinde uçtan uca temsil",
+          "Nafaka ve velayet uyuşmazlıklarında stratejik danışmanlık",
+          "Mal paylaşımı ve katkı payı alacağının hesaplanması",
+          "Maddi ve manevi tazminat taleplerinin takibi",
+          "Koruma tedbiri (6284 sayılı Kanun) başvurularında hızlı destek",
+          "Boşanma protokollerinin hazırlanması ve müzakeresi"
+        ],
+        "faq": [
+          {
+            "question": "Anlaşmalı boşanma ne kadar sürer?",
+            "answer": "Taraflar boşanmanın mali ve şahsi sonuçları üzerinde anlaştıysa, tek celsede sonuçlanabilir; süreç genellikle çekişmeli boşanmaya kıyasla çok daha kısadır."
+          },
+          {
+            "question": "Velayet hangi kriterlere göre belirlenir?",
+            "answer": "Mahkeme, kararını her zaman çocuğun üstün yararını gözeterek verir; ebeveynlerin ekonomik durumu, çocuğun yaşı ve mevcut yaşam düzeni gibi pek çok unsur değerlendirilir."
+          },
+          {
+            "question": "Boşanmada mal paylaşımı nasıl yapılır?",
+            "answer": "Türk hukukunda kural olarak edinilmiş mallara katılma rejimi uygulanır; evlilik süresince edinilen mal varlığı, eşler arasında eşit olarak paylaştırılır."
+          },
+          {
+            "question": "Nafaka miktarı neye göre belirlenir?",
+            "answer": "Nafaka; tarafların gelir durumu, ihtiyaçları ve hakkaniyet ilkesi gözetilerek hâkim tarafından takdir edilir, süreç içinde şartların değişmesiyle yeniden değerlendirilebilir."
+          }
         ]
       },
       "is-hukuku": {
         "title": "İş Hukuku",
-        "shortDescription": "İşçi ve işveren arasındaki uyuşmazlıklarda dava ve danışmanlık hizmeti.",
-        "description": "İşe iade, kıdem ve ihbar tazminatı, fazla mesai, iş kazası ve mobbing davaları ile işveren tarafında iş sözleşmeleri ve insan kaynakları süreçlerine yönelik danışmanlık sunuyoruz.",
+        "shortDescription": "İşçi ve işveren arasındaki uyuşmazlıklarda dava takibi, arabuluculuk ve kurumsal danışmanlık hizmeti.",
+        "description": "İş Hukuku ekibimiz, işe iade, kıdem ve ihbar tazminatı, fazla mesai ücreti, yıllık izin alacağı, iş kazası ve mobbing davalarında işçi tarafını; iş sözleşmelerinin hazırlanması, disiplin süreçleri ve toplu iş ilişkileri konularında ise işveren tarafını temsil eder.",
+        "detailBody": "Dava açılmadan önce zorunlu arabuluculuk sürecinin yönetiminden, iş mahkemelerindeki yargılamaya kadar sürecin tamamında yanınızdayız. Kurumsal müvekkillerimize; iş sözleşmesi ve personel yönetmeliği hazırlığı, fesih süreçlerinin mevzuata uygun yürütülmesi ve iş sağlığı-güvenliği yükümlülükleri konusunda düzenli danışmanlık desteği sağlıyoruz.",
+        "topics": [
+          "İşe iade davaları ve geçersiz fesih",
+          "Kıdem, ihbar tazminatı ve fazla mesai alacakları",
+          "İş kazası ve meslek hastalığından doğan tazminat davaları",
+          "Mobbing (psikolojik taciz) davaları",
+          "Zorunlu arabuluculuk süreçlerinin yönetimi",
+          "İş sözleşmesi ve personel yönetmeliği hazırlığı",
+          "Toplu iş sözleşmesi ve sendikal uyuşmazlıklar"
+        ],
         "benefits": [
-          "İşe iade ve tazminat davalarında temsil",
-          "İş sözleşmelerinin hazırlanması ve incelenmesi",
-          "İş kazası ve mobbing davalarında danışmanlık"
+          "İşe iade ve tazminat davalarında işçi/işveren temsili",
+          "Zorunlu arabuluculuk sürecinin etkin yönetimi",
+          "İş sözleşmelerinin mevzuata uygun hazırlanması ve incelenmesi",
+          "İş kazası ve mobbing davalarında danışmanlık",
+          "Fesih süreçlerinin hukuki risklerden arındırılması",
+          "İş mahkemelerinde dava takibi ve temsil"
+        ],
+        "faq": [
+          {
+            "question": "İşe iade davası açmadan önce arabulucuya başvurmak zorunlu mu?",
+            "answer": "Evet, işe iade ve çoğu işçilik alacağı davasında dava açılmadan önce arabulucuya başvurmak dava şartıdır; anlaşma sağlanamazsa süreç mahkemeye taşınır."
+          },
+          {
+            "question": "Kıdem tazminatına kimler hak kazanır?",
+            "answer": "Aynı işverende en az bir yıl çalışmış olup iş sözleşmesi kanunda sayılan haklı nedenlerle sona eren işçiler kıdem tazminatına hak kazanır."
+          },
+          {
+            "question": "Mobbinge maruz kaldığımı nasıl ispatlarım?",
+            "answer": "Yazışmalar, tanık beyanları ve varsa disiplin/şikayet süreçlerine ilişkin belgeler önemli delillerdir; sürecin başında bunların sistemli biçimde toplanması ispatı kolaylaştırır."
+          },
+          {
+            "question": "İşveren fazla mesai ücretini ödemezse ne yapabilirim?",
+            "answer": "Fazla mesai alacağınızı iş sözleşmesi devam ederken veya sona erdikten sonra arabuluculuk yoluyla, uzlaşma sağlanamazsa iş mahkemesinde dava açarak talep edebilirsiniz."
+          }
         ]
       },
       "ticaret-hukuku": {
         "title": "Ticaret ve Şirketler Hukuku",
-        "shortDescription": "Şirket kuruluşu, sözleşmeler ve ticari uyuşmazlıklarda danışmanlık.",
-        "description": "Şirket kuruluşu, birleşme ve devralmalar, ortaklık sözleşmeleri, ticari sözleşmelerin hazırlanması ve ticari uyuşmazlıkların çözümünde kurumsal müvekkillerimize kapsamlı hukuki destek sağlıyoruz.",
-        "benefits": [
-          "Şirket kuruluşu ve yapılandırma danışmanlığı",
+        "shortDescription": "Şirket kuruluşu, birleşme-devralma, ortaklık sözleşmeleri ve ticari uyuşmazlıklarda kurumsal hukuk danışmanlığı.",
+        "description": "Ticaret ve Şirketler Hukuku ekibimiz; şirket kuruluşu, tür değişikliği, birleşme ve devralmalar, pay devri, ortaklık ve hissedarlar sözleşmeleri ile ticari sözleşmelerin hazırlanmasında kurumsal müvekkillerimize uçtan uca hukuki destek sağlar.",
+        "detailBody": "Şirketler hukukunun yanı sıra, ticari alacakların tahsili, haksız rekabet, marka ve ticaret unvanı uyuşmazlıkları ile şirket ortakları arasındaki anlaşmazlıklarda da dava ve danışmanlık hizmeti veriyoruz. Küçük ve orta ölçekli işletmelerden kurumsal şirketlere kadar her ölçekteki müvekkilimize, ticari faaliyetlerinin her aşamasında hukuki risklerini en aza indirecek çözümler sunmayı amaçlıyoruz.",
+        "topics": [
+          "Şirket kuruluşu, tür değişikliği ve tasfiye",
+          "Birleşme, devralma ve pay devri işlemleri",
+          "Ortaklık ve hissedarlar sözleşmeleri",
           "Ticari sözleşmelerin hazırlanması ve müzakeresi",
-          "Ortaklık ve birleşme süreçlerinde hukuki destek"
+          "Ticari alacakların takibi ve tahsili",
+          "Haksız rekabet ve marka uyuşmazlıkları",
+          "Şirket ortakları arasındaki uyuşmazlıklar"
+        ],
+        "benefits": [
+          "Şirket kuruluşu ve yeniden yapılandırma danışmanlığı",
+          "Ticari sözleşmelerin hazırlanması ve müzakere desteği",
+          "Birleşme, devralma ve pay devri süreçlerinde hukuki destek",
+          "Ticari alacakların tahsilinde etkin takip",
+          "Haksız rekabet ve marka uyuşmazlıklarında temsil",
+          "Ortaklar arası uyuşmazlıkların çözümü"
+        ],
+        "faq": [
+          {
+            "question": "Hangi şirket türü benim işim için en uygunu?",
+            "answer": "Sorumluluk, vergi yükü, ortak sayısı ve sermaye yapısı gibi unsurlar değerlendirilerek limited, anonim veya diğer şirket türleri arasında işinize en uygun yapı belirlenir."
+          },
+          {
+            "question": "Ortaklar arasında anlaşmazlık çıkarsa ne yapılabilir?",
+            "answer": "Öncelikle ortaklık sözleşmesindeki uyuşmazlık çözüm mekanizmaları devreye girer; çözülemeyen durumlarda genel kurul kararlarının iptali veya haklı sebeple fesih gibi hukuki yollara başvurulabilir."
+          },
+          {
+            "question": "Ticari alacağımı nasıl tahsil edebilirim?",
+            "answer": "İhtarname ile başlayıp, gerekirse icra takibi veya ticari dava yoluyla alacağınızın tahsili sağlanabilir; sürecin hızı büyük ölçüde elinizdeki belgelerin sağlamlığına bağlıdır."
+          },
+          {
+            "question": "Şirket birleşmesi/devralması sürecinde nelere dikkat edilmeli?",
+            "answer": "Hukuki ve mali durum tespiti (due diligence), devir sözleşmesinin doğru kurgulanması ve rekabet hukuku yükümlülükleri sürecin en kritik aşamalarındandır."
+          }
         ]
       },
       "gayrimenkul-hukuku": {
         "title": "Gayrimenkul Hukuku",
-        "shortDescription": "Tapu, kira, kamulaştırma ve inşaat uyuşmazlıklarında hukuki temsil.",
-        "description": "Tapu iptal ve tescil, kira uyuşmazlıkları, kat mülkiyeti, kamulaştırma bedeli tespiti ve inşaat sözleşmelerinden doğan davalarda uzman desteği sunuyoruz.",
+        "shortDescription": "Tapu, kira, kat mülkiyeti, kamulaştırma ve inşaat uyuşmazlıklarında uzman hukuki temsil ve danışmanlık.",
+        "description": "Gayrimenkul Hukuku ekibimiz; tapu iptal ve tescil, ecrimisil, önalım (şufa), kat mülkiyeti ve kat irtifakından doğan uyuşmazlıklar ile kira ilişkisinden kaynaklanan tahliye ve alacak davalarında müvekkillerimizi temsil eder.",
+        "detailBody": "Kamulaştırma bedelinin tespiti ve kamulaştırmasız el atma davalarından, inşaat sözleşmeleri ve kat karşılığı inşaat uyuşmazlıklarına kadar geniş bir alanda hizmet veriyoruz. Gayrimenkul alım-satım öncesinde tapu kaydının hukuki durumunun incelenmesi (due diligence) ile olası riskleri önceden tespit ederek müvekkillerimizi güvenli işlemler yapmaları konusunda yönlendiriyoruz.",
+        "topics": [
+          "Tapu iptal ve tescil davaları",
+          "Kira uyuşmazlıkları ve tahliye davaları",
+          "Kat mülkiyeti ve kat irtifakı uyuşmazlıkları",
+          "Kamulaştırma bedeli tespiti ve kamulaştırmasız el atma",
+          "Önalım (şufa) hakkından doğan davalar",
+          "Kat karşılığı inşaat sözleşmesi uyuşmazlıkları",
+          "Gayrimenkul alım-satımında hukuki durum tespiti (due diligence)"
+        ],
         "benefits": [
           "Tapu iptal ve tescil davalarında temsil",
           "Kira ve kat mülkiyeti uyuşmazlıklarında danışmanlık",
-          "Kamulaştırma bedeli tespiti süreçlerinin takibi"
+          "Kamulaştırma bedeli tespiti süreçlerinin takibi",
+          "İnşaat ve kat karşılığı sözleşme uyuşmazlıklarında destek",
+          "Gayrimenkul alım-satımı öncesi hukuki risk analizi",
+          "Ecrimisil ve önalım davalarında temsil"
+        ],
+        "faq": [
+          {
+            "question": "Tapu iptal ve tescil davası ne zaman açılır?",
+            "answer": "Tapu kaydının hukuka aykırı biçimde oluştuğu, hileyle veya yetkisiz kişi tarafından devredildiği durumlarda gerçek hak sahibi tapu iptal ve tescil davası açabilir."
+          },
+          {
+            "question": "Kiracımı nasıl tahliye edebilirim?",
+            "answer": "Kira sözleşmesinin süresi, kira bedelinin ödenmemesi veya ihtiyaç gibi kanunda sayılan nedenlere göre ihtarname ve/veya dava yoluyla tahliye süreci başlatılabilir."
+          },
+          {
+            "question": "Kamulaştırma bedeline itiraz edebilir miyim?",
+            "answer": "Evet, kamulaştırma bedelinin düşük belirlendiğini düşünüyorsanız, kanunda öngörülen süre içinde bedel tespiti ve artırım davası açabilirsiniz."
+          },
+          {
+            "question": "Gayrimenkul almadan önce hangi kontrolleri yaptırmalıyım?",
+            "answer": "Tapu kaydındaki takyidatlar (ipotek, haciz, şerh), imar durumu ve varsa yapı ruhsatı/iskân belgesi mutlaka incelenmelidir; bu inceleme ileride doğabilecek uyuşmazlıkları önler."
+          }
         ]
       },
       "icra-iflas-hukuku": {
         "title": "İcra ve İflas Hukuku",
-        "shortDescription": "Alacakların tahsili ve icra takibi süreçlerinde etkin çözümler.",
-        "description": "İcra takibi başlatılması, alacağın tahsili, itirazın iptali/kaldırılması ve iflas süreçlerinde alacaklı ve borçlu taraflara hızlı ve etkili hukuki çözümler sunuyoruz.",
+        "shortDescription": "Alacakların hızlı ve etkin tahsili, icra takibi, itiraz ve iflas/konkordato süreçlerinde hukuki destek.",
+        "description": "İcra ve İflas Hukuku ekibimiz; ilamlı ve ilamsız icra takibi başlatılması, haciz işlemleri, itirazın iptali ve kaldırılması davaları ile menfi tespit ve istirdat davalarında alacaklı ve borçlu taraflara hızlı çözümler sunar.",
+        "detailBody": "Ticari alacaklardan kişisel borç ilişkilerine, kambiyo senetlerinden (çek, senet, poliçe) kaynaklanan takiplerden konkordato ve iflas erteleme süreçlerine kadar geniş bir uygulama alanında müvekkillerimizin yanındayız. Borçlu tarafında iseniz, haklarınızı koruyarak en uygun ödeme veya yeniden yapılandırma çözümünü bulmanıza; alacaklı tarafında iseniz, alacağınızı en hızlı ve etkin şekilde tahsil etmenize yardımcı oluyoruz.",
+        "topics": [
+          "İlamlı ve ilamsız icra takibi",
+          "Kambiyo senetlerine (çek, senet) özgü icra takibi",
+          "İtirazın iptali ve itirazın kaldırılması davaları",
+          "Haciz, muhafaza ve satış işlemlerinin takibi",
+          "Menfi tespit ve istirdat davaları",
+          "Konkordato ve iflas erteleme süreçleri",
+          "İflas ve iflasın ertelenmesi davaları"
+        ],
         "benefits": [
-          "İcra takibi başlatma ve alacak tahsili",
-          "İtirazın iptali ve kaldırılması süreçleri",
-          "İflas ve konkordato süreçlerinde danışmanlık"
+          "İcra takibi başlatma ve alacağın hızlı tahsili",
+          "İtirazın iptali ve kaldırılması davalarında temsil",
+          "Kambiyo senetlerinden doğan takiplerin yönetimi",
+          "Konkordato ve iflas süreçlerinde danışmanlık",
+          "Borçlu tarafında hak kaybını önleyici stratejik destek",
+          "Haciz ve satış aşamalarının yakından takibi"
+        ],
+        "faq": [
+          {
+            "question": "İcra takibine itiraz edersem süreç nasıl ilerler?",
+            "answer": "Borçlunun süresinde yaptığı itiraz takibi durdurur; alacaklı, itirazın iptali veya kaldırılması davası açarak takibe devam edilmesini sağlayabilir."
+          },
+          {
+            "question": "Elimde çek/senet var, alacağımı nasıl tahsil ederim?",
+            "answer": "Kambiyo senetlerine özgü icra takibi yoluyla, genel haciz yoluna göre daha hızlı işleyen bir süreçle alacağınızın tahsilini talep edebilirsiniz."
+          },
+          {
+            "question": "Borcumu ödeyemiyorum, konkordato bana uygun mu?",
+            "answer": "Konkordato, mali durumu bozulan ama iflasın önüne geçmek isteyen borçlulara alacaklılarla anlaşarak borçlarını yeniden yapılandırma imkânı tanır; uygunluğu somut duruma göre değerlendirilmelidir."
+          },
+          {
+            "question": "Haksız bir icra takibiyle karşılaştım, ne yapabilirim?",
+            "answer": "Süresi içinde icra dairesine itiraz edebilir, gerekirse menfi tespit davası açarak borçlu olmadığınızın tespitini talep edebilirsiniz."
+          }
         ]
       },
       "miras-hukuku": {
         "title": "Miras Hukuku",
-        "shortDescription": "Veraset, mirasın paylaşımı ve tenkis davalarında hukuki danışmanlık.",
-        "description": "Veraset ilamı alınması, mirasın reddi, mirasçılık belgesi, tenkis ve miras paylaşımı uyuşmazlıklarında müvekkillerimizin haklarını koruyoruz.",
+        "shortDescription": "Veraset, mirasçılık belgesi, mirasın reddi, tenkis ve miras paylaşımı süreçlerinde hukuki danışmanlık.",
+        "description": "Miras Hukuku ekibimiz; mirasçılık belgesi (veraset ilamı) alınması, mirasın reddi, mirastan yoksunluk, vasiyetnamenin iptali ve tenkis davaları ile miras paylaşımı (izale-i şüyu) süreçlerinde müvekkillerimizin haklarını korur.",
+        "detailBody": "Miras bırakanın sağlığında yapılan devirlerin muvazaa nedeniyle iptali, saklı pay ihlallerine karşı tenkis davası açılması ve mirasçılar arasındaki ortaklığın giderilmesi (izale-i şüyu) davalarında etkin temsil sağlıyoruz. Uyuşmazlık henüz doğmadan, miras planlaması ve vasiyetname hazırlığı konusunda da önleyici hukuki danışmanlık sunuyoruz.",
+        "topics": [
+          "Mirasçılık belgesi (veraset ilamı) alınması",
+          "Mirasın reddi ve mirastan yoksunluk",
+          "Vasiyetnamenin iptali ve tenkis davaları",
+          "Miras ortaklığının giderilmesi (izale-i şüyu) davaları",
+          "Muris muvazaası (mirastan mal kaçırma) davaları",
+          "Miras paylaşım sözleşmelerinin hazırlanması",
+          "Vasiyetname ve miras planlaması danışmanlığı"
+        ],
         "benefits": [
-          "Veraset ilamı ve mirasçılık belgesi işlemleri",
-          "Miras paylaşımı ve tenkis davalarında temsil",
-          "Mirasın reddi süreçlerinde danışmanlık"
+          "Mirasçılık belgesi ve veraset işlemlerinin hızlı takibi",
+          "Tenkis ve mirastan mal kaçırma (muvazaa) davalarında temsil",
+          "Miras ortaklığının giderilmesi davalarında danışmanlık",
+          "Mirasın reddi sürecinin süresinde ve doğru yürütülmesi",
+          "Vasiyetname hazırlığı ve miras planlaması desteği",
+          "Mirasçılar arası uyuşmazlıklarda uzlaştırıcı yaklaşım"
+        ],
+        "faq": [
+          {
+            "question": "Mirası reddetmek için ne kadar sürem var?",
+            "answer": "Yasal mirasçılar, mirasın kendilerine geçtiğini öğrendikleri tarihten itibaren üç ay içinde mirası reddedebilir; bu süre kaçırılırsa miras kabul edilmiş sayılır."
+          },
+          {
+            "question": "Saklı payım ihlal edildiyse ne yapabilirim?",
+            "answer": "Miras bırakanın yaptığı ölüme bağlı veya sağlararası kazandırmalar saklı payınızı zedeliyorsa, tenkis davası açarak eksik kalan payınızın tamamlanmasını talep edebilirsiniz."
+          },
+          {
+            "question": "Miras bırakan, ölmeden önce malını devretmişse ne yapılabilir?",
+            "answer": "Mirastan mal kaçırma amacıyla yapıldığı düşünülen devirler, muris muvazaası nedeniyle tapu iptali ve tescil davasıyla iptal ettirilebilir."
+          },
+          {
+            "question": "Mirasçılar mal üzerinde anlaşamıyorsa süreç nasıl ilerler?",
+            "answer": "Anlaşma sağlanamazsa, mirasçılardan herhangi biri izale-i şüyu (ortaklığın giderilmesi) davası açarak mirasa konu malların satılıp bedelinin paylaştırılmasını talep edebilir."
+          }
         ]
       },
       "sozlesmeler-hukuku": {
         "title": "Sözleşmeler Hukuku",
-        "shortDescription": "Her türlü sözleşmenin hazırlanması, incelenmesi ve uyuşmazlık çözümü.",
-        "description": "Bireysel ve kurumsal müvekkillerimiz için sözleşmelerin hazırlanması, müzakeresi, incelenmesi ve sözleşmeden doğan uyuşmazlıkların çözümünde danışmanlık veriyoruz.",
+        "shortDescription": "Her türlü ticari ve bireysel sözleşmenin hazırlanması, incelenmesi ve uyuşmazlıkların çözümünde hukuki destek.",
+        "description": "Sözleşmeler Hukuku ekibimiz; bireysel ve kurumsal müvekkillerimiz için alım-satım, kira, hizmet, eser, bayilik, franchise, gizlilik ve rekabet yasağı gibi her türlü sözleşmenin hazırlanması, müzakeresi ve hukuki incelemesinde danışmanlık sağlar.",
+        "detailBody": "Sözleşme öncesi risklerin tespit edilmesi kadar, sözleşmenin ifası sırasında ortaya çıkan temerrüt, ayıplı ifa ve haksız fesih gibi uyuşmazlıkların çözümünde de deneyim sahibiyiz. Standart sözleşme şablonlarınızın mevzuata ve güncel içtihada uygun hale getirilmesinden, tek seferlik özel sözleşmelerin sıfırdan hazırlanmasına kadar ihtiyacınıza uygun çözümler sunuyoruz.",
+        "topics": [
+          "Alım-satım ve hizmet sözleşmeleri",
+          "Kira, eser ve vekalet sözleşmeleri",
+          "Bayilik, distribütörlük ve franchise sözleşmeleri",
+          "Gizlilik (NDA) ve rekabet yasağı sözleşmeleri",
+          "Sözleşmeden doğan temerrüt ve tazminat davaları",
+          "Genel işlem şartlarının mevzuata uygunluk denetimi",
+          "Sözleşmenin haksız feshi ve ayıplı ifa uyuşmazlıkları"
+        ],
         "benefits": [
-          "Sözleşme taslaklarının hazırlanması",
-          "Mevcut sözleşmelerin hukuki incelemesi",
-          "Sözleşme uyuşmazlıklarının çözümü"
+          "İhtiyaca özel sözleşme taslaklarının hazırlanması",
+          "Mevcut sözleşmelerin hukuki risk analizi ve incelemesi",
+          "Sözleşme müzakerelerinde aktif destek",
+          "Temerrüt ve tazminat davalarında dava takibi",
+          "Standart sözleşme ve genel işlem şartlarının denetimi",
+          "Sözleşme uyuşmazlıklarında uzlaşma ve dava süreçlerinin yönetimi"
+        ],
+        "faq": [
+          {
+            "question": "İmzalamadan önce sözleşmemi neden bir avukata incelettirmeliyim?",
+            "answer": "Sözleşmedeki belirsiz ifadeler, tek taraflı fesih hükümleri veya cezai şart maddeleri ileride ciddi mali risklere yol açabilir; ön inceleme bu riskleri imzadan önce tespit etmenizi sağlar."
+          },
+          {
+            "question": "Karşı taraf sözleşmeyi ihlal ederse ne yapabilirim?",
+            "answer": "Öncelikle ihtarname ile temerrüde düşürülür; sonuç alınamazsa sözleşmenin ifası, feshi veya tazminat talebiyle dava yoluna gidilebilir."
+          },
+          {
+            "question": "Sözleşmede cezai şart maddesi ne işe yarar?",
+            "answer": "Cezai şart, sözleşmenin ihlali halinde ayrıca zarar ispatına gerek kalmadan talep edilebilecek önceden belirlenmiş bir tazminat tutarıdır; caydırıcılık sağlar."
+          },
+          {
+            "question": "Şablon bir sözleşme kullanmak yeterli midir?",
+            "answer": "Hazır şablonlar genel ihtiyaçları karşılasa da, işinizin veya işleminizin özelliklerine göre uyarlanmadığında önemli boşluklar bırakabilir; kritik işlemlerde özel hazırlanmış sözleşme daha güvenlidir."
+          }
+        ]
+      },
+      "idari-hukuku": {
+        "title": "İdari Hukuk",
+        "shortDescription": "İptal davaları, tam yargı davaları, imar ve kamu ihale uyuşmazlıklarında idareye karşı hukuki temsil.",
+        "description": "İdari Hukuk ekibimiz; kamu kurum ve kuruluşlarının işlem ve eylemlerinden doğan uyuşmazlıklarda vatandaş ve şirketleri idare mahkemeleri nezdinde temsil eder. İdari işlemin iptali (iptal davası) ile bu işlem veya eylem nedeniyle uğranılan zararın tazmini (tam yargı davası) taleplerinde süreci baştan sona yönetiyoruz.",
+        "detailBody": "İmar planları ve ruhsat uyuşmazlıklarından, memur disiplin cezalarına, kamu ihalelerinden doğan itirazlardan vergi/ceza uyuşmazlıklarına kadar idarenin taraf olduğu geniş bir alanda hizmet veriyoruz. İdari başvuru sürelerinin katı olması nedeniyle, idari işlemin tebliğinden itibaren hızlı hareket etmenin ve süreci en baştan doğru yönetmenin önemine inanıyor, müvekkillerimizi bu doğrultuda yönlendiriyoruz.",
+        "topics": [
+          "İptal davaları (idari işlemin iptali)",
+          "Tam yargı davaları (idareden tazminat talebi)",
+          "İmar planı ve yapı ruhsatı uyuşmazlıkları",
+          "Kamu ihalelerine itiraz ve ihale iptali süreçleri",
+          "Memur ve kamu görevlilerine ilişkin disiplin cezaları",
+          "Vergi ve ceza uyuşmazlıklarında idari itiraz ve dava süreçleri",
+          "Ruhsat, izin ve lisans iptali işlemlerine karşı dava"
+        ],
+        "benefits": [
+          "İdari işlemlere karşı süresinde iptal davası açılması",
+          "İdarenin eylem/işleminden doğan zararların tazmini (tam yargı davası)",
+          "İmar ve yapı ruhsatı uyuşmazlıklarında danışmanlık",
+          "Kamu ihalesi süreçlerinde itiraz ve dava takibi",
+          "Disiplin cezalarına karşı idari başvuru ve dava süreçleri",
+          "Vergi ve ceza uyuşmazlıklarında idare ile ihtilafların çözümü"
+        ],
+        "faq": [
+          {
+            "question": "İdari işleme karşı dava açma süresi ne kadardır?",
+            "answer": "Kural olarak idari işlemin tebliğinden itibaren 60 gün içinde idare mahkemesinde iptal davası açılmalıdır; bu süre kaçırılırsa dava hakkı kaybedilir."
+          },
+          {
+            "question": "İptal davası ile tam yargı davası arasındaki fark nedir?",
+            "answer": "İptal davasında idari işlemin hukuka aykırılığı nedeniyle ortadan kaldırılması istenir; tam yargı davasında ise bu işlem veya bir idari eylem nedeniyle uğranılan zararın tazmini talep edilir. İkisi birlikte de açılabilir."
+          },
+          {
+            "question": "Dava açmadan önce idareye başvurmam gerekir mi?",
+            "answer": "Bazı hallerde dava açmadan önce idareye başvuru (üst makama itiraz veya zorunlu idari başvuru) yapılması gerekebilir; bu, dava şartı olabileceğinden önceden değerlendirilmesi gereken bir husustur."
+          },
+          {
+            "question": "İdare mahkemesinde yürütmenin durdurulması talep edebilir miyim?",
+            "answer": "Evet, işlemin uygulanması halinde telafisi güç veya imkânsız zararlar doğacaksa, dava ile birlikte yürütmenin durdurulması talebinde bulunulabilir."
+          }
+        ]
+      },
+      "vatandaslik-basvurusu": {
+        "title": "Vatandaşlık Başvurusu",
+        "shortDescription": "Türk vatandaşlığının istisnai yolla kazanılması dahil, başvuru sürecinin baştan sona yönetimi ve takibi.",
+        "description": "Vatandaşlık Başvurusu ekibimiz; yabancı gerçek kişilerin Türk vatandaşlığı başvurularını, özellikle gayrimenkul yatırımı, sermaye yatırımı veya istihdam yaratma yoluyla istisnai vatandaşlık kazanımı süreçlerini baştan sona yönetir. Başvuru dosyasının hazırlanmasından ilgili kurumlar nezdindeki takibe kadar tüm süreçte müvekkillerimizin yanındayız.",
+        "detailBody": "Uygunluk değerlendirmesinden, gerekli belgelerin (uygunluk belgesi, değerleme raporu, banka dekontu vb.) hazırlanmasına, Tapu ve Kadastro, Göç İdaresi ve Nüfus Müdürlüğü nezdindeki işlemlerin koordinasyonuna kadar sürecin her adımını yönetiyoruz. Aile bireylerinin (eş ve reşit olmayan çocuklar) başvuruya dahil edilmesi ve olası ek belge taleplerinin hızlı şekilde karşılanması konusunda da aktif destek sağlıyoruz.",
+        "topics": [
+          "Gayrimenkul yatırımı yoluyla istisnai vatandaşlık başvurusu",
+          "Sermaye yatırımı ve istihdam yaratma yoluyla vatandaşlık",
+          "Uygunluk belgesi ve değerleme raporu süreçlerinin takibi",
+          "Tapu devri ve satış vaadi sözleşmelerinin hukuki incelemesi",
+          "Aile bireylerinin başvuruya dahil edilmesi",
+          "Göç İdaresi ve Nüfus Müdürlüğü nezdindeki işlemlerin koordinasyonu",
+          "Vatandaşlık başvurusu reddine karşı itiraz ve dava süreçleri"
+        ],
+        "benefits": [
+          "Başvuru öncesi uygunluk ve risk değerlendirmesi",
+          "Gerekli belgelerin eksiksiz ve doğru hazırlanması",
+          "Resmi kurumlar nezdindeki süreçlerin uçtan uca takibi",
+          "Aile bireyleri dahil kapsamlı başvuru yönetimi",
+          "Süreç boyunca düzenli bilgilendirme ve şeffaf iletişim",
+          "Olası ret kararlarına karşı itiraz ve dava desteği"
+        ],
+        "faq": [
+          {
+            "question": "Gayrimenkul yoluyla Türk vatandaşlığı için minimum yatırım tutarı nedir?",
+            "answer": "Kanunla belirlenen asgari yatırım tutarı zaman zaman güncellenebilir; başvurunuz öncesinde güncel eşiği ve şartları sizinle birlikte teyit ediyoruz."
+          },
+          {
+            "question": "Vatandaşlık başvurusu ne kadar sürer?",
+            "answer": "Süreç; dosyanın eksiksizliğine ve ilgili kurumların iş yüküne bağlı olarak değişmekle birlikte, doğru hazırlanmış bir başvuru süreci önemli ölçüde hızlandırır."
+          },
+          {
+            "question": "Eşim ve çocuklarım da vatandaşlık kazanabilir mi?",
+            "answer": "Evet, başvuru sahibinin eşi ve reşit olmayan çocukları, kanunda aranan şartlar dahilinde aynı başvuru kapsamında vatandaşlık kazanabilir."
+          },
+          {
+            "question": "Yatırım yaptığım gayrimenkulü belirli bir süre elde tutmam gerekir mi?",
+            "answer": "Evet, kanun gayrimenkul yatırımı yoluyla vatandaşlık için belirli bir elde tutma süresi öngörür; bu süre boyunca gayrimenkulün satılmaması gerekir, detayları başvuru öncesinde netleştiriyoruz."
+          }
+        ]
+      },
+      "ikamet-izni": {
+        "title": "İkamet İzni Takibi",
+        "shortDescription": "Kısa dönem, aile, öğrenci ve uzun dönem ikamet izni başvurularının hazırlanması ve takibi.",
+        "description": "İkamet İzni Takibi ekibimiz; Türkiye'de yaşamak isteyen yabancı uyruklu müvekkillerimizin kısa dönem, aile, öğrenci, çalışma ve uzun dönem ikamet izni başvurularını Göç İdaresi Başkanlığı nezdinde hazırlar ve takip eder.",
+        "detailBody": "Randevu alınmasından gerekli belgelerin (sağlık sigortası, adres kaydı, gelir/mali yeterlilik belgesi vb.) hazırlanmasına, başvurunun sisteme işlenmesinden uzatma ve durum değişikliği (ör. kısa dönemden aileye geçiş) taleplerine kadar sürecin tamamını yönetiyoruz. İkamet izni reddi veya iptali kararlarına karşı itiraz ve idari dava süreçlerinde de müvekkillerimizin yanındayız.",
+        "topics": [
+          "Kısa dönem ikamet izni başvuru ve uzatmaları",
+          "Aile ikamet izni (eş ve çocuklar için)",
+          "Öğrenci ikamet izni işlemleri",
+          "Uzun dönem ikamet izni başvuruları",
+          "İkamet izninden çalışma iznine geçiş süreçleri",
+          "İkamet izni ret ve iptal kararlarına karşı itiraz",
+          "Gayrimenkul sahibi yabancılar için ikamet izni danışmanlığı"
+        ],
+        "benefits": [
+          "Randevu ve başvuru sürecinin uçtan uca yönetimi",
+          "Gerekli belge ve sigorta işlemlerinin koordinasyonu",
+          "Uzatma ve tür değişikliği başvurularının takibi",
+          "Aile bireyleri için birlikte başvuru yönetimi",
+          "Ret/iptal kararlarına karşı itiraz ve dava desteği",
+          "Süreç boyunca düzenli bilgilendirme"
+        ],
+        "faq": [
+          {
+            "question": "İkamet izni başvurusu için hangi belgeler gereklidir?",
+            "answer": "Pasaport, biyometrik fotoğraf, geçerli sağlık sigortası, adres bilgisi ve başvuru türüne göre değişen ek belgeler (gelir belgesi, öğrenci belgesi vb.) gerekir; dosyanızı türünüze göre biz hazırlarız."
+          },
+          {
+            "question": "İkamet iznim ne zaman uzatılmalı?",
+            "answer": "Uzatma başvurusunun, mevcut ikamet izninin süresi dolmadan belirli bir süre önce yapılması gerekir; süresinde yapılmayan başvurular ek yaptırımlara yol açabilir."
+          },
+          {
+            "question": "İkamet izni başvurum reddedilirse ne yapabilirim?",
+            "answer": "Ret kararına karşı kanunda öngörülen süre içinde idari itiraz veya idare mahkemesinde iptal davası yoluna gidilebilir."
+          },
+          {
+            "question": "Gayrimenkul satın alırsam otomatik olarak ikamet izni alır mıyım?",
+            "answer": "Gayrimenkul sahipliği ikamet izni başvurusunu kolaylaştıran bir unsur olsa da otomatik hak sağlamaz; ayrıca başvuru yapılması ve şartların sağlanması gerekir."
+          }
+        ]
+      },
+      "uluslararasi-ticaret-gumruk": {
+        "title": "Uluslararası Ticaret ve Gümrük",
+        "shortDescription": "İthalat-ihracat sözleşmeleri, gümrük uyuşmazlıkları ve uluslararası ticaret hukukunda danışmanlık.",
+        "description": "Uluslararası Ticaret ve Gümrük ekibimiz; ithalat ve ihracat işlemlerinden doğan sözleşmelerin hazırlanması, gümrük mevzuatına uyum ve gümrük idareleriyle yaşanan uyuşmazlıkların çözümünde şirketlere hukuki destek sağlar.",
+        "detailBody": "Gümrük vergisi ve ceza uyuşmazlıklarından, menşe ve tarife anlaşmazlıklarına, uluslararası satış sözleşmeleri (Incoterms) ve akreditif işlemlerinden gümrük idari para cezalarına itiraz süreçlerine kadar geniş bir alanda hizmet veriyoruz. Yurt dışı ortaklı şirketler ve ihracatçı/ithalatçı müvekkillerimize, ticari faaliyetlerini mevzuata tam uyumlu ve öngörülebilir şekilde yürütmeleri için düzenli danışmanlık desteği sunuyoruz.",
+        "topics": [
+          "İthalat ve ihracat sözleşmelerinin hazırlanması (Incoterms)",
+          "Gümrük vergisi ve idari para cezası uyuşmazlıkları",
+          "Gümrük idaresi kararlarına itiraz ve dava süreçleri",
+          "Menşe ve gümrük tarife anlaşmazlıkları",
+          "Akreditif ve uluslararası ödeme işlemlerinden doğan uyuşmazlıklar",
+          "Dahilde ve hariçte işleme rejimi danışmanlığı",
+          "Uluslararası ticaret sözleşmelerinde uyuşmazlık çözümü"
+        ],
+        "benefits": [
+          "İthalat-ihracat sözleşmelerinin hazırlanması ve incelenmesi",
+          "Gümrük idaresi kararlarına itiraz ve dava takibi",
+          "Gümrük cezalarının iptali için hukuki destek",
+          "Menşe ve tarife uyuşmazlıklarında danışmanlık",
+          "Uluslararası ticari sözleşme uyuşmazlıklarının çözümü",
+          "Dış ticaret mevzuatına uyum danışmanlığı"
+        ],
+        "faq": [
+          {
+            "question": "Gümrükte kesilen bir cezaya itiraz edebilir miyim?",
+            "answer": "Evet, gümrük idari para cezalarına karşı kanunda öngörülen süre içinde önce idareye itiraz, ardından gerekirse vergi/idare mahkemesinde dava yoluna başvurulabilir."
+          },
+          {
+            "question": "Incoterms nedir, sözleşmemde neden önemli?",
+            "answer": "Incoterms, uluslararası satışlarda teslim, risk ve maliyet paylaşımını standart kurallarla belirleyen terimlerdir; doğru Incoterm seçimi taraflar arasındaki sorumluluk sınırlarını netleştirir ve uyuşmazlık riskini azaltır."
+          },
+          {
+            "question": "Menşe ülke uyuşmazlığı ne anlama gelir?",
+            "answer": "Bir ürünün gümrük tarife avantajlarından yararlanabilmesi için doğru menşe ülkeye sahip olduğunun ispatı gerekir; idarenin bu konudaki değerlendirmesine itiraz edilebilir."
+          },
+          {
+            "question": "Dahilde işleme rejimi nedir?",
+            "answer": "İhracat amacıyla ithal edilen eşyanın gümrük vergisinden muaf/indirimli şekilde işlenmesine imkan tanıyan bir rejimdir; şartlara uyulmaması ek vergi ve ceza riski doğurabilir."
+          }
         ]
       }
     }

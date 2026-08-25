@@ -24,6 +24,10 @@ export const SERVICE_SLUGS = [
   "icra-iflas-hukuku",
   "miras-hukuku",
   "sozlesmeler-hukuku",
+  "idari-hukuku",
+  "vatandaslik-basvurusu",
+  "ikamet-izni",
+  "uluslararasi-ticaret-gumruk",
 ] as const;
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
@@ -38,6 +42,12 @@ export const SERVICE_IMAGES: Record<ServiceSlug, string> = {
   "icra-iflas-hukuku": "/images/hizmet/icra-iflas-hukuku.jpg",
   "miras-hukuku": "/images/hizmet/miras-hukuku.jpg",
   "sozlesmeler-hukuku": "/images/hizmet/sozlesmeler-hukuku.jpg",
+  // Kendine ait bir görsel eklenene kadar ofis fotoğrafı kullanılır.
+  "idari-hukuku": "/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg",
+  "vatandaslik-basvurusu": "/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg",
+  "ikamet-izni": "/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg",
+  "uluslararasi-ticaret-gumruk":
+    "/images/ofis/atalya-hukuk-burosu-calisma-odasi.jpg",
 };
 
 export const TEAM_MEMBER_KEYS = ["member1", "member2", "member3"] as const;

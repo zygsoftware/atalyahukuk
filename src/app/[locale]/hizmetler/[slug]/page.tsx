@@ -8,6 +8,7 @@ import { Container } from "@/components/site/Container";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ServiceCard } from "@/components/site/ServiceCard";
+import { FaqAccordion } from "@/components/site/FaqAccordion";
 import {
   SERVICE_IMAGES,
   SERVICE_SLUGS,
@@ -56,6 +57,11 @@ export default async function ServiceDetailPage({
 
   const Icon = SERVICE_ICONS[slug];
   const benefits = t.raw(`items.${slug}.benefits`) as string[];
+  const topics = t.raw(`items.${slug}.topics`) as string[];
+  const faqItems = t.raw(`items.${slug}.faq`) as {
+    question: string;
+    answer: string;
+  }[];
   const relatedSlugs = SERVICE_SLUGS.filter((s) => s !== slug).slice(0, 3);
 
   const tNav = await getTranslations("nav");
@@ -90,6 +96,20 @@ export default async function ServiceDetailPage({
         }}
       />
       <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqItems.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }}
+      />
 
       <section className="relative overflow-hidden bg-bordo-950 py-16 sm:py-20">
         <Image
@@ -131,6 +151,24 @@ export default async function ServiceDetailPage({
             <p className="mt-10 text-lg leading-relaxed text-ink/75">
               {t(`items.${slug}.description`)}
             </p>
+            <p className="mt-5 leading-relaxed text-ink/70">
+              {t(`items.${slug}.detailBody`)}
+            </p>
+
+            <h2 className="mt-12 font-serif text-xl text-bordo-950">
+              {t("topicsTitle")}
+            </h2>
+            <ul className="mt-5 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+              {topics.map((topic) => (
+                <li
+                  key={topic}
+                  className="flex items-start gap-2.5 text-sm leading-relaxed text-ink/75"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />
+                  {topic}
+                </li>
+              ))}
+            </ul>
 
             <div className="mt-12 flex flex-wrap gap-4">
               <Link
@@ -165,6 +203,21 @@ export default async function ServiceDetailPage({
                 </li>
               ))}
             </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 sm:py-20">
+        <Container className="max-w-3xl">
+          <SectionHeading align="center" title={t("faqTitle")} className="mx-auto" />
+          <div className="mt-10">
+            <FaqAccordion
+              items={faqItems.map((item, i) => ({
+                id: `${slug}-faq-${i}`,
+                question: item.question,
+                answer: item.answer,
+              }))}
+            />
           </div>
         </Container>
       </section>

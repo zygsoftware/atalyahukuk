@@ -145,86 +145,500 @@
     "backToList": "Back to All Services",
     "contactCta": "Get Advice in This Area",
     "benefitsTitle": "What We Offer in This Area",
+    "topicsTitle": "Areas We Cover",
+    "faqTitle": "Frequently Asked Questions",
     "relatedTitle": "Related Practice Areas",
     "items": {
       "ceza-hukuku": {
         "title": "Criminal Law",
-        "shortDescription": "Effective defense and legal representation throughout investigation and prosecution.",
-        "description": "Our Criminal Law team protects clients' rights at every stage of detention, questioning, investigation and prosecution. We develop effective defense strategies in all criminal proceedings, whether as suspect, defendant or victim.",
+        "shortDescription": "Effective defense and legal representation at every stage of detention, investigation and prosecution.",
+        "description": "Our Criminal Law team protects the rights of suspects, defendants and victims at every stage of detention, questioning, investigation and prosecution. We get involved from the very first moment a file is opened, closely follow the evidence-gathering process, tailor the defense strategy to the specifics of the case, and provide effective representation throughout the entire proceeding.",
+        "detailBody": "We have experience across a wide range of matters, from offenses requiring heavy penal courts to economic crimes, cybercrimes and traffic offenses. Our services also include challenging detention and judicial control orders, managing mediation/reconciliation processes, and filing appeals before the regional courts of appeal and the Court of Cassation. Our goal is to ensure our clients' right to a fair trial is fully exercised at every point in the proceeding.",
+        "topics": [
+          "Serious criminal cases (homicide, bodily harm, sexual offenses)",
+          "Drug and smuggling offenses",
+          "Fraud, breach of trust and economic crimes",
+          "Cybercrime and computer-related offenses",
+          "Traffic accidents and negligence-based offenses",
+          "Challenging detention and judicial control decisions",
+          "Appeals before regional courts and the Court of Cassation"
+        ],
         "benefits": [
-          "Legal support during detention and questioning",
-          "Thorough review of the investigation file",
-          "Effective defense and representation at trial"
+          "Rapid legal support during detention and questioning",
+          "Thorough review of the investigation file and evidence",
+          "Effective defense and representation at trial",
+          "Objecting to detention and judicial control orders",
+          "Managing reconciliation and effective remorse processes",
+          "Representation at the appellate and cassation stages"
+        ],
+        "faq": [
+          {
+            "question": "What should I do first if I am taken into custody?",
+            "answer": "You may exercise your right to remain silent and request a lawyer. Giving a statement without first consulting a lawyer can seriously undermine your rights."
+          },
+          {
+            "question": "What is the difference between the investigation and prosecution stages?",
+            "answer": "The investigation is the confidential stage in which the prosecutor's office examines the suspicion of a crime; prosecution is the trial stage before the court, which begins once the indictment is accepted."
+          },
+          {
+            "question": "How does the reconciliation (mediation) process work in criminal cases?",
+            "answer": "For offenses subject to reconciliation under the law, the parties may settle through a mediator; if an agreement is reached, no public case is filed or the case is dismissed."
+          },
+          {
+            "question": "Is legal representation mandatory in a criminal case?",
+            "answer": "For offenses above a certain severity, having defense counsel is a legal requirement; even when not mandatory, we strongly recommend legal support to fully protect your rights."
+          }
         ]
       },
       "aile-hukuku": {
         "title": "Family Law",
-        "shortDescription": "Legal support in divorce, alimony, custody and property division matters.",
-        "description": "We carefully protect our clients' rights in contested and uncontested divorce, alimony, custody, matrimonial property regime and compensation cases, aiming to conclude the process with minimal strain.",
+        "shortDescription": "Careful, client-focused legal support in divorce, alimony, custody and property division matters.",
+        "description": "Our Family Law team carefully protects our clients' rights in uncontested and contested divorce, alimony, custody, contact arrangements, matrimonial property liquidation and compensation cases. Recognizing the emotional weight of these matters, we accompany our clients with both legal expertise and genuine care throughout the process.",
+        "detailBody": "Beyond the dissolution of marriage, we also advise on and litigate adoption, parentage, breach of engagement and protective measures against domestic violence. Wherever possible, our priority is to reach an amicable settlement that speeds up the process; where that isn't possible, we defend our clients' interests as forcefully as the contested process requires.",
+        "topics": [
+          "Uncontested and contested divorce cases",
+          "Alimony (temporary, poverty and child support) claims",
+          "Custody and contact arrangements",
+          "Matrimonial property liquidation and contribution claims",
+          "Material and moral compensation claims",
+          "Paternity and denial-of-parentage cases",
+          "Protective measures against domestic violence (Law No. 6284)"
+        ],
         "benefits": [
-          "Representation in uncontested and contested divorce",
-          "Advisory on alimony and custody disputes",
-          "Handling property division and compensation claims"
+          "End-to-end representation in uncontested and contested divorce",
+          "Strategic advice on alimony and custody disputes",
+          "Calculating and pursuing property division and contribution claims",
+          "Handling material and moral compensation claims",
+          "Rapid support with protective order applications (Law No. 6284)",
+          "Drafting and negotiating divorce settlement protocols"
+        ],
+        "faq": [
+          {
+            "question": "How long does an uncontested divorce take?",
+            "answer": "If the parties agree on the financial and personal consequences of the divorce, it can be concluded in a single hearing — generally much faster than a contested divorce."
+          },
+          {
+            "question": "What criteria determine custody?",
+            "answer": "The court always decides based on the best interests of the child, weighing factors such as each parent's financial situation, the child's age, and their current living arrangements."
+          },
+          {
+            "question": "How is property divided in a divorce?",
+            "answer": "Turkish law generally applies the participation-in-acquired-property regime, under which assets acquired during the marriage are shared equally between the spouses."
+          },
+          {
+            "question": "How is the amount of alimony determined?",
+            "answer": "Alimony is set by the judge based on the parties' income, needs and principles of equity, and can be reassessed later if circumstances change."
+          }
         ]
       },
       "is-hukuku": {
         "title": "Labor Law",
-        "shortDescription": "Litigation and advisory services in disputes between employees and employers.",
-        "description": "We offer services in reinstatement, severance and notice pay, overtime, workplace accident and mobbing cases, as well as advisory support for employment contracts and HR processes on the employer side.",
+        "shortDescription": "Litigation, mediation and advisory services for disputes between employees and employers.",
+        "description": "Our Labor Law team represents employees in reinstatement, severance and notice pay, overtime pay, annual leave pay, workplace accident and mobbing cases, and represents employers on employment contracts, disciplinary processes and collective labor relations.",
+        "detailBody": "We are with you throughout the entire process — from managing the mandatory mediation stage before a case is even filed, through litigation before the labor courts. For our corporate clients, we provide ongoing advisory support on drafting employment contracts and personnel regulations, carrying out terminations in line with the law, and meeting occupational health and safety obligations.",
+        "topics": [
+          "Reinstatement cases and invalid termination",
+          "Severance, notice pay and overtime claims",
+          "Compensation claims arising from workplace accidents and occupational disease",
+          "Mobbing (workplace psychological harassment) cases",
+          "Managing the mandatory mediation process",
+          "Drafting employment contracts and personnel regulations",
+          "Collective bargaining agreements and union disputes"
+        ],
         "benefits": [
-          "Representation in reinstatement and compensation cases",
-          "Drafting and reviewing employment contracts",
-          "Advisory on workplace accident and mobbing cases"
+          "Representing employees or employers in reinstatement and compensation cases",
+          "Effectively managing the mandatory mediation process",
+          "Drafting and reviewing employment contracts in line with the law",
+          "Advisory support in workplace accident and mobbing cases",
+          "De-risking termination processes",
+          "Litigation and representation before labor courts"
+        ],
+        "faq": [
+          {
+            "question": "Is mediation mandatory before filing a reinstatement lawsuit?",
+            "answer": "Yes, applying to a mediator is a precondition for reinstatement claims and most wage-related labor disputes; if no settlement is reached, the case proceeds to court."
+          },
+          {
+            "question": "Who is entitled to severance pay?",
+            "answer": "Employees who have worked for the same employer for at least one year and whose employment ends for a reason recognized by law are entitled to severance pay."
+          },
+          {
+            "question": "How do I prove that I've been subjected to mobbing?",
+            "answer": "Correspondence, witness statements and any documentation from disciplinary or complaint processes are important evidence; systematically collecting these from the outset makes proving the claim much easier."
+          },
+          {
+            "question": "What can I do if my employer doesn't pay my overtime?",
+            "answer": "You can claim your overtime pay through mediation while employed or after termination, and file a case before the labor court if no settlement is reached."
+          }
         ]
       },
       "ticaret-hukuku": {
         "title": "Commercial & Corporate Law",
-        "shortDescription": "Advisory services on company formation, contracts and commercial disputes.",
-        "description": "We provide comprehensive legal support to our corporate clients in company formation, mergers and acquisitions, partnership agreements, drafting commercial contracts, and resolving commercial disputes.",
-        "benefits": [
-          "Advisory on company formation and structuring",
+        "shortDescription": "Advisory services on company formation, mergers & acquisitions, shareholder agreements and commercial disputes.",
+        "description": "Our Commercial & Corporate Law team provides end-to-end legal support to corporate clients on company formation, changes of legal form, mergers and acquisitions, share transfers, partnership and shareholder agreements, and the drafting of commercial contracts.",
+        "detailBody": "Beyond corporate matters, we also handle collection of commercial receivables, unfair competition, trademark and trade name disputes, and disagreements between company partners. From small and medium-sized businesses to large corporations, our aim is to minimize legal risk at every stage of our clients' commercial activity.",
+        "topics": [
+          "Company formation, conversion and liquidation",
+          "Mergers, acquisitions and share transfer transactions",
+          "Partnership and shareholder agreements",
           "Drafting and negotiating commercial contracts",
-          "Legal support in partnership and merger processes"
+          "Collecting commercial receivables",
+          "Unfair competition and trademark disputes",
+          "Disputes between company partners"
+        ],
+        "benefits": [
+          "Advisory on company formation and restructuring",
+          "Drafting and negotiation support for commercial contracts",
+          "Legal support for mergers, acquisitions and share transfers",
+          "Effective pursuit of commercial receivables",
+          "Representation in unfair competition and trademark disputes",
+          "Resolving disputes between partners"
+        ],
+        "faq": [
+          {
+            "question": "Which company type is right for my business?",
+            "answer": "The most suitable structure — limited liability, joint-stock or otherwise — depends on factors like liability exposure, tax burden, number of partners and capital structure."
+          },
+          {
+            "question": "What can be done if a dispute arises between partners?",
+            "answer": "The dispute resolution mechanisms set out in the partnership agreement apply first; where they fail, remedies such as annulling general assembly resolutions or dissolution for just cause may be available."
+          },
+          {
+            "question": "How can I collect a commercial receivable?",
+            "answer": "Collection can start with a formal notice and, if necessary, proceed through enforcement proceedings or a commercial lawsuit; how quickly this moves largely depends on the strength of your supporting documents."
+          },
+          {
+            "question": "What should I watch out for in a merger or acquisition?",
+            "answer": "Legal and financial due diligence, properly structuring the transfer agreement, and competition law compliance are among the most critical stages of the process."
+          }
         ]
       },
       "gayrimenkul-hukuku": {
         "title": "Real Estate Law",
-        "shortDescription": "Legal representation in title deed, lease, expropriation and construction disputes.",
-        "description": "We provide expert support in title deed cancellation and registration, lease disputes, condominium ownership, expropriation valuation, and disputes arising from construction contracts.",
+        "shortDescription": "Expert representation in title deed, lease, condominium, expropriation and construction disputes.",
+        "description": "Our Real Estate Law team represents clients in title deed cancellation and registration cases, claims for compensation for unauthorized use, pre-emption (right of first refusal) claims, and disputes arising from condominium ownership and easements, as well as eviction and rent-related lawsuits.",
+        "detailBody": "We handle everything from expropriation valuation disputes and de facto expropriation claims to construction contracts and build-for-share (flat-for-land) disputes. Before a purchase, we review the legal status of the title deed to spot risks early and guide our clients toward safe transactions.",
+        "topics": [
+          "Title deed cancellation and registration cases",
+          "Lease disputes and eviction lawsuits",
+          "Condominium ownership and easement disputes",
+          "Expropriation valuation and de facto expropriation claims",
+          "Pre-emption (right of first refusal) claims",
+          "Build-for-share (flat-for-land) contract disputes",
+          "Legal due diligence before real estate purchases"
+        ],
         "benefits": [
-          "Representation in title deed cancellation cases",
-          "Advisory on lease and condominium disputes",
-          "Handling expropriation valuation processes"
+          "Representation in title deed cancellation and registration cases",
+          "Advisory on lease and condominium ownership disputes",
+          "Pursuing expropriation valuation claims",
+          "Support in construction and flat-for-land contract disputes",
+          "Legal risk review before real estate purchases",
+          "Representation in unauthorized-use and pre-emption cases"
+        ],
+        "faq": [
+          {
+            "question": "When can a title deed cancellation and registration case be filed?",
+            "answer": "The rightful owner can file this case where the title deed was recorded unlawfully, through fraud, or transferred by someone without authority to do so."
+          },
+          {
+            "question": "How can I evict my tenant?",
+            "answer": "Depending on grounds such as the lease term expiring, unpaid rent, or the owner's genuine need, eviction can be pursued through a formal notice and/or a lawsuit as provided by law."
+          },
+          {
+            "question": "Can I object to the expropriation compensation offered?",
+            "answer": "Yes, if you believe the expropriation compensation was set too low, you can file a valuation and increase lawsuit within the period prescribed by law."
+          },
+          {
+            "question": "What should I check before buying a property?",
+            "answer": "You should carefully review any liens on the title deed (mortgages, attachments, annotations), the zoning status, and the building's occupancy/construction permits — this prevents disputes down the line."
+          }
         ]
       },
       "icra-iflas-hukuku": {
         "title": "Enforcement & Bankruptcy Law",
-        "shortDescription": "Effective solutions in debt collection and enforcement proceedings.",
-        "description": "We provide fast and effective legal solutions to both creditors and debtors in initiating enforcement proceedings, debt collection, objection cancellation/removal, and bankruptcy processes.",
+        "shortDescription": "Fast, effective solutions for debt collection, enforcement proceedings, objections and bankruptcy/composition cases.",
+        "description": "Our Enforcement & Bankruptcy Law team provides fast solutions to both creditors and debtors in initiating enforcement proceedings with or without a court judgment, carrying out attachments, and litigating objection cancellation/removal, negative declaratory and unjust enrichment recovery cases.",
+        "detailBody": "Our experience spans commercial and personal debt relationships, proceedings based on negotiable instruments (checks, promissory notes, bills of exchange), and composition and bankruptcy postponement processes. If you are the debtor, we help you protect your rights while finding the most suitable payment or restructuring solution; if you are the creditor, we help you collect what you're owed as quickly and effectively as possible.",
+        "topics": [
+          "Enforcement proceedings with or without a court judgment",
+          "Enforcement proceedings based on negotiable instruments (checks, notes)",
+          "Objection cancellation and objection removal lawsuits",
+          "Managing attachment, custody and sale procedures",
+          "Negative declaratory and unjust enrichment recovery cases",
+          "Composition (concordat) and bankruptcy postponement processes",
+          "Bankruptcy and bankruptcy postponement lawsuits"
+        ],
         "benefits": [
-          "Initiating enforcement proceedings and debt collection",
-          "Objection cancellation and removal processes",
-          "Advisory on bankruptcy and composition proceedings"
+          "Initiating enforcement proceedings for fast debt collection",
+          "Representation in objection cancellation and removal cases",
+          "Managing proceedings based on negotiable instruments",
+          "Advisory on composition and bankruptcy processes",
+          "Protecting debtors from unnecessary loss of rights",
+          "Close monitoring of attachment and sale stages"
+        ],
+        "faq": [
+          {
+            "question": "What happens if I object to an enforcement proceeding?",
+            "answer": "A debtor's timely objection suspends the proceeding; the creditor can then file a case to cancel or remove the objection in order to resume enforcement."
+          },
+          {
+            "question": "I have a check or promissory note — how do I collect on it?",
+            "answer": "You can pursue collection through enforcement proceedings specific to negotiable instruments, which generally move faster than the general attachment route."
+          },
+          {
+            "question": "I can't pay my debts — is composition (concordat) right for me?",
+            "answer": "Composition allows debtors in financial distress who want to avoid bankruptcy to restructure their debts by agreement with creditors; whether it fits your situation needs to be assessed case by case."
+          },
+          {
+            "question": "I'm facing an enforcement proceeding I believe is unjust — what can I do?",
+            "answer": "You can object to the enforcement office within the legal deadline, and if necessary, file a negative declaratory action to establish that you do not owe the debt."
+          }
         ]
       },
       "miras-hukuku": {
         "title": "Inheritance Law",
-        "shortDescription": "Legal advisory on succession, estate division and reduction claims.",
-        "description": "We protect our clients' rights in obtaining certificates of inheritance, renunciation of inheritance, heirship documents, reduction claims and estate division disputes.",
+        "shortDescription": "Legal advisory on certificates of inheritance, renunciation, reduction claims and estate division disputes.",
+        "description": "Our Inheritance Law team protects our clients' rights in obtaining certificates of inheritance, renouncing an inheritance, cases of unworthiness to inherit, contesting wills, and reduction (forced-share) lawsuits, as well as in estate division (partition) proceedings among heirs.",
+        "detailBody": "We provide effective representation in annulling lifetime transfers made in circumvention of the law (collusive transfers intended to disinherit), filing reduction lawsuits for breaches of the forced share, and partition actions to resolve co-ownership among heirs. Before a dispute even arises, we also offer preventive advisory services on estate planning and drafting wills.",
+        "topics": [
+          "Obtaining a certificate of inheritance",
+          "Renunciation of inheritance and unworthiness to inherit",
+          "Contesting wills and reduction (forced-share) lawsuits",
+          "Partition actions to resolve co-ownership among heirs",
+          "Collusive lifetime transfers aimed at disinheriting heirs",
+          "Drafting estate division agreements",
+          "Will drafting and estate planning advisory"
+        ],
         "benefits": [
-          "Certificate of inheritance and heirship procedures",
-          "Representation in estate division and reduction cases",
-          "Advisory on renunciation of inheritance"
+          "Fast handling of certificate-of-inheritance procedures",
+          "Representation in reduction and collusive-transfer lawsuits",
+          "Advisory on partition actions among heirs",
+          "Ensuring inheritance renunciation is handled correctly and on time",
+          "Support with will drafting and estate planning",
+          "A conciliatory approach to disputes between heirs"
+        ],
+        "faq": [
+          {
+            "question": "How much time do I have to renounce an inheritance?",
+            "answer": "Legal heirs may renounce an inheritance within three months of learning that it has passed to them; missing this deadline means the inheritance is deemed accepted."
+          },
+          {
+            "question": "What can I do if my forced share has been violated?",
+            "answer": "If gifts made by the deceased, whether during their lifetime or upon death, infringe on your forced share, you can file a reduction lawsuit to recover the shortfall."
+          },
+          {
+            "question": "What if the deceased transferred assets before passing away?",
+            "answer": "Transfers believed to have been made to disinherit heirs can be annulled through a title deed cancellation and registration lawsuit based on collusion."
+          },
+          {
+            "question": "What happens if heirs can't agree on how to divide the estate?",
+            "answer": "If no agreement is reached, any heir may file a partition action requesting that the inherited assets be sold and the proceeds divided."
+          }
         ]
       },
       "sozlesmeler-hukuku": {
         "title": "Contract Law",
-        "shortDescription": "Drafting, review and dispute resolution for all types of contracts.",
-        "description": "We advise individual and corporate clients on drafting, negotiating and reviewing contracts, as well as resolving disputes arising from them.",
+        "shortDescription": "Drafting, review and dispute resolution for all types of commercial and personal contracts.",
+        "description": "Our Contract Law team advises individual and corporate clients on drafting, negotiating and reviewing all kinds of contracts — sale, lease, service, work, dealership, franchise, confidentiality and non-compete agreements among them.",
+        "detailBody": "We are just as experienced in resolving disputes that arise during performance — default, defective performance and unjustified termination — as we are in identifying risks before a contract is signed. Whether you need your standard templates brought up to date with current law and case law, or a bespoke contract drafted from scratch for a one-off transaction, we tailor our support to your needs.",
+        "topics": [
+          "Sale and service agreements",
+          "Lease, work and agency (vekalet) contracts",
+          "Dealership, distribution and franchise agreements",
+          "Confidentiality (NDA) and non-compete agreements",
+          "Default and compensation claims arising from contracts",
+          "Compliance review of standard terms and general conditions",
+          "Unjustified termination and defective performance disputes"
+        ],
         "benefits": [
-          "Drafting contract templates",
-          "Legal review of existing contracts",
-          "Resolving contract disputes"
+          "Drafting contract templates tailored to your needs",
+          "Legal risk review of existing contracts",
+          "Active support during contract negotiations",
+          "Litigation for default and compensation claims",
+          "Compliance review of standard terms and general conditions",
+          "Managing both settlement and litigation in contract disputes"
+        ],
+        "faq": [
+          {
+            "question": "Why should a lawyer review my contract before I sign it?",
+            "answer": "Ambiguous wording, one-sided termination clauses or penalty provisions can create serious financial risk down the road; a review beforehand catches these issues before you're bound by them."
+          },
+          {
+            "question": "What can I do if the other party breaches the contract?",
+            "answer": "The first step is usually a formal notice of default; if that doesn't resolve things, you can pursue performance, termination or compensation through litigation."
+          },
+          {
+            "question": "What is the purpose of a penalty clause in a contract?",
+            "answer": "A penalty clause sets a predetermined compensation amount payable upon breach, without needing to separately prove damages — it also serves as a deterrent."
+          },
+          {
+            "question": "Is it enough to use a template contract?",
+            "answer": "Templates may cover general needs, but if they aren't adapted to the specifics of your transaction, they can leave important gaps — a purpose-built contract is safer for significant transactions."
+          }
+        ]
+      },
+      "idari-hukuku": {
+        "title": "Administrative Law",
+        "shortDescription": "Representation against public authorities in annulment actions, full remedy claims, zoning and public tender disputes.",
+        "description": "Our Administrative Law team represents individuals and companies before administrative courts in disputes arising from the acts and actions of public institutions. We manage the entire process for both annulment actions seeking to set aside an unlawful administrative act, and full remedy actions seeking compensation for damage caused by that act or action.",
+        "detailBody": "We handle a broad range of matters where a public authority is a party — from zoning plan and building permit disputes to civil servant disciplinary penalties, objections arising from public tenders, and tax and administrative penalty disputes. Because administrative filing deadlines are strict, we believe in acting quickly from the moment an administrative act is notified and getting the process right from the very start — and we guide our clients accordingly.",
+        "topics": [
+          "Annulment actions (challenging an administrative act)",
+          "Full remedy actions (compensation claims against the administration)",
+          "Zoning plan and building permit disputes",
+          "Objections to public tenders and tender cancellation proceedings",
+          "Disciplinary penalties against civil servants and public officials",
+          "Administrative objections and litigation over tax and penalty disputes",
+          "Challenging the revocation of permits, licenses and authorizations"
+        ],
+        "benefits": [
+          "Filing annulment actions against administrative acts within the deadline",
+          "Pursuing full remedy (compensation) claims against the administration",
+          "Advisory on zoning and building permit disputes",
+          "Handling objections and litigation in public tender processes",
+          "Administrative appeals and litigation against disciplinary penalties",
+          "Resolving tax and administrative penalty disputes"
+        ],
+        "faq": [
+          {
+            "question": "How long do I have to file a case against an administrative act?",
+            "answer": "As a general rule, an annulment action must be filed with the administrative court within 60 days of the act being notified; missing this deadline forfeits your right to sue."
+          },
+          {
+            "question": "What's the difference between an annulment action and a full remedy action?",
+            "answer": "An annulment action seeks to set aside an unlawful administrative act; a full remedy action seeks compensation for damage caused by that act or an administrative action. The two can also be filed together."
+          },
+          {
+            "question": "Do I need to apply to the administration before filing a lawsuit?",
+            "answer": "In some cases, an application to the administration (an objection to a higher authority or a mandatory administrative application) must be made first; this can be a precondition for the lawsuit and should be assessed in advance."
+          },
+          {
+            "question": "Can I request a stay of execution before the administrative court?",
+            "answer": "Yes — if enforcing the act would cause damage that is difficult or impossible to remedy, you can request a stay of execution together with your lawsuit."
+          }
+        ]
+      },
+      "vatandaslik-basvurusu": {
+        "title": "Citizenship Application",
+        "shortDescription": "End-to-end management of Turkish citizenship applications, including citizenship by investment.",
+        "description": "Our Citizenship Application team manages the entire process for foreign nationals applying for Turkish citizenship, in particular exceptional citizenship acquired through real estate investment, capital investment or job creation. We support our clients from preparing the application file through to following it up with the relevant authorities.",
+        "detailBody": "We manage every step of the process — from assessing eligibility and preparing the required documents (certificate of conformity, valuation report, bank receipts, etc.) to coordinating procedures before the Land Registry, the Directorate General of Migration Management and the Civil Registry. We also actively support including family members (spouse and minor children) in the application and responding quickly to any additional document requests.",
+        "topics": [
+          "Exceptional citizenship applications through real estate investment",
+          "Citizenship through capital investment and job creation",
+          "Certificate of conformity and valuation report procedures",
+          "Legal review of title deed transfer and sale-promise agreements",
+          "Including family members in the application",
+          "Coordinating procedures before the Migration and Civil Registry authorities",
+          "Appeals and litigation against rejected citizenship applications"
+        ],
+        "benefits": [
+          "Pre-application eligibility and risk assessment",
+          "Complete and accurate preparation of required documents",
+          "End-to-end follow-up with official authorities",
+          "Comprehensive application management including family members",
+          "Regular updates and transparent communication throughout the process",
+          "Appeal and litigation support against rejection decisions"
+        ],
+        "faq": [
+          {
+            "question": "What is the minimum investment amount for Turkish citizenship through real estate?",
+            "answer": "The minimum investment threshold set by law is updated from time to time; we confirm the current threshold and conditions with you before you apply."
+          },
+          {
+            "question": "How long does a citizenship application take?",
+            "answer": "Timing varies depending on how complete the file is and the workload of the relevant authorities, but a properly prepared application significantly speeds up the process."
+          },
+          {
+            "question": "Can my spouse and children also acquire citizenship?",
+            "answer": "Yes, the applicant's spouse and minor children can acquire citizenship as part of the same application, provided the conditions set out by law are met."
+          },
+          {
+            "question": "Do I need to hold on to the property for a certain period?",
+            "answer": "Yes, the law requires a minimum holding period for real estate acquired for citizenship purposes, during which the property must not be sold; we clarify the details before you apply."
+          }
+        ]
+      },
+      "ikamet-izni": {
+        "title": "Residence Permit Follow-up",
+        "shortDescription": "Preparation and follow-up of short-term, family, student and long-term residence permit applications.",
+        "description": "Our Residence Permit Follow-up team prepares and follows up short-term, family, student, work and long-term residence permit applications before the Presidency of Migration Management on behalf of foreign clients who wish to live in Turkey.",
+        "detailBody": "We manage the entire process — from booking the appointment and preparing the required documents (health insurance, address registration, proof of income/financial sufficiency, etc.) to submitting the application and handling extension or status-change requests (such as moving from a short-term to a family permit). We also support clients through appeals and administrative litigation against rejected or cancelled residence permits.",
+        "topics": [
+          "Short-term residence permit applications and extensions",
+          "Family residence permits (for spouses and children)",
+          "Student residence permit procedures",
+          "Long-term residence permit applications",
+          "Transitioning from a residence permit to a work permit",
+          "Appeals against residence permit rejection and cancellation decisions",
+          "Residence permit advisory for foreign property owners"
+        ],
+        "benefits": [
+          "End-to-end management of the appointment and application process",
+          "Coordinating required documents and insurance procedures",
+          "Following up on extension and status-change applications",
+          "Managing joint applications for family members",
+          "Appeal and litigation support against rejection/cancellation decisions",
+          "Regular updates throughout the process"
+        ],
+        "faq": [
+          {
+            "question": "What documents are required for a residence permit application?",
+            "answer": "A passport, biometric photo, valid health insurance, address information and additional documents depending on the type of permit (proof of income, student certificate, etc.) are required; we prepare your file according to your specific case."
+          },
+          {
+            "question": "When should I renew my residence permit?",
+            "answer": "The renewal application must be filed a certain period before the current permit expires; applying late can lead to additional sanctions."
+          },
+          {
+            "question": "What can I do if my residence permit application is rejected?",
+            "answer": "A rejection decision can be challenged through an administrative appeal or an annulment action before the administrative court within the period prescribed by law."
+          },
+          {
+            "question": "Does owning property automatically give me a residence permit?",
+            "answer": "Property ownership makes a residence permit application easier but does not grant an automatic right — an application still needs to be filed and the conditions met."
+          }
+        ]
+      },
+      "uluslararasi-ticaret-gumruk": {
+        "title": "International Trade & Customs",
+        "shortDescription": "Advisory on import-export contracts, customs disputes and international trade law compliance.",
+        "description": "Our International Trade & Customs team provides legal support to companies in drafting contracts arising from import and export transactions, ensuring compliance with customs legislation, and resolving disputes with customs authorities.",
+        "detailBody": "We handle a wide range of matters, from customs duty and administrative fine disputes to disagreements over origin and tariff classification, international sale contracts (Incoterms), letter of credit transactions, and appeals against customs administrative fines. We provide ongoing advisory support to exporting and importing clients, including companies with foreign partners, to help them carry out their commercial activities in full compliance with the law and in a predictable manner.",
+        "topics": [
+          "Drafting import and export contracts (Incoterms)",
+          "Customs duty and administrative fine disputes",
+          "Appeals and litigation against customs authority decisions",
+          "Disputes over origin and customs tariff classification",
+          "Disputes arising from letters of credit and international payments",
+          "Advisory on inward and outward processing regimes",
+          "Dispute resolution in international trade contracts"
+        ],
+        "benefits": [
+          "Drafting and reviewing import-export contracts",
+          "Appeals and litigation against customs authority decisions",
+          "Legal support to annul customs administrative fines",
+          "Advisory on origin and tariff classification disputes",
+          "Resolving disputes in international trade contracts",
+          "Advisory on compliance with foreign trade legislation"
+        ],
+        "faq": [
+          {
+            "question": "Can I object to a fine imposed by customs?",
+            "answer": "Yes, customs administrative fines can be challenged by first objecting to the administration, and if necessary, filing a case before the tax/administrative court, within the period prescribed by law."
+          },
+          {
+            "question": "What are Incoterms and why do they matter in my contract?",
+            "answer": "Incoterms are standardized terms that define delivery, risk and cost allocation in international sales; choosing the right Incoterm clarifies each party's responsibilities and reduces the risk of disputes."
+          },
+          {
+            "question": "What does a dispute over country of origin mean?",
+            "answer": "To benefit from customs tariff advantages, a product's country of origin must be proven; the administration's assessment on this point can be challenged."
+          },
+          {
+            "question": "What is the inward processing regime?",
+            "answer": "It is a regime that allows goods imported for export purposes to be processed with an exemption from or reduction of customs duty; failing to meet its conditions can create the risk of additional duties and fines."
+          }
         ]
       }
     }
