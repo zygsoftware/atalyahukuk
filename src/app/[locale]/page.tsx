@@ -184,7 +184,7 @@ export default async function HomePage({
             <HeroSlider
               slides={[
                 {
-                  type: "logo",
+                  type: "photo",
                   src: "/slider-1.png",
                   alt: SITE_NAME,
                   radius: "50%",
