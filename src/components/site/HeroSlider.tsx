@@ -57,7 +57,10 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
               alt={slide.alt}
               fill
               sizes="(min-width: 1024px) 420px, 90vw"
-              className="object-cover"
+              // Kartın border-radius kırpması ile görselin kendi kenarı arasında
+              // alt zemin (bg-cream) sızıntısı (ince beyazlık) oluşmasını önlemek
+              // için görseli hafifçe büyütüp taşırıyoruz.
+              className="scale-[1.03] object-cover"
               priority={i === 0}
             />
           )}
