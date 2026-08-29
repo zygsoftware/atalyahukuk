@@ -667,7 +667,8 @@
     "empty": "There are no published articles yet.",
     "readMore": "Read More",
     "backToList": "Back to All Articles",
-    "publishedOn": "Published on"
+    "publishedOn": "Published on",
+    "tableOfContents": "Table of Contents"
   },
   "announcements": {
     "eyebrow": "Announcements",
@@ -675,7 +676,8 @@
     "subtitle": "Current announcements and news about our firm.",
     "empty": "There are no active announcements at the moment.",
     "pinned": "Pinned",
-    "backToList": "Back to All Announcements"
+    "backToList": "Back to All Announcements",
+    "tableOfContents": "Table of Contents"
   },
   "contact": {
     "eyebrow": "Contact",

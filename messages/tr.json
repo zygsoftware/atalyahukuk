@@ -667,7 +667,8 @@
     "empty": "Henüz yayınlanmış bir yazı bulunmuyor.",
     "readMore": "Devamını Oku",
     "backToList": "Tüm Yazılara Dön",
-    "publishedOn": "Yayın Tarihi"
+    "publishedOn": "Yayın Tarihi",
+    "tableOfContents": "İçindekiler"
   },
   "announcements": {
     "eyebrow": "Duyurular",
@@ -675,7 +676,8 @@
     "subtitle": "Büromuzla ilgili güncel duyuru ve haberler.",
     "empty": "Şu anda aktif bir duyuru bulunmuyor.",
     "pinned": "Sabitlenmiş",
-    "backToList": "Tüm Duyurulara Dön"
+    "backToList": "Tüm Duyurulara Dön",
+    "tableOfContents": "İçindekiler"
   },
   "contact": {
     "eyebrow": "İletişim",

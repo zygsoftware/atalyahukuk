@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, getPathname } from "@/i18n/navigation";
 import { Container } from "@/components/site/Container";
 import { JsonLd } from "@/components/site/JsonLd";
+import { ArticleContent } from "@/components/site/ArticleContent";
 import {
   getActiveAnnouncementBySlug,
   getActiveAnnouncementSlugs,
@@ -103,10 +104,7 @@ export default async function AnnouncementDetailPage({
           {title}
         </h1>
 
-        <div
-          className="prose prose-neutral mt-10 max-w-none prose-headings:font-serif prose-headings:text-bordo-950 prose-a:text-bordo-500"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <ArticleContent html={content} tocLabel={t("tableOfContents")} />
       </Container>
     </article>
   );

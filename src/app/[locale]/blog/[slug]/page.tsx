@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, getPathname } from "@/i18n/navigation";
 import { Container } from "@/components/site/Container";
 import { JsonLd } from "@/components/site/JsonLd";
+import { ArticleContent } from "@/components/site/ArticleContent";
 import { getPublishedPostBySlug, getPublishedPostSlugs } from "@/lib/data/posts";
 import { formatDate } from "@/lib/utils";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
@@ -126,10 +127,7 @@ export default async function BlogDetailPage({
             </div>
           )}
 
-          <div
-            className="prose prose-neutral mt-10 max-w-none prose-headings:font-serif prose-headings:text-bordo-950 prose-a:text-bordo-500"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          <ArticleContent html={content} tocLabel={t("tableOfContents")} />
         </Container>
       </article>
     </>

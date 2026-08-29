@@ -100,3 +100,76 @@ body {
     animation: none;
   }
 }
+
+/* Blog/haber makale gövdesi — düz "paragraf üstüne paragraf" hissini kırmak
+   için güçlü tipografik hiyerarşi: büyük/vurgulu başlıklar, nefes alan
+   paragraf boşlukları, özel madde işaretleri ve dipnot/uyarı kutusu. */
+.article-prose {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+
+.article-prose > p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.article-prose > p:first-of-type {
+  font-size: 1.2em;
+  line-height: 1.7;
+  color: var(--color-ink);
+  opacity: 0.85;
+}
+
+.article-prose h2 {
+  margin-top: 2.75em;
+  margin-bottom: 0.9em;
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--color-bordo-100, #eaddde);
+}
+
+.article-prose h3 {
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  font-size: 1.2em;
+  color: var(--color-bordo-500, #680a0f);
+}
+
+.article-prose ul > li,
+.article-prose ol > li {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  padding-left: 0.25em;
+}
+
+.article-prose ul > li::marker {
+  color: var(--color-gold-500, #a37a43);
+}
+
+.article-prose ol > li::marker {
+  color: var(--color-bordo-500, #680a0f);
+  font-weight: 600;
+}
+
+.article-prose strong {
+  color: var(--color-bordo-600, #5b0a0e);
+  font-weight: 700;
+}
+
+/* Yazının sonundaki "Bu içerik genel bilgilendirme amaçlıdır..." gibi tek
+   satırlık italik uyarı paragrafını görsel olarak ayıran kutu. */
+.article-prose p:has(> em:only-child) {
+  margin-top: 2em;
+  border-left: 3px solid var(--color-gold-400, #c0a57f);
+  background-color: var(--color-bordo-50, #f6f0f1);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1em 1.25em;
+  font-size: 0.9em;
+}
+
+.article-prose p:has(> em:only-child) em {
+  color: var(--color-ink);
+  opacity: 0.75;
+  font-style: normal;
+}
