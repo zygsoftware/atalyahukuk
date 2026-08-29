@@ -21,4 +21,8 @@ export const PRACTICE_AREA_LABEL: Record<string, string> = {
   "icra-iflas-hukuku": "İcra ve İflas Hukuku",
   "miras-hukuku": "Miras Hukuku",
   "sozlesmeler-hukuku": "Sözleşmeler Hukuku",
+  "idari-hukuku": "İdari Hukuk",
+  "vatandaslik-basvurusu": "Vatandaşlık Başvurusu",
+  "ikamet-izni": "İkamet İzni Takibi",
+  "uluslararasi-ticaret-gumruk": "Uluslararası Ticaret ve Gümrük",
 };

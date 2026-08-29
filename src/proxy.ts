@@ -7,6 +7,7 @@ const intlMiddleware = createMiddleware(routing);
 
 const ADMIN_ONLY_PREFIXES = [
   "/admin/muvekkiller",
+  "/admin/dosyalar",
   "/admin/kullanicilar",
   "/admin/takvim",
   "/admin/ayarlar",
