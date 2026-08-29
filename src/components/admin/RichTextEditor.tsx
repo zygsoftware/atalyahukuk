@@ -76,7 +76,10 @@ export function RichTextEditor({
       const { data, error } = await supabase.storage
         .from("media")
         .upload(path, file);
-      if (error || !data) return;
+      if (error || !data) {
+        window.alert(error?.message ?? "Görsel yüklenemedi.");
+        return;
+      }
       const {
         data: { publicUrl },
       } = supabase.storage.from("media").getPublicUrl(data.path);

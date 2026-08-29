@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import { createClient } from "@/lib/supabase/client";
 
+const MAX_FILE_SIZE_MB = 20;
+
 export function ImageUpload({
   value,
   onChange,
@@ -14,17 +16,30 @@ export function ImageUpload({
   folder: string;
 }) {
   const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   async function handleFile(file: File) {
+    setError(null);
+
+    if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+      setError(
+        `Dosya çok büyük (${(file.size / (1024 * 1024)).toFixed(1)} MB). En fazla ${MAX_FILE_SIZE_MB} MB olmalı — telefon fotoğraflarını önce sıkıştırın veya boyutunu küçültün.`,
+      );
+      return;
+    }
+
     setUploading(true);
     try {
       const supabase = createClient();
       const path = `${folder}/${Date.now()}-${file.name}`;
-      const { data, error } = await supabase.storage
+      const { data, error: uploadError } = await supabase.storage
         .from("media")
         .upload(path, file);
-      if (error || !data) return;
+      if (uploadError || !data) {
+        setError(uploadError?.message ?? "Görsel yüklenemedi.");
+        return;
+      }
       const {
         data: { publicUrl },
       } = supabase.storage.from("media").getPublicUrl(data.path);
@@ -36,6 +51,11 @@ export function ImageUpload({
 
   return (
     <div>
+      {error && (
+        <p className="mb-2 max-w-sm text-sm font-medium text-bordo-600">
+          {error}
+        </p>
+      )}
       {value ? (
         <div className="relative aspect-video w-full max-w-sm overflow-hidden rounded-lg border border-bordo-100">
           <Image src={value} alt="Kapak görseli" fill className="object-cover" />
