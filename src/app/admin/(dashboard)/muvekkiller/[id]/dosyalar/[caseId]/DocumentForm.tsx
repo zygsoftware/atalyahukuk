@@ -2,6 +2,7 @@
 
 import { useRef, useState, useTransition } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { sanitizeFileName } from "@/lib/utils";
 
 export function DocumentForm({
   caseId,
@@ -34,7 +35,7 @@ export function DocumentForm({
     startTransition(async () => {
       try {
         const supabase = createClient();
-        const path = `${caseId}/${Date.now()}-${file.name}`;
+        const path = `${caseId}/${Date.now()}-${sanitizeFileName(file.name)}`;
         const { data, error: uploadError } = await supabase.storage
           .from("case-documents")
           .upload(path, file);

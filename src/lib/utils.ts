@@ -34,6 +34,24 @@ export function slugify(input: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+// Supabase Storage nesne anahtarları boşluk/Türkçe karakter/özel karakter
+// içeren dosya adlarını reddediyor ("Invalid key" hatası). Yükleme öncesi
+// dosya adını güvenli bir slug'a çeviririz, uzantı korunur.
+export function sanitizeFileName(fileName: string): string {
+  const lastDot = fileName.lastIndexOf(".");
+  const hasExt = lastDot > 0 && lastDot < fileName.length - 1;
+  const base = hasExt ? fileName.slice(0, lastDot) : fileName;
+  const ext = hasExt
+    ? fileName
+        .slice(lastDot + 1)
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "")
+    : "";
+
+  const safeBase = slugify(base) || "dosya";
+  return ext ? `${safeBase}.${ext}` : safeBase;
+}
+
 export function formatDate(date: string, locale: string): string {
   return new Intl.DateTimeFormat(locale === "tr" ? "tr-TR" : "en-US", {
     year: "numeric",

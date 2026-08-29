@@ -6,7 +6,7 @@ import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import { createClient } from "@/lib/supabase/client";
-import { cn } from "@/lib/utils";
+import { cn, sanitizeFileName } from "@/lib/utils";
 
 function ToolbarButton({
   onClick,
@@ -72,7 +72,7 @@ export function RichTextEditor({
       const file = input.files?.[0];
       if (!file || !editor) return;
       const supabase = createClient();
-      const path = `posts/${Date.now()}-${file.name}`;
+      const path = `posts/${Date.now()}-${sanitizeFileName(file.name)}`;
       const { data, error } = await supabase.storage
         .from("media")
         .upload(path, file);

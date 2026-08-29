@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { createClient } from "@/lib/supabase/client";
+import { sanitizeFileName } from "@/lib/utils";
 
 const MAX_FILE_SIZE_MB = 20;
 
@@ -32,7 +33,7 @@ export function ImageUpload({
     setUploading(true);
     try {
       const supabase = createClient();
-      const path = `${folder}/${Date.now()}-${file.name}`;
+      const path = `${folder}/${Date.now()}-${sanitizeFileName(file.name)}`;
       const { data, error: uploadError } = await supabase.storage
         .from("media")
         .upload(path, file);
