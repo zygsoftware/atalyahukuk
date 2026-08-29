@@ -668,7 +668,13 @@
     "readMore": "Devamını Oku",
     "backToList": "Tüm Yazılara Dön",
     "publishedOn": "Yayın Tarihi",
-    "tableOfContents": "İçindekiler"
+    "tableOfContents": "İçindekiler",
+    "relatedTitle": "İlgili Yazılar",
+    "shareLabel": "Paylaş:",
+    "copyLink": "Bağlantıyı kopyala",
+    "linkCopied": "Kopyalandı!",
+    "authorByline": "Bu içerik, Atalya Hukuk Bürosu'nun uzman kadrosu tarafından hazırlanmış ve gözden geçirilmiştir.",
+    "authorLinkLabel": "Ekibimizi Tanıyın"
   },
   "announcements": {
     "eyebrow": "Duyurular",
@@ -677,7 +683,14 @@
     "empty": "Şu anda aktif bir duyuru bulunmuyor.",
     "pinned": "Sabitlenmiş",
     "backToList": "Tüm Duyurulara Dön",
-    "tableOfContents": "İçindekiler"
+    "tableOfContents": "İçindekiler",
+    "readMore": "Devamını Oku",
+    "relatedTitle": "İlgili Duyurular",
+    "shareLabel": "Paylaş:",
+    "copyLink": "Bağlantıyı kopyala",
+    "linkCopied": "Kopyalandı!",
+    "authorByline": "Bu içerik, Atalya Hukuk Bürosu'nun uzman kadrosu tarafından hazırlanmış ve gözden geçirilmiştir.",
+    "authorLinkLabel": "Ekibimizi Tanıyın"
   },
   "contact": {
     "eyebrow": "İletişim",

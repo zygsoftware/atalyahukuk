@@ -77,6 +77,11 @@ export interface Database {
           title_en: string | null;
           content_tr: string;
           content_en: string | null;
+          cover_image_url: string | null;
+          excerpt_tr: string | null;
+          excerpt_en: string | null;
+          meta_title: string | null;
+          meta_description: string | null;
           is_pinned: boolean;
           is_active: boolean;
           published_at: string;
@@ -90,6 +95,11 @@ export interface Database {
           title_en?: string | null;
           content_tr?: string;
           content_en?: string | null;
+          cover_image_url?: string | null;
+          excerpt_tr?: string | null;
+          excerpt_en?: string | null;
+          meta_title?: string | null;
+          meta_description?: string | null;
           is_pinned?: boolean;
           is_active?: boolean;
           published_at?: string;

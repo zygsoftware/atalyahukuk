@@ -5,11 +5,16 @@ import { Link, getPathname } from "@/i18n/navigation";
 import { Container } from "@/components/site/Container";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ArticleContent } from "@/components/site/ArticleContent";
+import { AuthorByline } from "@/components/site/AuthorByline";
+import { ShareButtons } from "@/components/site/ShareButtons";
+import { RelatedArticleCard } from "@/components/site/RelatedArticleCard";
 import {
   getActiveAnnouncementBySlug,
   getActiveAnnouncementSlugs,
+  getRelatedAnnouncements,
 } from "@/lib/data/announcements";
 import { formatDate } from "@/lib/utils";
+import { SITE_URL } from "@/lib/constants";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 import { buildAlternates } from "@/lib/seo";
 
@@ -61,6 +66,8 @@ export default async function AnnouncementDetailPage({
 
   if (!announcement) notFound();
 
+  const relatedAnnouncements = await getRelatedAnnouncements(slug, 3);
+
   const title =
     locale === "tr"
       ? announcement.title_tr
@@ -69,6 +76,10 @@ export default async function AnnouncementDetailPage({
     locale === "tr"
       ? announcement.content_tr
       : (announcement.content_en ?? announcement.content_tr);
+  const canonicalUrl = `${SITE_URL}${getPathname({
+    locale,
+    href: { pathname: "/duyurular/[slug]", params: { slug } },
+  })}`;
 
   const tNav = await getTranslations("nav");
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -105,7 +116,51 @@ export default async function AnnouncementDetailPage({
         </h1>
 
         <ArticleContent html={content} tocLabel={t("tableOfContents")} />
+
+        <ShareButtons
+          url={canonicalUrl}
+          title={title}
+          label={t("shareLabel")}
+          copyLabel={t("copyLink")}
+          copiedLabel={t("linkCopied")}
+        />
+
+        <AuthorByline
+          text={t("authorByline")}
+          linkLabel={t("authorLinkLabel")}
+        />
       </Container>
+
+      {relatedAnnouncements.length > 0 && (
+        <Container className="mt-16 max-w-5xl">
+          <h2 className="font-serif text-2xl text-bordo-950">
+            {t("relatedTitle")}
+          </h2>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedAnnouncements.map((related) => (
+              <RelatedArticleCard
+                key={related.id}
+                hrefPathname="/duyurular/[slug]"
+                slug={related.slug}
+                title={
+                  locale === "tr"
+                    ? related.title_tr
+                    : (related.title_en ?? related.title_tr)
+                }
+                excerpt={
+                  locale === "tr"
+                    ? related.excerpt_tr
+                    : (related.excerpt_en ?? related.excerpt_tr)
+                }
+                coverImageUrl={related.cover_image_url}
+                publishedAt={related.published_at}
+                locale={locale}
+                readMoreLabel={t("readMore")}
+              />
+            ))}
+          </div>
+        </Container>
+      )}
     </article>
   );
 }

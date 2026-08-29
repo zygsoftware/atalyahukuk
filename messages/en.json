@@ -668,7 +668,13 @@
     "readMore": "Read More",
     "backToList": "Back to All Articles",
     "publishedOn": "Published on",
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "relatedTitle": "Related Articles",
+    "shareLabel": "Share:",
+    "copyLink": "Copy link",
+    "linkCopied": "Copied!",
+    "authorByline": "This content was prepared and reviewed by the legal team at Atalya Hukuk Bürosu.",
+    "authorLinkLabel": "Meet Our Team"
   },
   "announcements": {
     "eyebrow": "Announcements",
@@ -677,7 +683,14 @@
     "empty": "There are no active announcements at the moment.",
     "pinned": "Pinned",
     "backToList": "Back to All Announcements",
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "readMore": "Read More",
+    "relatedTitle": "Related Announcements",
+    "shareLabel": "Share:",
+    "copyLink": "Copy link",
+    "linkCopied": "Copied!",
+    "authorByline": "This content was prepared and reviewed by the legal team at Atalya Hukuk Bürosu.",
+    "authorLinkLabel": "Meet Our Team"
   },
   "contact": {
     "eyebrow": "Contact",

@@ -32,6 +32,25 @@ export async function getActiveAnnouncementBySlug(slug: string) {
   }
 }
 
+export async function getRelatedAnnouncements(excludeSlug: string, limit = 3) {
+  try {
+    const supabase = createStaticClient();
+    const { data } = await supabase
+      .from("announcements")
+      .select(
+        "id, slug, title_tr, title_en, excerpt_tr, excerpt_en, cover_image_url, is_pinned, published_at",
+      )
+      .eq("is_active", true)
+      .neq("slug", excludeSlug)
+      .order("published_at", { ascending: false })
+      .limit(limit);
+
+    return data ?? [];
+  } catch {
+    return [];
+  }
+}
+
 export async function getActiveAnnouncementSlugs() {
   try {
     const supabase = createStaticClient();

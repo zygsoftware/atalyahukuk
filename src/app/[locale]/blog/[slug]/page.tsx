@@ -6,7 +6,14 @@ import { Link, getPathname } from "@/i18n/navigation";
 import { Container } from "@/components/site/Container";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ArticleContent } from "@/components/site/ArticleContent";
-import { getPublishedPostBySlug, getPublishedPostSlugs } from "@/lib/data/posts";
+import { AuthorByline } from "@/components/site/AuthorByline";
+import { ShareButtons } from "@/components/site/ShareButtons";
+import { RelatedArticleCard } from "@/components/site/RelatedArticleCard";
+import {
+  getPublishedPostBySlug,
+  getPublishedPostSlugs,
+  getRelatedPosts,
+} from "@/lib/data/posts";
 import { formatDate } from "@/lib/utils";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
@@ -60,9 +67,15 @@ export default async function BlogDetailPage({
 
   if (!post) notFound();
 
+  const relatedPosts = await getRelatedPosts(slug, 3);
+
   const title = locale === "tr" ? post.title_tr : (post.title_en ?? post.title_tr);
   const content =
     locale === "tr" ? post.content_tr : (post.content_en ?? post.content_tr);
+  const canonicalUrl = `${SITE_URL}${getPathname({
+    locale,
+    href: { pathname: "/blog/[slug]", params: { slug } },
+  })}`;
 
   const tNav = await getTranslations("nav");
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -128,7 +141,51 @@ export default async function BlogDetailPage({
           )}
 
           <ArticleContent html={content} tocLabel={t("tableOfContents")} />
+
+          <ShareButtons
+            url={canonicalUrl}
+            title={title}
+            label={t("shareLabel")}
+            copyLabel={t("copyLink")}
+            copiedLabel={t("linkCopied")}
+          />
+
+          <AuthorByline
+            text={t("authorByline")}
+            linkLabel={t("authorLinkLabel")}
+          />
         </Container>
+
+        {relatedPosts.length > 0 && (
+          <Container className="mt-16 max-w-5xl">
+            <h2 className="font-serif text-2xl text-bordo-950">
+              {t("relatedTitle")}
+            </h2>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedPosts.map((related) => (
+                <RelatedArticleCard
+                  key={related.id}
+                  hrefPathname="/blog/[slug]"
+                  slug={related.slug}
+                  title={
+                    locale === "tr"
+                      ? related.title_tr
+                      : (related.title_en ?? related.title_tr)
+                  }
+                  excerpt={
+                    locale === "tr"
+                      ? related.excerpt_tr
+                      : (related.excerpt_en ?? related.excerpt_tr)
+                  }
+                  coverImageUrl={related.cover_image_url}
+                  publishedAt={related.published_at}
+                  locale={locale}
+                  readMoreLabel={t("readMore")}
+                />
+              ))}
+            </div>
+          </Container>
+        )}
       </article>
     </>
   );
