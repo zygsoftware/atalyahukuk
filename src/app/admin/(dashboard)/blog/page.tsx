@@ -9,7 +9,7 @@ export default async function AdminBlogListPage() {
   const supabase = await createClient();
   const { data: posts } = await supabase
     .from("posts")
-    .select("id, slug, title_tr, status, published_at, created_at")
+    .select("id, slug, title_tr, status, category, is_pinned, published_at, created_at")
     .order("created_at", { ascending: false });
 
   return (
@@ -29,6 +29,7 @@ export default async function AdminBlogListPage() {
           <thead className="bg-bordo-50/60 text-xs uppercase tracking-wide text-ink/50">
             <tr>
               <th className="px-5 py-3">Başlık</th>
+              <th className="px-5 py-3">Tür</th>
               <th className="px-5 py-3">Durum</th>
               <th className="px-5 py-3">Yayın Tarihi</th>
               <th className="px-5 py-3" />
@@ -39,6 +40,22 @@ export default async function AdminBlogListPage() {
               <tr key={post.id} className="border-t border-bordo-50">
                 <td className="px-5 py-3 font-medium text-ink">
                   {post.title_tr}
+                  {post.is_pinned && (
+                    <span className="ml-2 rounded-full bg-gold-100 px-2 py-0.5 text-[10px] font-semibold text-gold-700">
+                      SABİT
+                    </span>
+                  )}
+                </td>
+                <td className="px-5 py-3">
+                  <span
+                    className={
+                      post.category === "duyuru"
+                        ? "rounded-full bg-bordo-50 px-2.5 py-1 text-xs font-medium text-bordo-600"
+                        : "rounded-full bg-gold-50 px-2.5 py-1 text-xs font-medium text-gold-700"
+                    }
+                  >
+                    {post.category === "duyuru" ? "Duyuru" : "Blog"}
+                  </span>
                 </td>
                 <td className="px-5 py-3">
                   <span
@@ -71,7 +88,7 @@ export default async function AdminBlogListPage() {
             ))}
             {(posts ?? []).length === 0 && (
               <tr>
-                <td colSpan={4} className="px-5 py-10 text-center text-ink/50">
+                <td colSpan={5} className="px-5 py-10 text-center text-ink/50">
                   Henüz blog yazısı eklenmemiş.
                 </td>
               </tr>
