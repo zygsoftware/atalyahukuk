@@ -6,7 +6,7 @@ export async function getPublishedPosts() {
     const { data } = await supabase
       .from("posts")
       .select(
-        "id, slug, title_tr, title_en, excerpt_tr, excerpt_en, cover_image_url, is_pinned, published_at",
+        "id, slug, title_tr, title_en, excerpt_tr, excerpt_en, cover_image_url, category, is_pinned, published_at",
       )
       .eq("status", "published")
       .order("is_pinned", { ascending: false })
@@ -40,7 +40,7 @@ export async function getRelatedPosts(excludeSlug: string, limit = 3) {
     const { data } = await supabase
       .from("posts")
       .select(
-        "id, slug, title_tr, title_en, excerpt_tr, excerpt_en, cover_image_url, is_pinned, published_at",
+        "id, slug, title_tr, title_en, excerpt_tr, excerpt_en, cover_image_url, category, is_pinned, published_at",
       )
       .eq("status", "published")
       .neq("slug", excludeSlug)

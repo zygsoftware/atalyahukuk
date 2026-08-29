@@ -118,11 +118,23 @@ export default async function BlogDetailPage({
             ← {t("backToList")}
           </Link>
 
-          {post.is_pinned && (
-            <span className="mt-6 inline-block rounded-full bg-gold-100 px-3 py-1 text-xs font-semibold text-gold-700">
-              {t("pinned")}
+          <div className="mt-6 flex flex-wrap items-center gap-2">
+            <span
+              className={
+                "rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide " +
+                (post.category === "duyuru"
+                  ? "bg-bordo-50 text-bordo-600"
+                  : "bg-gold-50 text-gold-700")
+              }
+            >
+              {post.category === "duyuru" ? t("categoryDuyuru") : t("categoryBlog")}
             </span>
-          )}
+            {post.is_pinned && (
+              <span className="rounded-full bg-gold-100 px-3 py-1 text-xs font-semibold text-gold-700">
+                {t("pinned")}
+              </span>
+            )}
+          </div>
           {post.published_at && (
             <p className="mt-3 text-xs font-medium uppercase tracking-wide text-gold-600">
               {t("publishedOn")} {formatDate(post.published_at, locale)}
@@ -185,6 +197,12 @@ export default async function BlogDetailPage({
                   publishedAt={related.published_at}
                   isPinned={related.is_pinned}
                   pinnedLabel={t("pinned")}
+                  categoryLabel={
+                    related.category === "duyuru"
+                      ? t("categoryDuyuru")
+                      : t("categoryBlog")
+                  }
+                  isAnnouncement={related.category === "duyuru"}
                   locale={locale}
                   readMoreLabel={t("readMore")}
                 />

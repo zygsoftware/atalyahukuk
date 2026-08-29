@@ -10,6 +10,8 @@ export function PostCard({
   publishedAt,
   isPinned,
   pinnedLabel,
+  categoryLabel,
+  isAnnouncement,
   locale,
   readMoreLabel,
 }: {
@@ -20,6 +22,8 @@ export function PostCard({
   publishedAt: string | null;
   isPinned?: boolean;
   pinnedLabel?: string;
+  categoryLabel?: string;
+  isAnnouncement?: boolean;
   locale: string;
   readMoreLabel: string;
 }) {
@@ -49,11 +53,25 @@ export function PostCard({
         )}
       </div>
       <div className="flex flex-1 flex-col p-6">
-        {publishedAt && (
-          <span className="text-xs font-medium uppercase tracking-wide text-gold-600">
-            {formatDate(publishedAt, locale)}
-          </span>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {categoryLabel && (
+            <span
+              className={
+                "rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide " +
+                (isAnnouncement
+                  ? "bg-bordo-50 text-bordo-600"
+                  : "bg-gold-50 text-gold-700")
+              }
+            >
+              {categoryLabel}
+            </span>
+          )}
+          {publishedAt && (
+            <span className="text-xs font-medium uppercase tracking-wide text-gold-600">
+              {formatDate(publishedAt, locale)}
+            </span>
+          )}
+        </div>
         <h3 className="mt-2 font-serif text-lg text-bordo-950">{title}</h3>
         {excerpt && (
           <p className="mt-3 line-clamp-3 flex-1 text-sm leading-relaxed text-ink/65">

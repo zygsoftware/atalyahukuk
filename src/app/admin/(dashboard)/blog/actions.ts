@@ -4,12 +4,14 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { requireStaff } from "@/lib/supabase/auth-helpers";
 import { createClient } from "@/lib/supabase/server";
-import type { PostStatus } from "@/lib/supabase/types";
+import type { PostCategory, PostStatus } from "@/lib/supabase/types";
 
 function readPostFields(formData: FormData) {
   const status = formData.get("status") as PostStatus;
+  const category = (formData.get("category") as PostCategory) || "blog";
   return {
     slug: String(formData.get("slug") ?? "").trim(),
+    category,
     title_tr: String(formData.get("title_tr") ?? "").trim(),
     title_en: (formData.get("title_en") as string) || null,
     excerpt_tr: (formData.get("excerpt_tr") as string) || null,

@@ -4,7 +4,7 @@ import { useState, useTransition } from "react";
 import { RichTextEditor } from "@/components/admin/RichTextEditor";
 import { ImageUpload } from "@/components/admin/ImageUpload";
 import { slugify } from "@/lib/utils";
-import type { Database } from "@/lib/supabase/types";
+import type { Database, PostCategory } from "@/lib/supabase/types";
 
 type Post = Database["public"]["Tables"]["posts"]["Row"];
 
@@ -15,6 +15,9 @@ export function PostForm({
   initial?: Post;
   onSubmit: (formData: FormData) => Promise<void>;
 }) {
+  const [category, setCategory] = useState<PostCategory>(
+    initial?.category ?? "blog",
+  );
   const [titleTr, setTitleTr] = useState(initial?.title_tr ?? "");
   const [titleEn, setTitleEn] = useState(initial?.title_en ?? "");
   const [slug, setSlug] = useState(initial?.slug ?? "");
@@ -45,6 +48,7 @@ export function PostForm({
     setError(null);
 
     const formData = new FormData();
+    formData.set("category", category);
     formData.set("title_tr", titleTr);
     formData.set("title_en", titleEn ?? "");
     formData.set("slug", slug);
@@ -69,6 +73,36 @@ export function PostForm({
 
   return (
     <form onSubmit={handleSubmit} className="max-w-3xl space-y-8">
+      <div>
+        <label className="text-sm font-medium text-ink/80">Tür *</label>
+        <div className="mt-2 flex gap-3">
+          <button
+            type="button"
+            onClick={() => setCategory("blog")}
+            className={
+              "rounded-full px-5 py-2 text-sm font-medium transition " +
+              (category === "blog"
+                ? "bg-bordo-500 text-cream"
+                : "bg-white text-ink/70 ring-1 ring-bordo-100 hover:text-bordo-500")
+            }
+          >
+            Blog Yazısı
+          </button>
+          <button
+            type="button"
+            onClick={() => setCategory("duyuru")}
+            className={
+              "rounded-full px-5 py-2 text-sm font-medium transition " +
+              (category === "duyuru"
+                ? "bg-bordo-500 text-cream"
+                : "bg-white text-ink/70 ring-1 ring-bordo-100 hover:text-bordo-500")
+            }
+          >
+            Duyuru
+          </button>
+        </div>
+      </div>
+
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label className="text-sm font-medium text-ink/80">

@@ -1,5 +1,6 @@
 export type ProfileRole = "admin" | "editor";
 export type PostStatus = "draft" | "published";
+export type PostCategory = "blog" | "duyuru";
 export type ClientStatus = "aktif" | "pasif" | "arsiv";
 export type GalleryCategory = "ofis" | "ekip" | "etkinlik" | "diger";
 export type CaseStatus = "acik" | "kapali" | "beklemede";
@@ -41,6 +42,7 @@ export interface Database {
           content_en: string | null;
           cover_image_url: string | null;
           status: PostStatus;
+          category: PostCategory;
           is_pinned: boolean;
           meta_title: string | null;
           meta_description: string | null;
@@ -60,6 +62,7 @@ export interface Database {
           content_en?: string | null;
           cover_image_url?: string | null;
           status?: PostStatus;
+          category?: PostCategory;
           is_pinned?: boolean;
           meta_title?: string | null;
           meta_description?: string | null;
