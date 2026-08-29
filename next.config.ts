@@ -21,6 +21,20 @@ const nextConfig: NextConfig = {
     return [
       { source: "/tr", destination: "/", permanent: true },
       { source: "/tr/:path*", destination: "/:path*", permanent: true },
+      // Duyurular, Blog ile birleştirildi — eski linklerin SEO değerini
+      // korumak için kalıcı yönlendirme.
+      { source: "/duyurular", destination: "/blog", permanent: true },
+      { source: "/duyurular/:slug", destination: "/blog/:slug", permanent: true },
+      {
+        source: "/en/announcements",
+        destination: "/en/blog",
+        permanent: true,
+      },
+      {
+        source: "/en/announcements/:slug",
+        destination: "/en/blog/:slug",
+        permanent: true,
+      },
     ];
   },
 };

@@ -8,6 +8,8 @@ export function PostCard({
   excerpt,
   coverImageUrl,
   publishedAt,
+  isPinned,
+  pinnedLabel,
   locale,
   readMoreLabel,
 }: {
@@ -16,6 +18,8 @@ export function PostCard({
   excerpt: string | null;
   coverImageUrl: string | null;
   publishedAt: string | null;
+  isPinned?: boolean;
+  pinnedLabel?: string;
   locale: string;
   readMoreLabel: string;
 }) {
@@ -37,6 +41,11 @@ export function PostCard({
           <div className="flex h-full w-full items-center justify-center">
             <span className="font-serif text-3xl text-bordo-200">A</span>
           </div>
+        )}
+        {isPinned && pinnedLabel && (
+          <span className="absolute left-3 top-3 rounded-full bg-gold-500 px-3 py-1 text-xs font-semibold text-bordo-950 shadow-sm">
+            {pinnedLabel}
+          </span>
         )}
       </div>
       <div className="flex flex-1 flex-col p-6">

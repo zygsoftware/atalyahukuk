@@ -41,6 +41,7 @@ export interface Database {
           content_en: string | null;
           cover_image_url: string | null;
           status: PostStatus;
+          is_pinned: boolean;
           meta_title: string | null;
           meta_description: string | null;
           author_id: string | null;
@@ -59,6 +60,7 @@ export interface Database {
           content_en?: string | null;
           cover_image_url?: string | null;
           status?: PostStatus;
+          is_pinned?: boolean;
           meta_title?: string | null;
           meta_description?: string | null;
           author_id?: string | null;
@@ -67,48 +69,6 @@ export interface Database {
           updated_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["posts"]["Insert"]>;
-        Relationships: [];
-      };
-      announcements: {
-        Row: {
-          id: string;
-          slug: string;
-          title_tr: string;
-          title_en: string | null;
-          content_tr: string;
-          content_en: string | null;
-          cover_image_url: string | null;
-          excerpt_tr: string | null;
-          excerpt_en: string | null;
-          meta_title: string | null;
-          meta_description: string | null;
-          is_pinned: boolean;
-          is_active: boolean;
-          published_at: string;
-          created_at: string;
-          updated_at: string;
-        };
-        Insert: {
-          id?: string;
-          slug: string;
-          title_tr: string;
-          title_en?: string | null;
-          content_tr?: string;
-          content_en?: string | null;
-          cover_image_url?: string | null;
-          excerpt_tr?: string | null;
-          excerpt_en?: string | null;
-          meta_title?: string | null;
-          meta_description?: string | null;
-          is_pinned?: boolean;
-          is_active?: boolean;
-          published_at?: string;
-          created_at?: string;
-          updated_at?: string;
-        };
-        Update: Partial<
-          Database["public"]["Tables"]["announcements"]["Insert"]
-        >;
         Relationships: [];
       };
       clients: {

@@ -30,14 +30,6 @@ export const routing = defineRouting({
       tr: "/blog/[slug]",
       en: "/blog/[slug]",
     },
-    "/duyurular": {
-      tr: "/duyurular",
-      en: "/announcements",
-    },
-    "/duyurular/[slug]": {
-      tr: "/duyurular/[slug]",
-      en: "/announcements/[slug]",
-    },
     "/iletisim": {
       tr: "/iletisim",
       en: "/contact",

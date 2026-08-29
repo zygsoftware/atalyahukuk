@@ -9,7 +9,6 @@ export const NAV_ITEMS = [
   { href: "/hizmetler", key: "services" },
   { href: "/galeri", key: "gallery" },
   { href: "/blog", key: "blog" },
-  { href: "/duyurular", key: "announcements" },
   { href: "/iletisim", key: "contact" },
 ] as const;
 

@@ -3,7 +3,6 @@ import { SITE_URL, SERVICE_SLUGS } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
 import { getPathname } from "@/i18n/navigation";
 import { getPublishedPostSlugs } from "@/lib/data/posts";
-import { getActiveAnnouncementSlugs } from "@/lib/data/announcements";
 
 type Href = Parameters<typeof getPathname>[0]["href"];
 
@@ -44,14 +43,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/hizmetler",
     "/galeri",
     "/blog",
-    "/duyurular",
     "/iletisim",
   ] as const;
 
-  const [postSlugs, announcementSlugs] = await Promise.all([
-    getPublishedPostSlugs(),
-    getActiveAnnouncementSlugs(),
-  ]);
+  const postSlugs = await getPublishedPostSlugs();
 
   const entries: MetadataRoute.Sitemap = [];
 
@@ -75,17 +70,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const slug of postSlugs) {
     entries.push(
       ...buildEntries({ pathname: "/blog/[slug]", params: { slug } }, "yearly", 0.5, now),
-    );
-  }
-
-  for (const slug of announcementSlugs) {
-    entries.push(
-      ...buildEntries(
-        { pathname: "/duyurular/[slug]", params: { slug } },
-        "yearly",
-        0.4,
-        now,
-      ),
     );
   }
 

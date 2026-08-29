@@ -27,6 +27,7 @@ export function PostForm({
     initial?.cover_image_url ?? null,
   );
   const [status, setStatus] = useState(initial?.status ?? "draft");
+  const [isPinned, setIsPinned] = useState(initial?.is_pinned ?? false);
   const [metaTitle, setMetaTitle] = useState(initial?.meta_title ?? "");
   const [metaDescription, setMetaDescription] = useState(
     initial?.meta_description ?? "",
@@ -53,6 +54,7 @@ export function PostForm({
     formData.set("content_en", contentEn ?? "");
     formData.set("cover_image_url", coverImageUrl ?? "");
     formData.set("status", status);
+    if (isPinned) formData.set("is_pinned", "on");
     formData.set("meta_title", metaTitle ?? "");
     formData.set("meta_description", metaDescription ?? "");
 
@@ -179,16 +181,27 @@ export function PostForm({
         </div>
       </div>
 
-      <div>
-        <label className="text-sm font-medium text-ink/80">Durum</label>
-        <select
-          value={status}
-          onChange={(e) => setStatus(e.target.value as "draft" | "published")}
-          className="mt-2 block w-48 rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
-        >
-          <option value="draft">Taslak</option>
-          <option value="published">Yayında</option>
-        </select>
+      <div className="flex flex-wrap items-end gap-8">
+        <div>
+          <label className="text-sm font-medium text-ink/80">Durum</label>
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value as "draft" | "published")}
+            className="mt-2 block w-48 rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          >
+            <option value="draft">Taslak</option>
+            <option value="published">Yayında</option>
+          </select>
+        </div>
+        <label className="flex items-center gap-2 pb-2.5 text-sm font-medium text-ink/80">
+          <input
+            type="checkbox"
+            checked={isPinned}
+            onChange={(e) => setIsPinned(e.target.checked)}
+            className="h-4 w-4 rounded border-bordo-300"
+          />
+          Sabitlenmiş (listenin başında gösterilir)
+        </label>
       </div>
 
       {error && <p className="text-sm font-medium text-bordo-600">{error}</p>}

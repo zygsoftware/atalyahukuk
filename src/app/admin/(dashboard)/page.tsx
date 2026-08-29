@@ -12,7 +12,7 @@ export default async function AdminDashboardPage() {
 
   const [
     postsCount,
-    announcementsCount,
+    publishedPostsCount,
     unreadMessagesCount,
     galleryCount,
     clientsCount,
@@ -20,9 +20,9 @@ export default async function AdminDashboardPage() {
   ] = await Promise.all([
     supabase.from("posts").select("id", { count: "exact", head: true }),
     supabase
-      .from("announcements")
+      .from("posts")
       .select("id", { count: "exact", head: true })
-      .eq("is_active", true),
+      .eq("status", "published"),
     supabase
       .from("contact_messages")
       .select("id", { count: "exact", head: true })
@@ -50,9 +50,9 @@ export default async function AdminDashboardPage() {
   const cards = [
     { label: "Toplam Blog Yazısı", value: postsCount.count ?? 0, href: "/admin/blog" },
     {
-      label: "Aktif Duyuru",
-      value: announcementsCount.count ?? 0,
-      href: "/admin/duyurular",
+      label: "Yayındaki Yazı",
+      value: publishedPostsCount.count ?? 0,
+      href: "/admin/blog",
     },
     {
       label: "Okunmamış Mesaj",

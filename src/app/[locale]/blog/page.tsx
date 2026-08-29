@@ -69,6 +69,8 @@ export default async function BlogPage({
                   }
                   coverImageUrl={post.cover_image_url}
                   publishedAt={post.published_at}
+                  isPinned={post.is_pinned}
+                  pinnedLabel={t("pinned")}
                   locale={locale}
                   readMoreLabel={t("readMore")}
                 />

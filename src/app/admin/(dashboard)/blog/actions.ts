@@ -18,6 +18,7 @@ function readPostFields(formData: FormData) {
     content_en: (formData.get("content_en") as string) || null,
     cover_image_url: (formData.get("cover_image_url") as string) || null,
     status,
+    is_pinned: formData.get("is_pinned") === "on",
     meta_title: (formData.get("meta_title") as string) || null,
     meta_description: (formData.get("meta_description") as string) || null,
   };

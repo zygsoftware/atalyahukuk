@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/site/JsonLd";
 import { ArticleContent } from "@/components/site/ArticleContent";
 import { AuthorByline } from "@/components/site/AuthorByline";
 import { ShareButtons } from "@/components/site/ShareButtons";
-import { RelatedArticleCard } from "@/components/site/RelatedArticleCard";
+import { PostCard } from "@/components/site/PostCard";
 import {
   getPublishedPostBySlug,
   getPublishedPostSlugs,
@@ -118,8 +118,13 @@ export default async function BlogDetailPage({
             ← {t("backToList")}
           </Link>
 
+          {post.is_pinned && (
+            <span className="mt-6 inline-block rounded-full bg-gold-100 px-3 py-1 text-xs font-semibold text-gold-700">
+              {t("pinned")}
+            </span>
+          )}
           {post.published_at && (
-            <p className="mt-6 text-xs font-medium uppercase tracking-wide text-gold-600">
+            <p className="mt-3 text-xs font-medium uppercase tracking-wide text-gold-600">
               {t("publishedOn")} {formatDate(post.published_at, locale)}
             </p>
           )}
@@ -163,9 +168,8 @@ export default async function BlogDetailPage({
             </h2>
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {relatedPosts.map((related) => (
-                <RelatedArticleCard
+                <PostCard
                   key={related.id}
-                  hrefPathname="/blog/[slug]"
                   slug={related.slug}
                   title={
                     locale === "tr"
@@ -179,6 +183,8 @@ export default async function BlogDetailPage({
                   }
                   coverImageUrl={related.cover_image_url}
                   publishedAt={related.published_at}
+                  isPinned={related.is_pinned}
+                  pinnedLabel={t("pinned")}
                   locale={locale}
                   readMoreLabel={t("readMore")}
                 />

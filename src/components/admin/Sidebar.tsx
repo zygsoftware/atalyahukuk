@@ -15,12 +15,6 @@ const NAV = [
     roles: ["admin", "editor"],
   },
   {
-    href: "/admin/duyurular",
-    label: "Duyurular",
-    exact: false,
-    roles: ["admin", "editor"],
-  },
-  {
     href: "/admin/galeri",
     label: "Galeri",
     exact: false,
