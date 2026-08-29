@@ -1,19 +1,22 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { slugify } from "@/lib/utils";
 
 type TocItem = { id: string; text: string; level: 2 | 3 };
 
-export function ArticleContent({
+// Makale gövdesi ayrı ve memo'lu bir bileşen: `html` değişmediği sürece bir
+// daha asla yeniden render edilmez. Bu şart olmazsa, üst bileşende TOC'u
+// göstermek için tetiklenen setToc(...) yeniden render'ı bu div'i de
+// yeniden işler ve biraz önce başlıklara eklediğimiz id/class'ları siler.
+const ArticleBody = memo(function ArticleBody({
   html,
-  tocLabel,
+  onTocReady,
 }: {
   html: string;
-  tocLabel: string;
+  onTocReady: (items: TocItem[]) => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [toc, setToc] = useState<TocItem[]>([]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -25,10 +28,11 @@ export function ArticleContent({
     const usedIds = new Set<string>();
     const items: TocItem[] = headings.map((heading) => {
       const text = heading.textContent?.trim() ?? "";
-      let id = heading.id || slugify(text) || "bolum";
+      const base = heading.id || slugify(text) || "bolum";
+      let id = base;
       let suffix = 2;
       while (usedIds.has(id)) {
-        id = `${heading.id || slugify(text) || "bolum"}-${suffix}`;
+        id = `${base}-${suffix}`;
         suffix += 1;
       }
       usedIds.add(id);
@@ -41,8 +45,26 @@ export function ArticleContent({
       };
     });
 
-    setToc(items);
-  }, [html]);
+    onTocReady(items);
+  }, [html, onTocReady]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="article-prose prose prose-neutral mt-10 max-w-none prose-headings:font-serif prose-headings:text-bordo-950 prose-a:text-bordo-500"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
+});
+
+export function ArticleContent({
+  html,
+  tocLabel,
+}: {
+  html: string;
+  tocLabel: string;
+}) {
+  const [toc, setToc] = useState<TocItem[]>([]);
 
   return (
     <>
@@ -70,11 +92,7 @@ export function ArticleContent({
         </nav>
       )}
 
-      <div
-        ref={containerRef}
-        className="article-prose prose prose-neutral mt-10 max-w-none prose-headings:font-serif prose-headings:text-bordo-950 prose-a:text-bordo-500"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <ArticleBody html={html} onTocReady={setToc} />
     </>
   );
 }
