@@ -20,12 +20,15 @@ export function PostForm({
   );
   const [titleTr, setTitleTr] = useState(initial?.title_tr ?? "");
   const [titleEn, setTitleEn] = useState(initial?.title_en ?? "");
+  const [titleRu, setTitleRu] = useState(initial?.title_ru ?? "");
   const [slug, setSlug] = useState(initial?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(initial));
   const [excerptTr, setExcerptTr] = useState(initial?.excerpt_tr ?? "");
   const [excerptEn, setExcerptEn] = useState(initial?.excerpt_en ?? "");
+  const [excerptRu, setExcerptRu] = useState(initial?.excerpt_ru ?? "");
   const [contentTr, setContentTr] = useState(initial?.content_tr ?? "");
   const [contentEn, setContentEn] = useState(initial?.content_en ?? "");
+  const [contentRu, setContentRu] = useState(initial?.content_ru ?? "");
   const [coverImageUrl, setCoverImageUrl] = useState<string | null>(
     initial?.cover_image_url ?? null,
   );
@@ -34,6 +37,10 @@ export function PostForm({
   const [metaTitle, setMetaTitle] = useState(initial?.meta_title ?? "");
   const [metaDescription, setMetaDescription] = useState(
     initial?.meta_description ?? "",
+  );
+  const [metaTitleRu, setMetaTitleRu] = useState(initial?.meta_title_ru ?? "");
+  const [metaDescriptionRu, setMetaDescriptionRu] = useState(
+    initial?.meta_description_ru ?? "",
   );
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
@@ -51,16 +58,21 @@ export function PostForm({
     formData.set("category", category);
     formData.set("title_tr", titleTr);
     formData.set("title_en", titleEn ?? "");
+    formData.set("title_ru", titleRu ?? "");
     formData.set("slug", slug);
     formData.set("excerpt_tr", excerptTr ?? "");
     formData.set("excerpt_en", excerptEn ?? "");
+    formData.set("excerpt_ru", excerptRu ?? "");
     formData.set("content_tr", contentTr);
     formData.set("content_en", contentEn ?? "");
+    formData.set("content_ru", contentRu ?? "");
     formData.set("cover_image_url", coverImageUrl ?? "");
     formData.set("status", status);
     if (isPinned) formData.set("is_pinned", "on");
     formData.set("meta_title", metaTitle ?? "");
     formData.set("meta_description", metaDescription ?? "");
+    formData.set("meta_title_ru", metaTitleRu ?? "");
+    formData.set("meta_description_ru", metaDescriptionRu ?? "");
 
     startTransition(async () => {
       try {
@@ -103,7 +115,7 @@ export function PostForm({
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-3">
         <div>
           <label className="text-sm font-medium text-ink/80">
             Başlık (TR) *
@@ -122,6 +134,16 @@ export function PostForm({
           <input
             value={titleEn ?? ""}
             onChange={(e) => setTitleEn(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            Başlık (RU)
+          </label>
+          <input
+            value={titleRu ?? ""}
+            onChange={(e) => setTitleRu(e.target.value)}
             className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
           />
         </div>
@@ -153,7 +175,7 @@ export function PostForm({
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-3">
         <div>
           <label className="text-sm font-medium text-ink/80">
             Özet (TR)
@@ -176,6 +198,17 @@ export function PostForm({
             className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
           />
         </div>
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            Özet (RU)
+          </label>
+          <textarea
+            rows={3}
+            value={excerptRu ?? ""}
+            onChange={(e) => setExcerptRu(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
       </div>
 
       <div>
@@ -189,6 +222,13 @@ export function PostForm({
         <label className="text-sm font-medium text-ink/80">İçerik (EN)</label>
         <div className="mt-2">
           <RichTextEditor value={contentEn ?? ""} onChange={setContentEn} />
+        </div>
+      </div>
+
+      <div>
+        <label className="text-sm font-medium text-ink/80">İçerik (RU)</label>
+        <div className="mt-2">
+          <RichTextEditor value={contentRu ?? ""} onChange={setContentRu} />
         </div>
       </div>
 
@@ -210,6 +250,29 @@ export function PostForm({
           <input
             value={metaDescription ?? ""}
             onChange={(e) => setMetaDescription(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            SEO Başlığı (RU)
+          </label>
+          <input
+            value={metaTitleRu ?? ""}
+            onChange={(e) => setMetaTitleRu(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            SEO Açıklaması (RU)
+          </label>
+          <input
+            value={metaDescriptionRu ?? ""}
+            onChange={(e) => setMetaDescriptionRu(e.target.value)}
             className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
           />
         </div>

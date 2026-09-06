@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { BlogListClient } from "@/components/site/BlogListClient";
 import { getPublishedPosts } from "@/lib/data/posts";
 import { buildAlternates } from "@/lib/seo";
+import { pickLocaleField } from "@/lib/utils";
 
 export async function generateMetadata({
   params,
@@ -35,9 +36,8 @@ export default async function BlogPage({
   const items = posts.map((post) => ({
     id: post.id,
     slug: post.slug,
-    title: locale === "tr" ? post.title_tr : (post.title_en ?? post.title_tr),
-    excerpt:
-      locale === "tr" ? post.excerpt_tr : (post.excerpt_en ?? post.excerpt_tr),
+    title: pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru),
+    excerpt: pickLocaleField(locale, post.excerpt_tr, post.excerpt_en, post.excerpt_ru),
     coverImageUrl: post.cover_image_url,
     publishedAt: post.published_at,
     isPinned: post.is_pinned,

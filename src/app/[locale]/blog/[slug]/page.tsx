@@ -14,7 +14,7 @@ import {
   getPublishedPostSlugs,
   getRelatedPosts,
 } from "@/lib/data/posts";
-import { formatDate } from "@/lib/utils";
+import { formatDate, pickLocaleField } from "@/lib/utils";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 import { buildAlternates } from "@/lib/seo";
@@ -33,11 +33,17 @@ export async function generateMetadata({
   const post = await getPublishedPostBySlug(slug);
   if (!post) return {};
 
+  const metaTitle =
+    locale === "ru" ? (post.meta_title_ru ?? post.meta_title) : post.meta_title;
+  const metaDescription =
+    locale === "ru"
+      ? (post.meta_description_ru ?? post.meta_description)
+      : post.meta_description;
   const title =
-    post.meta_title ?? (locale === "tr" ? post.title_tr : (post.title_en ?? post.title_tr));
+    metaTitle ?? pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru);
   const description =
-    post.meta_description ??
-    (locale === "tr" ? post.excerpt_tr : (post.excerpt_en ?? post.excerpt_tr)) ??
+    metaDescription ??
+    pickLocaleField(locale, post.excerpt_tr, post.excerpt_en, post.excerpt_ru) ??
     undefined;
 
   return {
@@ -69,9 +75,13 @@ export default async function BlogDetailPage({
 
   const relatedPosts = await getRelatedPosts(slug, 3);
 
-  const title = locale === "tr" ? post.title_tr : (post.title_en ?? post.title_tr);
-  const content =
-    locale === "tr" ? post.content_tr : (post.content_en ?? post.content_tr);
+  const title = pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru);
+  const content = pickLocaleField(
+    locale,
+    post.content_tr,
+    post.content_en,
+    post.content_ru,
+  );
   const canonicalUrl = `${SITE_URL}${getPathname({
     locale,
     href: { pathname: "/blog/[slug]", params: { slug } },
@@ -183,16 +193,18 @@ export default async function BlogDetailPage({
                 <PostCard
                   key={related.id}
                   slug={related.slug}
-                  title={
-                    locale === "tr"
-                      ? related.title_tr
-                      : (related.title_en ?? related.title_tr)
-                  }
-                  excerpt={
-                    locale === "tr"
-                      ? related.excerpt_tr
-                      : (related.excerpt_en ?? related.excerpt_tr)
-                  }
+                  title={pickLocaleField(
+                    locale,
+                    related.title_tr,
+                    related.title_en,
+                    related.title_ru,
+                  )}
+                  excerpt={pickLocaleField(
+                    locale,
+                    related.excerpt_tr,
+                    related.excerpt_en,
+                    related.excerpt_ru,
+                  )}
                   coverImageUrl={related.cover_image_url}
                   publishedAt={related.published_at}
                   isPinned={related.is_pinned}

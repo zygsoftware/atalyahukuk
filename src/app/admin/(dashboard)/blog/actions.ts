@@ -14,15 +14,20 @@ function readPostFields(formData: FormData) {
     category,
     title_tr: String(formData.get("title_tr") ?? "").trim(),
     title_en: (formData.get("title_en") as string) || null,
+    title_ru: (formData.get("title_ru") as string) || null,
     excerpt_tr: (formData.get("excerpt_tr") as string) || null,
     excerpt_en: (formData.get("excerpt_en") as string) || null,
+    excerpt_ru: (formData.get("excerpt_ru") as string) || null,
     content_tr: (formData.get("content_tr") as string) || "",
     content_en: (formData.get("content_en") as string) || null,
+    content_ru: (formData.get("content_ru") as string) || null,
     cover_image_url: (formData.get("cover_image_url") as string) || null,
     status,
     is_pinned: formData.get("is_pinned") === "on",
     meta_title: (formData.get("meta_title") as string) || null,
     meta_description: (formData.get("meta_description") as string) || null,
+    meta_title_ru: (formData.get("meta_title_ru") as string) || null,
+    meta_description_ru: (formData.get("meta_description_ru") as string) || null,
   };
 }
 

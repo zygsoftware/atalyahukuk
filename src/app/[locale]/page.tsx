@@ -28,6 +28,7 @@ import { getActiveGalleryImages } from "@/lib/data/gallery";
 import { getSiteSettings } from "@/lib/data/site-settings";
 import { getGoogleReviews } from "@/lib/data/google-reviews";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
+import { pickLocaleField } from "@/lib/utils";
 import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -510,12 +511,13 @@ export default async function HomePage({
                 <PostCard
                   key={post.id}
                   slug={post.slug}
-                  title={locale === "tr" ? post.title_tr : (post.title_en ?? post.title_tr)}
-                  excerpt={
-                    locale === "tr"
-                      ? post.excerpt_tr
-                      : (post.excerpt_en ?? post.excerpt_tr)
-                  }
+                  title={pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru)}
+                  excerpt={pickLocaleField(
+                    locale,
+                    post.excerpt_tr,
+                    post.excerpt_en,
+                    post.excerpt_ru,
+                  )}
                   coverImageUrl={post.cover_image_url}
                   publishedAt={post.published_at}
                   locale={locale}
