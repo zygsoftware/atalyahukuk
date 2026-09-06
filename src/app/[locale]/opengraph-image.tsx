@@ -10,10 +10,12 @@ export default async function OpengraphImage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const tagline =
-    locale === "tr"
-      ? "Haklarınızı Güvenle Savunuyoruz"
-      : "Defending Your Rights with Confidence";
+  const taglineMap: Record<string, string> = {
+    tr: "Haklarınızı Güvenle Savunuyoruz",
+    en: "Defending Your Rights with Confidence",
+    ru: "Защищаем Ваши Права с Уверенностью",
+  };
+  const tagline = taglineMap[locale] ?? taglineMap.en;
 
   return new ImageResponse(
     (

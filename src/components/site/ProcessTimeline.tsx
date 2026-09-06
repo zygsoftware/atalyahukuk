@@ -38,7 +38,13 @@ export interface ProcessStep {
  * akışta kalıp IntersectionObserver ile tetiklenen bir reveal kullanıyor —
  * hem bu riski taşımıyor hem de mobil/masaüstü aynı, tutarlı bir deneyim.
  */
-export function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
+export function ProcessTimeline({
+  steps,
+  stepLabel = "STEP",
+}: {
+  steps: ProcessStep[];
+  stepLabel?: string;
+}) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -91,7 +97,7 @@ export function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
                   style={{ transitionDelay: visible ? `${i * 150}ms` : "0ms" }}
                 >
                   <p className="text-[11px] font-semibold tracking-[0.2em] text-gold-500">
-                    ADIM {String(i + 1).padStart(2, "0")}
+                    {stepLabel} {String(i + 1).padStart(2, "0")}
                   </p>
                   <div className="relative z-10 mx-auto mt-3 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-br from-bordo-500 to-bordo-800 shadow-lg shadow-bordo-900/20 ring-4 ring-cream transition-transform duration-500 group-hover:scale-110">
                     <Icon
@@ -135,7 +141,7 @@ export function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
               </div>
               <div className="pt-1.5">
                 <p className="text-[11px] font-semibold tracking-[0.2em] text-gold-500">
-                  ADIM {String(i + 1).padStart(2, "0")}
+                  {stepLabel} {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-1 font-serif text-lg text-bordo-950">
                   {step.title}

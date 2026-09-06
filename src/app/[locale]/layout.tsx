@@ -25,10 +25,21 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
+  const firmSuffixMap: Record<string, string> = {
+    tr: "Hukuk Bürosu",
+    en: "Law Firm",
+    ru: "Юридическая фирма",
+  };
+  const ogLocaleMap: Record<string, string> = {
+    tr: "tr_TR",
+    en: "en_US",
+    ru: "ru_RU",
+  };
+
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: `${SITE_NAME} | ${locale === "tr" ? "Hukuk Bürosu" : "Law Firm"}`,
+      default: `${SITE_NAME} | ${firmSuffixMap[locale] ?? firmSuffixMap.en}`,
       template: t("titleTemplate"),
     },
     description: t("defaultDescription"),
@@ -37,12 +48,13 @@ export async function generateMetadata({
       languages: {
         tr: "/",
         en: "/en",
+        ru: "/ru",
       },
     },
     openGraph: {
       type: "website",
       siteName: SITE_NAME,
-      locale: locale === "tr" ? "tr_TR" : "en_US",
+      locale: ogLocaleMap[locale] ?? ogLocaleMap.en,
     },
     icons: {
       icon: "/icon.png",

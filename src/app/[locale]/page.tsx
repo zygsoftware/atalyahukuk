@@ -83,7 +83,9 @@ export default async function HomePage({
   const latestPosts = posts.slice(0, 3);
   const featuredGalleryImages = galleryImages.slice(0, 4);
 
-  const address = locale === "tr" ? settings?.address_tr : settings?.address_en;
+  const address =
+    (locale === "tr" ? settings?.address_tr : settings?.address_en) ??
+    settings?.address_tr;
 
   return (
     <>
@@ -295,6 +297,7 @@ export default async function HomePage({
                   ] as const
                 )[i],
               }))}
+              stepLabel={t("stepLabel")}
             />
           </div>
         </Container>

@@ -52,8 +52,14 @@ export function sanitizeFileName(fileName: string): string {
   return ext ? `${safeBase}.${ext}` : safeBase;
 }
 
+const DATE_LOCALE_MAP: Record<string, string> = {
+  tr: "tr-TR",
+  en: "en-US",
+  ru: "ru-RU",
+};
+
 export function formatDate(date: string, locale: string): string {
-  return new Intl.DateTimeFormat(locale === "tr" ? "tr-TR" : "en-US", {
+  return new Intl.DateTimeFormat(DATE_LOCALE_MAP[locale] ?? "en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
