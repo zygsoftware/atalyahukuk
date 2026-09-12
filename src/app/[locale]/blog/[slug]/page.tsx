@@ -18,6 +18,7 @@ import { formatDate, pickLocaleField } from "@/lib/utils";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 import { buildAlternates } from "@/lib/seo";
+import { extractFaqs } from "@/lib/faq";
 
 export async function generateStaticParams() {
   const posts = await getPublishedPostSlugs();
@@ -117,6 +118,7 @@ export default async function BlogDetailPage({
     locale,
     href: { pathname: "/blog/[slug]", params: { slug } },
   })}`;
+  const faqs = extractFaqs(content, locale);
 
   const tNav = await getTranslations("nav");
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -157,6 +159,22 @@ export default async function BlogDetailPage({
         }}
       />
       <JsonLd data={breadcrumbJsonLd} />
+      {faqs.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }}
+        />
+      )}
 
       <article className="py-16 sm:py-20">
         <Container className="max-w-3xl">
