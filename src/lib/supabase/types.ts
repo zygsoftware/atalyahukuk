@@ -49,6 +49,8 @@ export interface Database {
           is_pinned: boolean;
           meta_title: string | null;
           meta_description: string | null;
+          meta_title_en: string | null;
+          meta_description_en: string | null;
           meta_title_ru: string | null;
           meta_description_ru: string | null;
           author_id: string | null;
@@ -74,6 +76,8 @@ export interface Database {
           is_pinned?: boolean;
           meta_title?: string | null;
           meta_description?: string | null;
+          meta_title_en?: string | null;
+          meta_description_en?: string | null;
           meta_title_ru?: string | null;
           meta_description_ru?: string | null;
           author_id?: string | null;

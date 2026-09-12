@@ -34,11 +34,17 @@ export async function generateMetadata({
   if (!post) return {};
 
   const metaTitle =
-    locale === "ru" ? (post.meta_title_ru ?? post.meta_title) : post.meta_title;
+    locale === "ru"
+      ? (post.meta_title_ru ?? post.meta_title)
+      : locale === "en"
+        ? (post.meta_title_en ?? post.meta_title)
+        : post.meta_title;
   const metaDescription =
     locale === "ru"
       ? (post.meta_description_ru ?? post.meta_description)
-      : post.meta_description;
+      : locale === "en"
+        ? (post.meta_description_en ?? post.meta_description)
+        : post.meta_description;
   const title =
     metaTitle ?? pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru);
   const description =

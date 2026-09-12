@@ -38,6 +38,10 @@ export function PostForm({
   const [metaDescription, setMetaDescription] = useState(
     initial?.meta_description ?? "",
   );
+  const [metaTitleEn, setMetaTitleEn] = useState(initial?.meta_title_en ?? "");
+  const [metaDescriptionEn, setMetaDescriptionEn] = useState(
+    initial?.meta_description_en ?? "",
+  );
   const [metaTitleRu, setMetaTitleRu] = useState(initial?.meta_title_ru ?? "");
   const [metaDescriptionRu, setMetaDescriptionRu] = useState(
     initial?.meta_description_ru ?? "",
@@ -71,6 +75,8 @@ export function PostForm({
     if (isPinned) formData.set("is_pinned", "on");
     formData.set("meta_title", metaTitle ?? "");
     formData.set("meta_description", metaDescription ?? "");
+    formData.set("meta_title_en", metaTitleEn ?? "");
+    formData.set("meta_description_en", metaDescriptionEn ?? "");
     formData.set("meta_title_ru", metaTitleRu ?? "");
     formData.set("meta_description_ru", metaDescriptionRu ?? "");
 
@@ -250,6 +256,29 @@ export function PostForm({
           <input
             value={metaDescription ?? ""}
             onChange={(e) => setMetaDescription(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            SEO Başlığı (EN)
+          </label>
+          <input
+            value={metaTitleEn ?? ""}
+            onChange={(e) => setMetaTitleEn(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            SEO Açıklaması (EN)
+          </label>
+          <input
+            value={metaDescriptionEn ?? ""}
+            onChange={(e) => setMetaDescriptionEn(e.target.value)}
             className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
           />
         </div>

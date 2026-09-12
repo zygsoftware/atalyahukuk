@@ -26,6 +26,8 @@ function readPostFields(formData: FormData) {
     is_pinned: formData.get("is_pinned") === "on",
     meta_title: (formData.get("meta_title") as string) || null,
     meta_description: (formData.get("meta_description") as string) || null,
+    meta_title_en: (formData.get("meta_title_en") as string) || null,
+    meta_description_en: (formData.get("meta_description_en") as string) || null,
     meta_title_ru: (formData.get("meta_title_ru") as string) || null,
     meta_description_ru: (formData.get("meta_description_ru") as string) || null,
   };
