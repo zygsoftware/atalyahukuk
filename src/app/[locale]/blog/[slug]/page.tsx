@@ -20,8 +20,8 @@ import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 import { buildAlternates } from "@/lib/seo";
 
 export async function generateStaticParams() {
-  const slugs = await getPublishedPostSlugs();
-  return slugs.map((slug) => ({ slug }));
+  const posts = await getPublishedPostSlugs();
+  return posts.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -52,6 +52,11 @@ export async function generateMetadata({
     pickLocaleField(locale, post.excerpt_tr, post.excerpt_en, post.excerpt_ru) ??
     undefined;
 
+  const canonicalPath = getPathname({
+    locale,
+    href: { pathname: "/blog/[slug]", params: { slug } },
+  });
+
   return {
     title,
     description,
@@ -59,9 +64,23 @@ export async function generateMetadata({
       pathname: "/blog/[slug]",
       params: { slug },
     }),
-    openGraph: post.cover_image_url
-      ? { images: [{ url: post.cover_image_url }] }
-      : undefined,
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      url: `${SITE_URL}${canonicalPath}`,
+      siteName: SITE_NAME,
+      locale,
+      publishedTime: post.published_at ?? undefined,
+      modifiedTime: post.updated_at,
+      images: post.cover_image_url ? [{ url: post.cover_image_url }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: post.cover_image_url ? [post.cover_image_url] : undefined,
+    },
   };
 }
 
@@ -82,6 +101,12 @@ export default async function BlogDetailPage({
   const relatedPosts = await getRelatedPosts(slug, 3);
 
   const title = pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru);
+  const excerpt = pickLocaleField(
+    locale,
+    post.excerpt_tr,
+    post.excerpt_en,
+    post.excerpt_ru,
+  );
   const content = pickLocaleField(
     locale,
     post.content_tr,
@@ -111,11 +136,19 @@ export default async function BlogDetailPage({
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "Article",
+          "@type": post.category === "duyuru" ? "NewsArticle" : "BlogPosting",
           headline: title,
+          description: excerpt ?? undefined,
           image: post.cover_image_url ? [post.cover_image_url] : undefined,
           datePublished: post.published_at,
           dateModified: post.updated_at,
+          url: canonicalUrl,
+          mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+          author: {
+            "@type": "Organization",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,

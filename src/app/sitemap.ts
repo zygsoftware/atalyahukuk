@@ -67,9 +67,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     );
   }
 
-  for (const slug of postSlugs) {
+  for (const post of postSlugs) {
     entries.push(
-      ...buildEntries({ pathname: "/blog/[slug]", params: { slug } }, "yearly", 0.5, now),
+      ...buildEntries(
+        { pathname: "/blog/[slug]", params: { slug: post.slug } },
+        "yearly",
+        0.5,
+        new Date(post.updated_at),
+      ),
     );
   }
 

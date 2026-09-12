@@ -59,10 +59,10 @@ export async function getPublishedPostSlugs() {
     const supabase = createStaticClient();
     const { data } = await supabase
       .from("posts")
-      .select("slug")
+      .select("slug, updated_at")
       .eq("status", "published");
 
-    return (data ?? []).map((row) => row.slug);
+    return data ?? [];
   } catch {
     return [];
   }
