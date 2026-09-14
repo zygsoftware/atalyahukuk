@@ -511,12 +511,19 @@ export default async function HomePage({
                 <PostCard
                   key={post.id}
                   slug={post.slug}
-                  title={pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru)}
+                  title={pickLocaleField(
+                    locale,
+                    post.title_tr,
+                    post.title_en,
+                    post.title_ru,
+                    post.title_de,
+                  )}
                   excerpt={pickLocaleField(
                     locale,
                     post.excerpt_tr,
                     post.excerpt_en,
                     post.excerpt_ru,
+                    post.excerpt_de,
                   )}
                   coverImageUrl={post.cover_image_url}
                   publishedAt={post.published_at}

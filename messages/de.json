@@ -1,0 +1,718 @@
+{
+  "meta": {
+    "siteName": "Atalya Anwaltskanzlei",
+    "titleTemplate": "%s | Atalya Anwaltskanzlei",
+    "defaultDescription": "Die Atalya Anwaltskanzlei mit Sitz in Antalya bietet zuverlässige und wirksame Rechtsberatung in den Bereichen Straf-, Familien-, Arbeits-, Handels- und Immobilienrecht sowie weiteren Rechtsgebieten."
+  },
+  "floatingContact": {
+    "whatsappLabel": "Kontaktieren Sie uns über WhatsApp",
+    "whatsappAriaLabel": "Auf WhatsApp chatten",
+    "whatsappPrefilledMessage": "Hallo, ich möchte gerne Informationen von der Atalya Hukuk Bürosu erhalten.",
+    "emailAriaLabel": "E-Mail senden",
+    "telegramAriaLabel": "Auf Telegram chatten"
+  },
+  "cookieConsent": {
+    "message": "Wir verwenden Cookies, um unsere Website zu verbessern und Besucherstatistiken zu verstehen. Wenn Sie zustimmen, wird Google Analytics aktiviert.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Rechtsgebiete",
+    "gallery": "Galerie",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "callToAction": "Kostenloses Erstgespräch",
+    "menu": "Menü"
+  },
+  "home": {
+    "heroEyebrow": "Atalya Anwaltskanzlei",
+    "heroTitle": "Wir verteidigen Ihre Rechte mit Zuversicht",
+    "heroSubtitle": "Mit Sitz in Antalya hört unser erfahrenes Anwaltsteam jedem Mandanten aufmerksam zu — wir schützen Ihre Rechte mit transparenter Kommunikation und entschlossenem Einsatz in vollem Umfang.",
+    "heroPrimaryCta": "Kontaktieren Sie uns",
+    "heroSecondaryCta": "Unsere Leistungen entdecken",
+    "aboutTeaserTitle": "Über die Atalya Anwaltskanzlei",
+    "aboutTeaserBody": "Bei der Atalya Anwaltskanzlei begleiten wir den rechtlichen Prozess jedes Mandanten sorgfältig — mit transparenter Kommunikation und starken Verteidigungsstrategien stehen wir Ihnen zur Seite.",
+    "aboutTeaserCta": "Mehr erfahren",
+    "servicesTeaserTitle": "Unsere Rechtsgebiete",
+    "servicesTeaserSubtitle": "Wir bieten spezialisierte Rechtsberatung in einem breiten Spektrum von Fachgebieten.",
+    "servicesTeaserCta": "Alle Leistungen ansehen",
+    "whyUsTitle": "Warum die Atalya Anwaltskanzlei?",
+    "whyUsItem1Title": "Erfahrenes Team",
+    "whyUsItem1Body": "Unsere erfahrenen Anwälte entwickeln für jeden Fall eine maßgeschneiderte Strategie.",
+    "whyUsItem2Title": "Transparente Kommunikation",
+    "whyUsItem2Body": "Wir halten unsere Mandanten in jeder Phase des Verfahrens auf dem Laufenden.",
+    "whyUsItem3Title": "Verlässliche Ergebnisse",
+    "whyUsItem3Body": "Unser sorgfältiger Ansatz liefert starke und beständige Ergebnisse.",
+    "blogTeaserTitle": "Blog & Artikel",
+    "blogTeaserSubtitle": "Aktuelle rechtliche Entwicklungen und Expertenwissen",
+    "blogTeaserCta": "Alle Artikel ansehen",
+    "processTitle": "Wie wir arbeiten",
+    "processSubtitle": "Wir verfolgen einen transparenten, gut organisierten Prozess vom ersten Gespräch bis zur Ergebnismitteilung.",
+    "stepLabel": "SCHRITT",
+    "teamTitle": "Unser Team",
+    "teamSubtitle": "Lernen Sie unser Team erfahrener Anwälte kennen.",
+    "testimonialsTitle": "Was unsere Mandanten sagen",
+    "testimonialsSubtitle": "Erfahrungen von Mandanten, die uns vertrauen.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faqSubtitle": "Hier finden Sie Antworten auf Ihre Fragen.",
+    "ctaTitle": "Benötigen Sie rechtliche Unterstützung?",
+    "ctaSubtitle": "Nehmen Sie Kontakt mit uns auf, damit wir Ihre Situation einschätzen können.",
+    "ctaButton": "Jetzt Kontakt aufnehmen"
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Atalya Anwaltskanzlei",
+    "metaDescription": "Die Atalya Anwaltskanzlei mit Sitz in Antalya bietet zuverlässige Rechtsberatung in den Bereichen Straf-, Familien-, Arbeits-, Handels- und Immobilienrecht sowie weiteren Rechtsgebieten.",
+    "intro": "Die Atalya Anwaltskanzlei mit Sitz in Antalya bietet Privat- und Firmenmandanten zuverlässige, lösungsorientierte und transparente Rechtsberatung in einem breiten Spektrum von Rechtsgebieten. Mit unserem erfahrenen Anwaltsteam verteidigen wir die Rechte unserer Mandanten so wirksam wie möglich – unter anderem im Straf-, Familien-, Arbeits-, Handels-, Immobilien-, Vollstreckungs- und Insolvenz-, Erb- sowie Vertragsrecht.",
+    "approachTitle": "Unser Arbeitsprinzip",
+    "approachBody": "Wir behandeln jeden Fall nach seinen eigenen Umständen und pflegen während des gesamten Verfahrens eine klare, regelmäßige Kommunikation mit unseren Mandanten. Wir informieren Sie in jeder Phase und legen Risiken und Optionen klar dar. Unser Ziel ist nicht nur der Abschluss eines Falls – wir wollen von Anfang an solide, nachhaltige rechtliche Lösungen schaffen, die die Rechte unserer Mandanten schützen.",
+    "localTitle": "Verlässliche Rechtsberatung in Antalya",
+    "localBody": "Mit Sitz in Antalya betreut unsere Kanzlei Privat- und Firmenmandanten in Muratpaşa, Konyaaltı, Kepez, Döşemealtı und den umliegenden Bezirken. Unser Team kennt die intensiven rechtlichen Bedürfnisse der Region in den Bereichen Tourismus, Bauwesen, Immobilien und Handel genau und verfolgt die lokalen Entwicklungen aufmerksam, um praxisnahe und zielgerichtete Lösungen anzubieten. Für Mandanten außerhalb Antalyas oder aus dem Ausland können wir unsere Prozesse auch problemlos per Online-Meeting und digitaler Dokumentenverwaltung abwickeln.",
+    "expertiseTitle": "Unsere Fachgebiete",
+    "expertiseBody": "Von Strafsachen über Familienrecht bis hin zu Handelsstreitigkeiten und Immobiliengeschäften stehen wir unseren Mandanten in einem breiten Leistungsspektrum zur Seite. Detaillierte Informationen zu jedem unserer Rechtsgebiete finden Sie auf unserer Leistungen-Seite.",
+    "expertiseCta": "Unsere Leistungen entdecken",
+    "missionTitle": "Unsere Mission",
+    "missionBody": "Den Zugang zum Recht durch sorgfältig zugeschnittene rechtliche Strategien für jeden Mandanten zu erleichtern.",
+    "visionTitle": "Unsere Vision",
+    "visionBody": "Die bevorzugte Anwaltskanzlei in und um Antalya zu sein – aufgebaut auf Vertrauen, Transparenz und Fachkompetenz.",
+    "valuesTitle": "Unsere Werte",
+    "value1": "Ehrlichkeit und Transparenz",
+    "value2": "Mandantenorientierung",
+    "value3": "Rechtliche Sorgfalt",
+    "value4": "Kontinuierliche Weiterentwicklung",
+    "teamTitle": "Unser Team",
+    "teamBody": "Unser Team aus erfahrenen Anwälten und Beratern behandelt jeden Fall mit derselben Sorgfalt und Professionalität."
+  },
+  "team": {
+    "members": {
+      "member1": { "name": "RA Mümtaz Köse", "title": "Gründungspartner" },
+      "member2": { "name": "RA Furkan Yağcı", "title": "Gründungspartner" },
+      "member3": { "name": "Gürkan Yavuz", "title": "IT-Spezialist" }
+    }
+  },
+  "process": {
+    "steps": {
+      "step1": {
+        "title": "Erstgespräch",
+        "body": "Wir hören uns Ihre Situation an und erarbeiten gemeinsam den rechtlichen Weg."
+      },
+      "step2": {
+        "title": "Falleinschätzung & Strategie",
+        "body": "Unser erfahrenes Team analysiert Ihren Fall und erarbeitet die passende Strategie."
+      },
+      "step3": {
+        "title": "Begleitung des Verfahrens",
+        "body": "Wir halten Sie in jeder Phase des Verfahrens regelmäßig auf dem Laufenden."
+      },
+      "step4": {
+        "title": "Ergebnis & Bericht",
+        "body": "Am Ende des Verfahrens teilen wir Ihnen das Ergebnis klar und transparent mit."
+      }
+    }
+  },
+  "faq": {
+    "items": {
+      "f1": {
+        "question": "Ist das Erstgespräch kostenpflichtig?",
+        "answer": "Im Erstgespräch besprechen wir gemeinsam Ihre Situation und informieren Sie über den weiteren rechtlichen Ablauf. Die Kosten werden nach dem Gespräch je nach Art des Falls festgelegt."
+      },
+      "f2": {
+        "question": "In welchen Rechtsgebieten sind Sie tätig?",
+        "answer": "Wir bieten Beratung und Prozessvertretung im Straf-, Familien-, Arbeits-, Handels-, Immobilien-, Vollstreckungs- und Insolvenz-, Erb-, Vertrags- und Verwaltungsrecht sowie bei Anträgen auf die türkische Staatsbürgerschaft, Aufenthaltstiteln und im internationalen Handelsrecht an. Alle unsere Rechtsgebiete finden Sie auf der Seite Rechtsgebiete."
+      },
+      "f3": {
+        "question": "Wie kann ich einen Termin vereinbaren?",
+        "answer": "Sie können ganz einfach über das Formular auf unserer Kontaktseite einen Termin anfragen oder uns telefonisch bzw. per E-Mail erreichen."
+      },
+      "f4": {
+        "question": "Wie lange dauert mein Fall?",
+        "answer": "Die Dauer hängt von der Art des Falls und der Auslastung des Gerichts ab. Im Erstgespräch geben wir Ihnen eine möglichst realistische Einschätzung."
+      },
+      "f5": {
+        "question": "Kann ich auch außerhalb der Stadt betreut werden?",
+        "answer": "Ja, viele unserer Prozesse können wir per Online-Meeting, E-Mail und Kurierdienst auch aus der Ferne abwickeln."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Unsere Leistungen",
+    "title": "Unsere Rechtsgebiete",
+    "subtitle": "Wir bieten mit unserem erfahrenen Team Rechtsberatung und Prozessvertretung in den folgenden Bereichen.",
+    "detailCta": "Ausführliche Informationen",
+    "backToList": "Zurück zu allen Leistungen",
+    "contactCta": "Beratung in diesem Bereich erhalten",
+    "benefitsTitle": "Unsere Leistungen in diesem Bereich",
+    "topicsTitle": "Von uns abgedeckte Themen",
+    "faqTitle": "Häufig gestellte Fragen",
+    "relatedTitle": "Verwandte Rechtsgebiete",
+    "items": {
+      "ceza-hukuku": {
+        "title": "Strafrecht",
+        "shortDescription": "Wirksame Verteidigung und rechtliche Vertretung in jeder Phase von Festnahme, Ermittlung und Strafverfahren.",
+        "description": "Unser Team für Strafrecht schützt die Rechte von Verdächtigen, Beschuldigten und Opfern in jeder Phase von Festnahme, Vernehmung, Ermittlung und Strafverfahren. Wir sind vom ersten Moment an dabei, verfolgen die Beweisaufnahme aufmerksam, passen die Verteidigungsstrategie an die Besonderheiten des Falls an und sorgen während des gesamten Verfahrens für eine wirksame Vertretung.",
+        "detailBody": "Wir verfügen über Erfahrung in einem breiten Spektrum – von Delikten vor dem Schwurgericht über Wirtschaftsdelikte bis hin zu Cyberkriminalität und Verkehrsdelikten. Zu unseren Leistungen gehören außerdem der Widerspruch gegen Untersuchungshaft und richterliche Kontrollmaßnahmen, die Begleitung von Vergleichs-/Schlichtungsverfahren sowie Rechtsmittel vor den Regionalgerichten und dem Kassationsgerichtshof. Unser Ziel ist es, dass das Recht unserer Mandanten auf ein faires Verfahren in jeder Phase vollständig gewahrt bleibt.",
+        "topics": [
+          "Schwere Straftaten (Tötungsdelikte, Körperverletzung, Sexualdelikte)",
+          "Betäubungsmittel- und Schmuggeldelikte",
+          "Betrug, Untreue und Wirtschaftsdelikte",
+          "Cyberkriminalität und computerbezogene Delikte",
+          "Verkehrsunfälle und Fahrlässigkeitsdelikte",
+          "Widerspruch gegen Untersuchungshaft und richterliche Kontrollmaßnahmen",
+          "Rechtsmittel vor den Regionalgerichten und dem Kassationsgerichtshof"
+        ],
+        "benefits": [
+          "Schnelle rechtliche Unterstützung bei Festnahme und Vernehmung",
+          "Gründliche Prüfung der Ermittlungsakte und der Beweise",
+          "Wirksame Verteidigung und Vertretung in der Hauptverhandlung",
+          "Widerspruch gegen Untersuchungshaft und richterliche Kontrollmaßnahmen",
+          "Begleitung von Vergleichs- und Tätige-Reue-Verfahren",
+          "Vertretung in der Berufungs- und Revisionsinstanz"
+        ],
+        "faq": [
+          {
+            "question": "Was sollte ich zuerst tun, wenn ich festgenommen werde?",
+            "answer": "Sie können Ihr Schweigerecht ausüben und einen Anwalt verlangen. Eine Aussage ohne vorherige Rücksprache mit einem Anwalt kann Ihre Rechte erheblich beeinträchtigen."
+          },
+          {
+            "question": "Was ist der Unterschied zwischen Ermittlungs- und Hauptverfahren?",
+            "answer": "Das Ermittlungsverfahren ist die vertrauliche Phase, in der die Staatsanwaltschaft den Tatverdacht prüft; das Hauptverfahren ist die gerichtliche Phase, die mit der Zulassung der Anklageschrift beginnt."
+          },
+          {
+            "question": "Wie läuft das Vergleichs-/Schlichtungsverfahren in Strafsachen ab?",
+            "answer": "Bei Delikten, die dem Vergleichsverfahren unterliegen, können sich die Parteien über einen Vermittler einigen; kommt es zu einer Einigung, wird keine öffentliche Klage erhoben bzw. das Verfahren eingestellt."
+          },
+          {
+            "question": "Ist eine anwaltliche Vertretung in einem Strafverfahren zwingend erforderlich?",
+            "answer": "Bei Delikten ab einer bestimmten Schwere ist ein Verteidiger gesetzlich vorgeschrieben; auch wenn dies nicht zwingend ist, empfehlen wir dringend rechtlichen Beistand, um Ihre Rechte vollständig zu schützen."
+          }
+        ]
+      },
+      "aile-hukuku": {
+        "title": "Familienrecht",
+        "shortDescription": "Sorgfältige, mandantenorientierte Rechtsberatung bei Scheidung, Unterhalt, Sorgerecht und Vermögensaufteilung.",
+        "description": "Unser Team für Familienrecht schützt sorgfältig die Rechte unserer Mandanten bei einvernehmlichen und streitigen Scheidungen, Unterhalt, Sorgerecht, Umgangsregelungen, güterrechtlicher Auseinandersetzung und Entschädigungsansprüchen. In Anbetracht der emotionalen Belastung dieser Angelegenheiten begleiten wir unsere Mandanten mit juristischer Kompetenz und echtem menschlichem Einfühlungsvermögen.",
+        "detailBody": "Über die Auflösung der Ehe hinaus beraten und vertreten wir auch bei Adoption, Vaterschaft, Verlöbnisbruch und Schutzmaßnahmen gegen häusliche Gewalt. Wo immer möglich, ist unser vorrangiges Ziel eine einvernehmliche Lösung, die das Verfahren beschleunigt; ist dies nicht möglich, vertreten wir die Interessen unserer Mandanten im streitigen Verfahren mit dem gebotenen Nachdruck.",
+        "topics": [
+          "Einvernehmliche und streitige Scheidungsverfahren",
+          "Unterhaltsansprüche (vorläufiger Unterhalt, Trennungs- und Kindesunterhalt)",
+          "Sorgerecht und Umgangsregelungen",
+          "Güterrechtliche Auseinandersetzung und Ausgleichsansprüche",
+          "Materielle und immaterielle Entschädigungsansprüche",
+          "Vaterschaftsanfechtungs- und Vaterschaftsfeststellungsverfahren",
+          "Schutzmaßnahmen gegen häusliche Gewalt (Gesetz Nr. 6284)"
+        ],
+        "benefits": [
+          "Umfassende Vertretung bei einvernehmlicher und streitiger Scheidung",
+          "Strategische Beratung bei Unterhalts- und Sorgerechtsstreitigkeiten",
+          "Berechnung und Durchsetzung von Vermögensausgleichsansprüchen",
+          "Bearbeitung materieller und immaterieller Entschädigungsansprüche",
+          "Schnelle Unterstützung bei Schutzanordnungen (Gesetz Nr. 6284)",
+          "Erstellung und Verhandlung von Scheidungsvereinbarungen"
+        ],
+        "faq": [
+          {
+            "question": "Wie lange dauert eine einvernehmliche Scheidung?",
+            "answer": "Sind sich die Parteien über die finanziellen und persönlichen Folgen der Scheidung einig, kann diese in einer einzigen Verhandlung abgeschlossen werden – in der Regel deutlich schneller als bei einer streitigen Scheidung."
+          },
+          {
+            "question": "Nach welchen Kriterien wird das Sorgerecht bestimmt?",
+            "answer": "Das Gericht entscheidet stets nach dem Kindeswohl und berücksichtigt dabei u. a. die finanzielle Situation der Eltern, das Alter des Kindes und seine aktuellen Lebensumstände."
+          },
+          {
+            "question": "Wie wird das Vermögen bei einer Scheidung aufgeteilt?",
+            "answer": "Im türkischen Recht gilt grundsätzlich die Errungenschaftsbeteiligung, wonach während der Ehe erworbenes Vermögen zwischen den Ehegatten gleichmäßig aufgeteilt wird."
+          },
+          {
+            "question": "Wie wird die Höhe des Unterhalts festgelegt?",
+            "answer": "Der Unterhalt wird vom Richter unter Berücksichtigung des Einkommens und der Bedürfnisse der Parteien sowie der Billigkeit festgesetzt und kann bei veränderten Umständen später neu bewertet werden."
+          }
+        ]
+      },
+      "is-hukuku": {
+        "title": "Arbeitsrecht",
+        "shortDescription": "Prozessvertretung, Schlichtung und Beratung bei Streitigkeiten zwischen Arbeitnehmern und Arbeitgebern.",
+        "description": "Unser Team für Arbeitsrecht vertritt Arbeitnehmer bei Wiedereinstellungsklagen, Abfindung, Kündigungsfrist, Überstundenvergütung, Arbeitsunfällen und Mobbingfällen und berät Arbeitgeber zu Arbeitsverträgen, Disziplinarverfahren und kollektivem Arbeitsrecht.",
+        "detailBody": "Wir begleiten Sie durch den gesamten Prozess – von der Steuerung des obligatorischen Schlichtungsverfahrens vor Klageerhebung bis zur Prozessführung vor den Arbeitsgerichten. Für unsere Firmenmandanten bieten wir laufende Beratung bei der Erstellung von Arbeitsverträgen und Personalordnungen, bei der rechtskonformen Durchführung von Kündigungen sowie bei der Erfüllung der Arbeitsschutzpflichten.",
+        "topics": [
+          "Wiedereinstellungsklagen und unwirksame Kündigung",
+          "Ansprüche auf Abfindung, Kündigungsfrist und Überstunden",
+          "Entschädigungsansprüche aus Arbeitsunfällen und Berufskrankheiten",
+          "Mobbing (psychische Belästigung am Arbeitsplatz)",
+          "Begleitung des obligatorischen Schlichtungsverfahrens",
+          "Erstellung von Arbeitsverträgen und Personalordnungen",
+          "Tarifverträge und gewerkschaftliche Streitigkeiten"
+        ],
+        "benefits": [
+          "Vertretung von Arbeitnehmern oder Arbeitgebern bei Wiedereinstellungs- und Entschädigungsklagen",
+          "Wirksame Begleitung des obligatorischen Schlichtungsverfahrens",
+          "Rechtskonforme Erstellung und Prüfung von Arbeitsverträgen",
+          "Beratung bei Arbeitsunfällen und Mobbingfällen",
+          "Risikominimierung bei Kündigungsverfahren",
+          "Prozessführung und Vertretung vor den Arbeitsgerichten"
+        ],
+        "faq": [
+          {
+            "question": "Ist ein Schlichtungsverfahren vor einer Wiedereinstellungsklage zwingend?",
+            "answer": "Ja, die Anrufung eines Schlichters ist Voraussetzung für Wiedereinstellungsklagen und die meisten lohnbezogenen Arbeitsstreitigkeiten; kommt keine Einigung zustande, geht das Verfahren vor Gericht weiter."
+          },
+          {
+            "question": "Wer hat Anspruch auf Abfindung?",
+            "answer": "Arbeitnehmer, die mindestens ein Jahr beim selben Arbeitgeber beschäftigt waren und deren Arbeitsverhältnis aus einem gesetzlich anerkannten Grund endet, haben Anspruch auf Abfindung."
+          },
+          {
+            "question": "Wie kann ich nachweisen, dass ich Mobbing ausgesetzt war?",
+            "answer": "Schriftverkehr, Zeugenaussagen und Unterlagen aus Disziplinar- oder Beschwerdeverfahren sind wichtige Beweismittel; wer diese von Anfang an systematisch sammelt, kann den Nachweis wesentlich erleichtern."
+          },
+          {
+            "question": "Was kann ich tun, wenn mein Arbeitgeber meine Überstunden nicht bezahlt?",
+            "answer": "Sie können Ihren Überstundenanspruch während oder nach dem Arbeitsverhältnis im Schlichtungsverfahren geltend machen und bei Nichteinigung Klage vor dem Arbeitsgericht erheben."
+          }
+        ]
+      },
+      "ticaret-hukuku": {
+        "title": "Handels- und Gesellschaftsrecht",
+        "shortDescription": "Beratung bei Unternehmensgründung, Fusionen und Übernahmen, Gesellschaftervereinbarungen und Handelsstreitigkeiten.",
+        "description": "Unser Team für Handels- und Gesellschaftsrecht bietet Firmenmandanten umfassende rechtliche Unterstützung bei Unternehmensgründung, Rechtsformwechsel, Fusionen und Übernahmen, Anteilsübertragungen, Gesellschafts- und Gesellschaftervereinbarungen sowie bei der Erstellung von Handelsverträgen.",
+        "detailBody": "Neben gesellschaftsrechtlichen Angelegenheiten übernehmen wir auch die Beitreibung von Handelsforderungen sowie die Bearbeitung von Streitigkeiten im Bereich unlauterer Wettbewerb, Marken- und Firmennamen sowie Auseinandersetzungen zwischen Gesellschaftern. Vom kleinen und mittleren Unternehmen bis zum Großkonzern ist es unser Ziel, das rechtliche Risiko in jeder Phase der geschäftlichen Tätigkeit unserer Mandanten zu minimieren.",
+        "topics": [
+          "Unternehmensgründung, Umwandlung und Liquidation",
+          "Fusionen, Übernahmen und Anteilsübertragungen",
+          "Gesellschafts- und Gesellschaftervereinbarungen",
+          "Erstellung und Verhandlung von Handelsverträgen",
+          "Beitreibung von Handelsforderungen",
+          "Streitigkeiten wegen unlauteren Wettbewerbs und Markenrecht",
+          "Streitigkeiten zwischen Gesellschaftern"
+        ],
+        "benefits": [
+          "Beratung bei Unternehmensgründung und Umstrukturierung",
+          "Erstellung und Verhandlungsunterstützung bei Handelsverträgen",
+          "Rechtliche Unterstützung bei Fusionen, Übernahmen und Anteilsübertragungen",
+          "Wirksame Beitreibung von Handelsforderungen",
+          "Vertretung bei Streitigkeiten wegen unlauteren Wettbewerbs und Markenrecht",
+          "Beilegung von Streitigkeiten zwischen Gesellschaftern"
+        ],
+        "faq": [
+          {
+            "question": "Welche Gesellschaftsform passt zu meinem Unternehmen?",
+            "answer": "Die passende Struktur – GmbH, Aktiengesellschaft oder eine andere Form – hängt von Faktoren wie Haftungsrisiko, Steuerlast, Anzahl der Gesellschafter und Kapitalstruktur ab."
+          },
+          {
+            "question": "Was kann bei einer Streitigkeit zwischen Gesellschaftern getan werden?",
+            "answer": "Zunächst greifen die im Gesellschaftervertrag vorgesehenen Streitbeilegungsmechanismen; scheitern diese, kommen Rechtsmittel wie die Anfechtung von Hauptversammlungsbeschlüssen oder die Auflösung aus wichtigem Grund in Betracht."
+          },
+          {
+            "question": "Wie kann ich eine Handelsforderung beitreiben?",
+            "answer": "Die Beitreibung kann mit einer Mahnung beginnen und bei Bedarf über ein Vollstreckungsverfahren oder eine Handelsklage fortgesetzt werden; wie schnell dies gelingt, hängt maßgeblich von der Beweislage ab."
+          },
+          {
+            "question": "Worauf sollte ich bei einer Fusion oder Übernahme achten?",
+            "answer": "Rechtliche und finanzielle Due Diligence, die korrekte Gestaltung des Übertragungsvertrags sowie die Einhaltung des Wettbewerbsrechts gehören zu den kritischsten Phasen des Prozesses."
+          }
+        ]
+      },
+      "gayrimenkul-hukuku": {
+        "title": "Immobilienrecht",
+        "shortDescription": "Fachkundige Vertretung bei Streitigkeiten zu Grundbuch, Miete, Wohnungseigentum, Enteignung und Bauwesen.",
+        "description": "Unser Team für Immobilienrecht vertritt Mandanten bei Verfahren zur Grundbuchlöschung und -berichtigung, bei Ansprüchen wegen unbefugter Nutzung, beim Vorkaufsrecht sowie bei Streitigkeiten aus Wohnungseigentum und Dienstbarkeiten sowie bei Räumungs- und Mietklagen.",
+        "detailBody": "Wir übernehmen alles von Streitigkeiten über die Enteignungsentschädigung und Ansprüchen wegen faktischer Enteignung bis hin zu Bauverträgen und Streitigkeiten bei Bauträgerverträgen (Grundstück gegen Wohnung). Vor einem Kauf prüfen wir den rechtlichen Status des Grundbuchs, um Risiken frühzeitig zu erkennen und unsere Mandanten zu sicheren Transaktionen zu führen.",
+        "topics": [
+          "Verfahren zur Grundbuchlöschung und -berichtigung",
+          "Mietstreitigkeiten und Räumungsklagen",
+          "Streitigkeiten aus Wohnungseigentum und Dienstbarkeiten",
+          "Enteignungsentschädigung und Ansprüche wegen faktischer Enteignung",
+          "Ansprüche aus dem Vorkaufsrecht",
+          "Streitigkeiten aus Bauträgerverträgen (Grundstück gegen Wohnung)",
+          "Rechtliche Due Diligence vor Immobilienkäufen"
+        ],
+        "benefits": [
+          "Vertretung bei Verfahren zur Grundbuchlöschung und -berichtigung",
+          "Beratung bei Miet- und Wohnungseigentumsstreitigkeiten",
+          "Durchsetzung von Ansprüchen auf Enteignungsentschädigung",
+          "Unterstützung bei Bau- und Bauträgervertragsstreitigkeiten",
+          "Rechtliche Risikoprüfung vor Immobilienkäufen",
+          "Vertretung bei Ansprüchen wegen unbefugter Nutzung und Vorkaufsrecht"
+        ],
+        "faq": [
+          {
+            "question": "Wann kann eine Klage auf Grundbuchlöschung und -berichtigung erhoben werden?",
+            "answer": "Der rechtmäßige Eigentümer kann diese Klage erheben, wenn das Grundbuch rechtswidrig, durch Betrug oder durch eine unbefugte Person eingetragen wurde."
+          },
+          {
+            "question": "Wie kann ich meinen Mieter räumen lassen?",
+            "answer": "Je nach Grund – Ablauf der Mietzeit, nicht gezahlte Miete oder Eigenbedarf des Eigentümers – kann die Räumung durch eine förmliche Mahnung und/oder eine gesetzlich vorgesehene Klage erfolgen."
+          },
+          {
+            "question": "Kann ich gegen die angebotene Enteignungsentschädigung Einspruch erheben?",
+            "answer": "Ja, wenn Sie der Ansicht sind, dass die Enteignungsentschädigung zu niedrig angesetzt wurde, können Sie innerhalb der gesetzlichen Frist eine Klage auf Wertfeststellung und Erhöhung erheben."
+          },
+          {
+            "question": "Was sollte ich vor dem Kauf einer Immobilie prüfen?",
+            "answer": "Sie sollten Belastungen im Grundbuch (Hypotheken, Pfändungen, Vormerkungen), den Bebauungsstatus sowie die Bau-/Nutzungsgenehmigung des Gebäudes sorgfältig prüfen – das verhindert spätere Streitigkeiten."
+          }
+        ]
+      },
+      "icra-iflas-hukuku": {
+        "title": "Vollstreckungs- und Insolvenzrecht",
+        "shortDescription": "Schnelle, wirksame Lösungen bei Forderungsbeitreibung, Vollstreckungsverfahren, Widersprüchen und Insolvenz-/Vergleichsverfahren.",
+        "description": "Unser Team für Vollstreckungs- und Insolvenzrecht bietet Gläubigern und Schuldnern schnelle Lösungen bei der Einleitung von Vollstreckungsverfahren mit oder ohne gerichtliches Urteil, bei Pfändungen sowie bei Klagen auf Aufhebung/Beseitigung von Widersprüchen, negativen Feststellungsklagen und Rückforderungsklagen wegen ungerechtfertigter Bereicherung.",
+        "detailBody": "Unsere Erfahrung erstreckt sich auf geschäftliche und private Schuldverhältnisse, auf Verfahren aufgrund von Wertpapieren (Schecks, Wechsel, Solawechsel) sowie auf Vergleichs- und Insolvenzaufschubverfahren. Sind Sie Schuldner, helfen wir Ihnen, Ihre Rechte zu wahren und zugleich die passendste Zahlungs- oder Umschuldungslösung zu finden; sind Sie Gläubiger, unterstützen wir Sie dabei, Ihre Forderung so schnell und wirksam wie möglich beizutreiben.",
+        "topics": [
+          "Vollstreckungsverfahren mit oder ohne gerichtliches Urteil",
+          "Vollstreckungsverfahren aufgrund von Wertpapieren (Schecks, Wechsel)",
+          "Klagen auf Aufhebung und Beseitigung von Widersprüchen",
+          "Begleitung von Pfändung, Verwahrung und Verwertung",
+          "Negative Feststellungs- und Rückforderungsklagen",
+          "Vergleichs- (Konkordat-) und Insolvenzaufschubverfahren",
+          "Insolvenz- und Insolvenzaufschubklagen"
+        ],
+        "benefits": [
+          "Einleitung von Vollstreckungsverfahren zur schnellen Forderungsbeitreibung",
+          "Vertretung bei Klagen auf Aufhebung und Beseitigung von Widersprüchen",
+          "Begleitung von Verfahren aufgrund von Wertpapieren",
+          "Beratung bei Vergleichs- und Insolvenzverfahren",
+          "Schutz von Schuldnern vor unnötigem Rechtsverlust",
+          "Enge Begleitung von Pfändung und Verwertung"
+        ],
+        "faq": [
+          {
+            "question": "Was passiert, wenn ich einem Vollstreckungsverfahren widerspreche?",
+            "answer": "Ein fristgerechter Widerspruch des Schuldners setzt das Verfahren aus; der Gläubiger kann daraufhin Klage auf Aufhebung oder Beseitigung des Widerspruchs erheben, um die Vollstreckung fortzusetzen."
+          },
+          {
+            "question": "Ich habe einen Scheck oder Wechsel – wie treibe ich meine Forderung ein?",
+            "answer": "Sie können die Beitreibung über ein spezielles Vollstreckungsverfahren für Wertpapiere verfolgen, das in der Regel schneller abläuft als der allgemeine Pfändungsweg."
+          },
+          {
+            "question": "Ich kann meine Schulden nicht bezahlen – ist ein Vergleich (Konkordat) das Richtige für mich?",
+            "answer": "Ein Vergleich ermöglicht es Schuldnern in finanziellen Schwierigkeiten, die eine Insolvenz vermeiden möchten, ihre Schulden in Absprache mit den Gläubigern umzustrukturieren; ob dies zu Ihrer Situation passt, muss im Einzelfall geprüft werden."
+          },
+          {
+            "question": "Ich bin mit einem Vollstreckungsverfahren konfrontiert, das ich für ungerecht halte – was kann ich tun?",
+            "answer": "Sie können innerhalb der gesetzlichen Frist beim Vollstreckungsamt widersprechen und bei Bedarf eine negative Feststellungsklage erheben, um festzustellen, dass die Schuld nicht besteht."
+          }
+        ]
+      },
+      "miras-hukuku": {
+        "title": "Erbrecht",
+        "shortDescription": "Rechtsberatung zu Erbscheinen, Erbausschlagung, Pflichtteilsklagen und Erbauseinandersetzungen.",
+        "description": "Unser Team für Erbrecht schützt die Rechte unserer Mandanten bei der Erlangung von Erbscheinen, der Ausschlagung einer Erbschaft, bei Erbunwürdigkeit, der Anfechtung von Testamenten und Pflichtteilsklagen sowie bei Erbauseinandersetzungen (Teilungsklagen) unter den Erben.",
+        "detailBody": "Wir vertreten wirksam bei der Nichtigerklärung von Lebzeitübertragungen, die zur Umgehung des Gesetzes vorgenommen wurden (Scheingeschäfte zur Enterbung), bei Pflichtteilsklagen wegen Pflichtteilsverletzung sowie bei Teilungsklagen zur Auflösung der Erbengemeinschaft. Schon bevor ein Streit entsteht, bieten wir vorbeugende Beratung zur Nachlassplanung und Testamentserstellung.",
+        "topics": [
+          "Erlangung eines Erbscheins",
+          "Erbausschlagung und Erbunwürdigkeit",
+          "Anfechtung von Testamenten und Pflichtteilsklagen",
+          "Teilungsklagen zur Auflösung der Erbengemeinschaft",
+          "Lebzeitige Scheingeschäfte zur Enterbung von Erben",
+          "Erstellung von Erbauseinandersetzungsvereinbarungen",
+          "Beratung zu Testamentserstellung und Nachlassplanung"
+        ],
+        "benefits": [
+          "Schnelle Abwicklung von Erbschein-Verfahren",
+          "Vertretung bei Pflichtteils- und Scheingeschäftsklagen",
+          "Beratung bei Teilungsklagen unter Erben",
+          "Korrekte und fristgerechte Abwicklung der Erbausschlagung",
+          "Unterstützung bei Testamentserstellung und Nachlassplanung",
+          "Vermittelnder Ansatz bei Streitigkeiten zwischen Erben"
+        ],
+        "faq": [
+          {
+            "question": "Wie viel Zeit habe ich, um eine Erbschaft auszuschlagen?",
+            "answer": "Gesetzliche Erben können eine Erbschaft innerhalb von drei Monaten ab Kenntnis des Erbanfalls ausschlagen; wird diese Frist versäumt, gilt die Erbschaft als angenommen."
+          },
+          {
+            "question": "Was kann ich tun, wenn mein Pflichtteil verletzt wurde?",
+            "answer": "Wenn Zuwendungen des Erblassers, sei es zu Lebzeiten oder von Todes wegen, Ihren Pflichtteil verletzen, können Sie eine Pflichtteilsklage erheben, um den fehlenden Anteil einzufordern."
+          },
+          {
+            "question": "Was gilt, wenn der Erblasser vor seinem Tod Vermögen übertragen hat?",
+            "answer": "Übertragungen, die dem Zweck dienten, Erben zu enterben, können durch eine Klage auf Grundbuchlöschung und -berichtigung wegen Scheingeschäfts für nichtig erklärt werden."
+          },
+          {
+            "question": "Was passiert, wenn sich die Erben nicht über die Vermögensaufteilung einigen können?",
+            "answer": "Kommt keine Einigung zustande, kann jeder Erbe eine Teilungsklage erheben, mit der der Verkauf des Nachlassvermögens und die Aufteilung des Erlöses beantragt wird."
+          }
+        ]
+      },
+      "sozlesmeler-hukuku": {
+        "title": "Vertragsrecht",
+        "shortDescription": "Erstellung, Prüfung und Streitbeilegung für alle Arten von Handels- und Privatverträgen.",
+        "description": "Unser Team für Vertragsrecht berät Privat- und Firmenmandanten bei der Erstellung, Verhandlung und Prüfung aller Arten von Verträgen – darunter Kauf-, Miet-, Dienstleistungs-, Werk-, Vertriebs-, Franchise-, Vertraulichkeits- und Wettbewerbsverbotsvereinbarungen.",
+        "detailBody": "Wir sind ebenso erfahren in der Beilegung von Streitigkeiten, die während der Vertragserfüllung entstehen – Verzug, mangelhafte Erfüllung und unberechtigte Kündigung – wie in der frühzeitigen Erkennung von Risiken vor Vertragsunterzeichnung. Ob Sie Ihre Standardverträge an die aktuelle Rechtslage und Rechtsprechung anpassen lassen möchten oder für eine einmalige Transaktion einen maßgeschneiderten Vertrag von Grund auf benötigen – wir richten unsere Unterstützung nach Ihren Bedürfnissen.",
+        "topics": [
+          "Kauf- und Dienstleistungsverträge",
+          "Miet-, Werk- und Vollmachtsverträge",
+          "Vertriebs-, Handelsvertreter- und Franchiseverträge",
+          "Vertraulichkeitsvereinbarungen (NDA) und Wettbewerbsverbote",
+          "Verzugs- und Entschädigungsansprüche aus Verträgen",
+          "Prüfung von Standardbedingungen und AGB auf Rechtskonformität",
+          "Streitigkeiten wegen unberechtigter Kündigung und mangelhafter Erfüllung"
+        ],
+        "benefits": [
+          "Erstellung maßgeschneiderter Vertragsentwürfe",
+          "Rechtliche Risikoprüfung bestehender Verträge",
+          "Aktive Unterstützung bei Vertragsverhandlungen",
+          "Prozessführung bei Verzugs- und Entschädigungsansprüchen",
+          "Prüfung von Standardbedingungen und AGB",
+          "Begleitung von Vergleichs- und Gerichtsverfahren bei Vertragsstreitigkeiten"
+        ],
+        "faq": [
+          {
+            "question": "Warum sollte ein Anwalt meinen Vertrag vor der Unterschrift prüfen?",
+            "answer": "Unklare Formulierungen, einseitige Kündigungsklauseln oder Vertragsstrafen können später erhebliche finanzielle Risiken bergen; eine vorherige Prüfung deckt diese Probleme auf, bevor Sie sich vertraglich binden."
+          },
+          {
+            "question": "Was kann ich tun, wenn die Gegenseite den Vertrag verletzt?",
+            "answer": "In der Regel erfolgt zunächst eine förmliche Mahnung; führt diese nicht zum Erfolg, können Erfüllung, Kündigung oder Schadensersatz gerichtlich geltend gemacht werden."
+          },
+          {
+            "question": "Wozu dient eine Vertragsstrafenklausel?",
+            "answer": "Eine Vertragsstrafenklausel legt einen im Voraus bestimmten Entschädigungsbetrag fest, der bei einer Vertragsverletzung fällig wird, ohne dass der Schaden gesondert nachgewiesen werden muss – sie wirkt zugleich abschreckend."
+          },
+          {
+            "question": "Reicht die Verwendung eines Mustervertrags aus?",
+            "answer": "Musterverträge decken allgemeine Bedürfnisse ab, können aber, wenn sie nicht an die Besonderheiten Ihres Geschäfts angepasst werden, wichtige Lücken aufweisen – bei bedeutenden Transaktionen ist ein maßgeschneiderter Vertrag sicherer."
+          }
+        ]
+      },
+      "idari-hukuku": {
+        "title": "Verwaltungsrecht",
+        "shortDescription": "Vertretung gegenüber Behörden bei Anfechtungsklagen, Amtshaftungsklagen sowie Bebauungs- und Vergabestreitigkeiten.",
+        "description": "Unser Team für Verwaltungsrecht vertritt Privatpersonen und Unternehmen vor den Verwaltungsgerichten bei Streitigkeiten, die aus Handlungen und Maßnahmen öffentlicher Stellen entstehen. Wir übernehmen den gesamten Prozess sowohl bei Anfechtungsklagen zur Aufhebung eines rechtswidrigen Verwaltungsakts als auch bei Amtshaftungsklagen auf Ersatz des durch diesen Akt oder diese Handlung verursachten Schadens.",
+        "detailBody": "Wir bearbeiten ein breites Spektrum an Angelegenheiten, an denen eine Behörde beteiligt ist – von Streitigkeiten über Bebauungspläne und Baugenehmigungen über Disziplinarstrafen gegen Beamte bis hin zu Einsprüchen im Zusammenhang mit öffentlichen Ausschreibungen sowie Steuer- und Bußgeldstreitigkeiten. Da verwaltungsrechtliche Fristen streng sind, handeln wir ab dem Zeitpunkt der Zustellung eines Verwaltungsakts umgehend und sorgen von Anfang an für ein korrektes Vorgehen – entsprechend beraten wir unsere Mandanten.",
+        "topics": [
+          "Anfechtungsklagen (gegen einen Verwaltungsakt)",
+          "Amtshaftungsklagen (Entschädigungsansprüche gegen die Verwaltung)",
+          "Streitigkeiten über Bebauungspläne und Baugenehmigungen",
+          "Einsprüche gegen öffentliche Ausschreibungen und Verfahren zur Aufhebung von Vergaben",
+          "Disziplinarstrafen gegen Beamte und öffentlich Bedienstete",
+          "Verwaltungseinsprüche und Klagen bei Steuer- und Bußgeldstreitigkeiten",
+          "Anfechtung des Widerrufs von Genehmigungen, Lizenzen und Erlaubnissen"
+        ],
+        "benefits": [
+          "Fristgerechte Erhebung von Anfechtungsklagen gegen Verwaltungsakte",
+          "Durchsetzung von Amtshaftungsansprüchen gegen die Verwaltung",
+          "Beratung bei Bebauungs- und Baugenehmigungsstreitigkeiten",
+          "Begleitung von Einsprüchen und Klagen bei öffentlichen Vergabeverfahren",
+          "Verwaltungseinsprüche und Klagen gegen Disziplinarstrafen",
+          "Beilegung von Steuer- und Bußgeldstreitigkeiten"
+        ],
+        "faq": [
+          {
+            "question": "Wie viel Zeit habe ich, um gegen einen Verwaltungsakt zu klagen?",
+            "answer": "Grundsätzlich muss eine Anfechtungsklage innerhalb von 60 Tagen nach Zustellung des Akts beim Verwaltungsgericht erhoben werden; wird diese Frist versäumt, geht das Klagerecht verloren."
+          },
+          {
+            "question": "Was ist der Unterschied zwischen einer Anfechtungsklage und einer Amtshaftungsklage?",
+            "answer": "Mit einer Anfechtungsklage wird die Aufhebung eines rechtswidrigen Verwaltungsakts angestrebt; mit einer Amtshaftungsklage wird Ersatz des durch diesen Akt oder eine Verwaltungshandlung verursachten Schadens verlangt. Beide können auch gemeinsam erhoben werden."
+          },
+          {
+            "question": "Muss ich mich vor der Klageerhebung an die Behörde wenden?",
+            "answer": "In manchen Fällen ist zunächst ein Antrag an die Behörde (Einspruch bei einer übergeordneten Stelle oder ein verpflichtendes Verwaltungsverfahren) erforderlich; dies kann eine Klagevoraussetzung sein und sollte vorab geprüft werden."
+          },
+          {
+            "question": "Kann ich beim Verwaltungsgericht die Aussetzung der Vollziehung beantragen?",
+            "answer": "Ja – wenn die Vollziehung des Akts einen schwer oder nicht wiedergutzumachenden Schaden verursachen würde, kann zusammen mit der Klage die Aussetzung der Vollziehung beantragt werden."
+          }
+        ]
+      },
+      "vatandaslik-basvurusu": {
+        "title": "Antrag auf Staatsbürgerschaft",
+        "shortDescription": "Umfassende Begleitung von Anträgen auf die türkische Staatsbürgerschaft, einschließlich Staatsbürgerschaft durch Investition.",
+        "description": "Unser Team für Staatsbürgerschaftsanträge betreut den gesamten Prozess für ausländische Staatsangehörige, die die türkische Staatsbürgerschaft beantragen möchten – insbesondere die außerordentliche Einbürgerung durch Immobilieninvestition, Kapitalinvestition oder Schaffung von Arbeitsplätzen. Wir unterstützen unsere Mandanten von der Vorbereitung der Antragsunterlagen bis zur Nachverfolgung bei den zuständigen Behörden.",
+        "detailBody": "Wir begleiten jeden Schritt des Verfahrens – von der Prüfung der Voraussetzungen und der Vorbereitung der erforderlichen Unterlagen (Konformitätsbescheinigung, Wertgutachten, Bankbelege usw.) bis zur Koordination der Verfahren beim Grundbuchamt, der Generaldirektion für Migrationsmanagement und dem Standesamt. Wir unterstützen auch aktiv bei der Einbeziehung von Familienangehörigen (Ehepartner und minderjährige Kinder) in den Antrag und reagieren schnell auf zusätzliche Unterlagenanforderungen.",
+        "topics": [
+          "Außerordentliche Einbürgerung durch Immobilieninvestition",
+          "Staatsbürgerschaft durch Kapitalinvestition und Schaffung von Arbeitsplätzen",
+          "Verfahren zur Konformitätsbescheinigung und zum Wertgutachten",
+          "Rechtliche Prüfung von Eigentumsübertragungs- und Vorverkaufsverträgen",
+          "Einbeziehung von Familienangehörigen in den Antrag",
+          "Koordination der Verfahren bei Migrations- und Standesamtsbehörden",
+          "Rechtsmittel und Klagen gegen abgelehnte Staatsbürgerschaftsanträge"
+        ],
+        "benefits": [
+          "Prüfung der Voraussetzungen und Risikoeinschätzung vor Antragstellung",
+          "Vollständige und korrekte Vorbereitung der erforderlichen Unterlagen",
+          "Durchgehende Begleitung bei den zuständigen Behörden",
+          "Umfassende Antragsbegleitung einschließlich Familienangehöriger",
+          "Regelmäßige Updates und transparente Kommunikation während des gesamten Prozesses",
+          "Unterstützung bei Rechtsmitteln und Klagen gegen Ablehnungsentscheidungen"
+        ],
+        "faq": [
+          {
+            "question": "Wie hoch ist die Mindestinvestitionssumme für die türkische Staatsbürgerschaft durch Immobilien?",
+            "answer": "Die gesetzlich festgelegte Mindestinvestitionsschwelle wird von Zeit zu Zeit angepasst; wir bestätigen die aktuelle Schwelle und die Bedingungen mit Ihnen, bevor Sie den Antrag stellen."
+          },
+          {
+            "question": "Wie lange dauert ein Staatsbürgerschaftsantrag?",
+            "answer": "Die Dauer variiert je nach Vollständigkeit der Unterlagen und Auslastung der zuständigen Behörden, aber ein korrekt vorbereiteter Antrag beschleunigt den Prozess erheblich."
+          },
+          {
+            "question": "Können mein Ehepartner und meine Kinder ebenfalls die Staatsbürgerschaft erwerben?",
+            "answer": "Ja, der Ehepartner und die minderjährigen Kinder des Antragstellers können im Rahmen desselben Antrags die Staatsbürgerschaft erwerben, sofern die gesetzlichen Voraussetzungen erfüllt sind."
+          },
+          {
+            "question": "Muss ich die Immobilie eine bestimmte Zeit lang behalten?",
+            "answer": "Ja, das Gesetz schreibt für durch Immobilieninvestition erworbene Staatsbürgerschaft eine Mindesthaltefrist vor, während der die Immobilie nicht verkauft werden darf; wir klären die Einzelheiten vor Antragstellung."
+          }
+        ]
+      },
+      "ikamet-izni": {
+        "title": "Begleitung von Aufenthaltstitelverfahren",
+        "shortDescription": "Vorbereitung und Begleitung von kurzfristigen, familiären, studentischen und langfristigen Aufenthaltstitelanträgen.",
+        "description": "Unser Team zur Begleitung von Aufenthaltstitelverfahren bereitet für ausländische Mandanten, die in der Türkei leben möchten, Anträge auf kurzfristige, familiäre, studentische, arbeitsbezogene und langfristige Aufenthaltstitel bei der Präsidentschaft für Migrationsmanagement vor und begleitet diese.",
+        "detailBody": "Wir übernehmen den gesamten Prozess – von der Terminvereinbarung und Vorbereitung der erforderlichen Unterlagen (Krankenversicherung, Meldebescheinigung, Einkommens-/Finanznachweis usw.) bis zur Einreichung des Antrags sowie der Bearbeitung von Verlängerungs- oder Statusänderungsanträgen (z. B. Wechsel von einem kurzfristigen zu einem familiären Aufenthaltstitel). Wir unterstützen unsere Mandanten auch bei Rechtsmitteln und Verwaltungsklagen gegen abgelehnte oder widerrufene Aufenthaltstitel.",
+        "topics": [
+          "Anträge und Verlängerungen für kurzfristige Aufenthaltstitel",
+          "Familiäre Aufenthaltstitel (für Ehepartner und Kinder)",
+          "Verfahren für studentische Aufenthaltstitel",
+          "Anträge auf langfristige Aufenthaltstitel",
+          "Übergang vom Aufenthaltstitel zur Arbeitserlaubnis",
+          "Rechtsmittel gegen Ablehnungs- und Widerrufsentscheidungen bei Aufenthaltstiteln",
+          "Beratung zu Aufenthaltstiteln für ausländische Immobilieneigentümer"
+        ],
+        "benefits": [
+          "Durchgehende Begleitung von Terminvereinbarung und Antragsverfahren",
+          "Koordination der erforderlichen Unterlagen und Versicherungsverfahren",
+          "Begleitung von Verlängerungs- und Statusänderungsanträgen",
+          "Begleitung gemeinsamer Anträge für Familienangehörige",
+          "Unterstützung bei Rechtsmitteln und Klagen gegen Ablehnungs-/Widerrufsentscheidungen",
+          "Regelmäßige Updates während des gesamten Verfahrens"
+        ],
+        "faq": [
+          {
+            "question": "Welche Unterlagen sind für einen Aufenthaltstitelantrag erforderlich?",
+            "answer": "Erforderlich sind ein Reisepass, ein biometrisches Foto, eine gültige Krankenversicherung, Adressangaben sowie je nach Art des Titels zusätzliche Unterlagen (Einkommensnachweis, Studienbescheinigung usw.); wir bereiten Ihre Unterlagen entsprechend Ihrem Fall vor."
+          },
+          {
+            "question": "Wann sollte ich meinen Aufenthaltstitel verlängern?",
+            "answer": "Der Verlängerungsantrag muss eine gewisse Zeit vor Ablauf des aktuellen Titels gestellt werden; eine verspätete Antragstellung kann zusätzliche Sanktionen nach sich ziehen."
+          },
+          {
+            "question": "Was kann ich tun, wenn mein Aufenthaltstitelantrag abgelehnt wird?",
+            "answer": "Eine Ablehnungsentscheidung kann innerhalb der gesetzlichen Frist durch einen Verwaltungseinspruch oder eine Anfechtungsklage vor dem Verwaltungsgericht angefochten werden."
+          },
+          {
+            "question": "Erhalte ich durch den Kauf einer Immobilie automatisch einen Aufenthaltstitel?",
+            "answer": "Immobilienbesitz erleichtert den Antrag auf einen Aufenthaltstitel, begründet aber keinen automatischen Anspruch – ein Antrag muss weiterhin gestellt und die Voraussetzungen müssen erfüllt werden."
+          }
+        ]
+      },
+      "uluslararasi-ticaret-gumruk": {
+        "title": "Internationaler Handel & Zoll",
+        "shortDescription": "Beratung bei Import-/Exportverträgen, Zollstreitigkeiten und der Einhaltung des internationalen Handelsrechts.",
+        "description": "Unser Team für internationalen Handel und Zoll unterstützt Unternehmen rechtlich bei der Erstellung von Verträgen im Zusammenhang mit Import- und Exportgeschäften, der Einhaltung der Zollvorschriften und der Beilegung von Streitigkeiten mit den Zollbehörden.",
+        "detailBody": "Wir bearbeiten ein breites Spektrum an Angelegenheiten – von Streitigkeiten über Zollabgaben und Bußgelder über Meinungsverschiedenheiten zu Ursprung und Tarifeinstufung bis hin zu internationalen Kaufverträgen (Incoterms), Akkreditivgeschäften und Rechtsmitteln gegen Zollbußgelder. Wir bieten Export- und Importmandanten, einschließlich Unternehmen mit ausländischen Partnern, laufende Beratung, damit sie ihre Geschäftstätigkeit vollständig rechtskonform und planbar ausüben können.",
+        "topics": [
+          "Erstellung von Import- und Exportverträgen (Incoterms)",
+          "Streitigkeiten über Zollabgaben und Bußgelder",
+          "Rechtsmittel und Klagen gegen Entscheidungen der Zollbehörde",
+          "Streitigkeiten über Ursprung und Zolltarifeinstufung",
+          "Streitigkeiten aus Akkreditiven und internationalen Zahlungen",
+          "Beratung zu aktiver und passiver Veredelung",
+          "Streitbeilegung bei internationalen Handelsverträgen"
+        ],
+        "benefits": [
+          "Erstellung und Prüfung von Import-/Exportverträgen",
+          "Rechtsmittel und Klagen gegen Entscheidungen der Zollbehörde",
+          "Rechtliche Unterstützung zur Aufhebung von Zollbußgeldern",
+          "Beratung bei Streitigkeiten über Ursprung und Tarifeinstufung",
+          "Beilegung von Streitigkeiten bei internationalen Handelsverträgen",
+          "Beratung zur Einhaltung des Außenhandelsrechts"
+        ],
+        "faq": [
+          {
+            "question": "Kann ich gegen ein vom Zoll verhängtes Bußgeld Einspruch erheben?",
+            "answer": "Ja, gegen Zollbußgelder kann innerhalb der gesetzlichen Frist zunächst bei der Behörde Einspruch erhoben und bei Bedarf anschließend Klage vor dem Steuer-/Verwaltungsgericht erhoben werden."
+          },
+          {
+            "question": "Was sind Incoterms und warum sind sie für meinen Vertrag wichtig?",
+            "answer": "Incoterms sind standardisierte Klauseln, die Lieferung, Risiko- und Kostenverteilung bei internationalen Kaufgeschäften regeln; die richtige Wahl klärt die Verantwortlichkeiten der Parteien und verringert das Streitrisiko."
+          },
+          {
+            "question": "Was bedeutet eine Ursprungslandstreitigkeit?",
+            "answer": "Um von Zolltarifvergünstigungen zu profitieren, muss das Ursprungsland eines Produkts nachgewiesen werden; die Einschätzung der Behörde hierzu kann angefochten werden."
+          },
+          {
+            "question": "Was ist die aktive Veredelung?",
+            "answer": "Es handelt sich um ein Verfahren, das die Bearbeitung von zu Exportzwecken eingeführten Waren unter Befreiung von oder Ermäßigung der Zollabgaben ermöglicht; werden die Voraussetzungen nicht erfüllt, besteht das Risiko zusätzlicher Abgaben und Bußgelder."
+          }
+        ]
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Galerie",
+    "subtitle": "Eindrücke aus unserem Büro, unserem Team und unseren Veranstaltungen.",
+    "empty": "Es wurden noch keine Galeriebilder hinzugefügt.",
+    "imageAlt": "Galeriefoto der Atalya Anwaltskanzlei",
+    "filterAll": "Alle",
+    "close": "Schließen",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "categories": {
+      "ofis": "Büro",
+      "ekip": "Team",
+      "etkinlik": "Veranstaltungen",
+      "diger": "Sonstiges"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Blog & Artikel",
+    "subtitle": "Rechtliche Entwicklungen, aktuelle Gesetzesänderungen und unsere fachliche Einschätzung.",
+    "empty": "Es wurden noch keine Artikel veröffentlicht.",
+    "readMore": "Weiterlesen",
+    "backToList": "Zurück zu allen Artikeln",
+    "publishedOn": "Veröffentlicht am",
+    "pinned": "Angeheftet",
+    "filterAll": "Alle",
+    "categoryBlog": "Blog",
+    "categoryDuyuru": "Ankündigung",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "relatedTitle": "Verwandte Artikel",
+    "shareLabel": "Teilen:",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Kopiert!",
+    "authorByline": "Dieser Inhalt wurde vom Rechtsteam der Atalya Hukuk Bürosu erstellt und geprüft.",
+    "authorLinkLabel": "Unser Team kennenlernen"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Nehmen Sie Kontakt auf",
+    "subtitle": "Füllen Sie das Formular mit Ihren Fragen oder rechtlichen Anliegen aus, wir melden uns so schnell wie möglich bei Ihnen.",
+    "formName": "Vollständiger Name",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon",
+    "formMessage": "Ihre Nachricht",
+    "formSubmit": "Senden",
+    "formSending": "Wird gesendet...",
+    "formSuccess": "Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.",
+    "formError": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "officeTitle": "Büroinformationen",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-Mail",
+    "hoursLabel": "Öffnungszeiten",
+    "addressPlaceholder": "[Adresse wird über das Admin-Panel aktualisiert]",
+    "phonePlaceholder": "+90 (___) ___ __ __",
+    "emailPlaceholder": "info@atalyahukuk.com",
+    "hoursPlaceholder": "Montag - Freitag, 9:00 - 18:00 Uhr",
+    "mapTitle": "Standort der Atalya Hukuk Bürosu",
+    "openInMaps": "In Google Maps öffnen"
+  },
+  "footer": {
+    "tagline": "Wir verteidigen Ihre Rechte mit Zuversicht.",
+    "quickLinksTitle": "Schnellzugriff",
+    "contactTitle": "Kontakt",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "notFound": "Seite nicht gefunden",
+    "notFoundSubtitle": "Die gesuchte Seite wurde möglicherweise verschoben, entfernt oder existiert nicht.",
+    "backHome": "Zurück zur Startseite"
+  }
+}

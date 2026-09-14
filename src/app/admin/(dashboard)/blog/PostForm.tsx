@@ -21,14 +21,17 @@ export function PostForm({
   const [titleTr, setTitleTr] = useState(initial?.title_tr ?? "");
   const [titleEn, setTitleEn] = useState(initial?.title_en ?? "");
   const [titleRu, setTitleRu] = useState(initial?.title_ru ?? "");
+  const [titleDe, setTitleDe] = useState(initial?.title_de ?? "");
   const [slug, setSlug] = useState(initial?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(initial));
   const [excerptTr, setExcerptTr] = useState(initial?.excerpt_tr ?? "");
   const [excerptEn, setExcerptEn] = useState(initial?.excerpt_en ?? "");
   const [excerptRu, setExcerptRu] = useState(initial?.excerpt_ru ?? "");
+  const [excerptDe, setExcerptDe] = useState(initial?.excerpt_de ?? "");
   const [contentTr, setContentTr] = useState(initial?.content_tr ?? "");
   const [contentEn, setContentEn] = useState(initial?.content_en ?? "");
   const [contentRu, setContentRu] = useState(initial?.content_ru ?? "");
+  const [contentDe, setContentDe] = useState(initial?.content_de ?? "");
   const [coverImageUrl, setCoverImageUrl] = useState<string | null>(
     initial?.cover_image_url ?? null,
   );
@@ -45,6 +48,10 @@ export function PostForm({
   const [metaTitleRu, setMetaTitleRu] = useState(initial?.meta_title_ru ?? "");
   const [metaDescriptionRu, setMetaDescriptionRu] = useState(
     initial?.meta_description_ru ?? "",
+  );
+  const [metaTitleDe, setMetaTitleDe] = useState(initial?.meta_title_de ?? "");
+  const [metaDescriptionDe, setMetaDescriptionDe] = useState(
+    initial?.meta_description_de ?? "",
   );
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
@@ -63,13 +70,16 @@ export function PostForm({
     formData.set("title_tr", titleTr);
     formData.set("title_en", titleEn ?? "");
     formData.set("title_ru", titleRu ?? "");
+    formData.set("title_de", titleDe ?? "");
     formData.set("slug", slug);
     formData.set("excerpt_tr", excerptTr ?? "");
     formData.set("excerpt_en", excerptEn ?? "");
     formData.set("excerpt_ru", excerptRu ?? "");
+    formData.set("excerpt_de", excerptDe ?? "");
     formData.set("content_tr", contentTr);
     formData.set("content_en", contentEn ?? "");
     formData.set("content_ru", contentRu ?? "");
+    formData.set("content_de", contentDe ?? "");
     formData.set("cover_image_url", coverImageUrl ?? "");
     formData.set("status", status);
     if (isPinned) formData.set("is_pinned", "on");
@@ -79,6 +89,8 @@ export function PostForm({
     formData.set("meta_description_en", metaDescriptionEn ?? "");
     formData.set("meta_title_ru", metaTitleRu ?? "");
     formData.set("meta_description_ru", metaDescriptionRu ?? "");
+    formData.set("meta_title_de", metaTitleDe ?? "");
+    formData.set("meta_description_de", metaDescriptionDe ?? "");
 
     startTransition(async () => {
       try {
@@ -121,7 +133,7 @@ export function PostForm({
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <label className="text-sm font-medium text-ink/80">
             Başlık (TR) *
@@ -153,6 +165,16 @@ export function PostForm({
             className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
           />
         </div>
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            Başlık (DE)
+          </label>
+          <input
+            value={titleDe ?? ""}
+            onChange={(e) => setTitleDe(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
       </div>
 
       <div>
@@ -181,7 +203,7 @@ export function PostForm({
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <label className="text-sm font-medium text-ink/80">
             Özet (TR)
@@ -215,6 +237,17 @@ export function PostForm({
             className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
           />
         </div>
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            Özet (DE)
+          </label>
+          <textarea
+            rows={3}
+            value={excerptDe ?? ""}
+            onChange={(e) => setExcerptDe(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
       </div>
 
       <div>
@@ -235,6 +268,13 @@ export function PostForm({
         <label className="text-sm font-medium text-ink/80">İçerik (RU)</label>
         <div className="mt-2">
           <RichTextEditor value={contentRu ?? ""} onChange={setContentRu} />
+        </div>
+      </div>
+
+      <div>
+        <label className="text-sm font-medium text-ink/80">İçerik (DE)</label>
+        <div className="mt-2">
+          <RichTextEditor value={contentDe ?? ""} onChange={setContentDe} />
         </div>
       </div>
 
@@ -302,6 +342,29 @@ export function PostForm({
           <input
             value={metaDescriptionRu ?? ""}
             onChange={(e) => setMetaDescriptionRu(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            SEO Başlığı (DE)
+          </label>
+          <input
+            value={metaTitleDe ?? ""}
+            onChange={(e) => setMetaTitleDe(e.target.value)}
+            className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium text-ink/80">
+            SEO Açıklaması (DE)
+          </label>
+          <input
+            value={metaDescriptionDe ?? ""}
+            onChange={(e) => setMetaDescriptionDe(e.target.value)}
             className="mt-2 w-full rounded-lg border border-bordo-100 px-4 py-2.5 text-sm outline-none focus:border-bordo-400"
           />
         </div>

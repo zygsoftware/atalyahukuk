@@ -39,18 +39,29 @@ export async function generateMetadata({
       ? (post.meta_title_ru ?? post.meta_title)
       : locale === "en"
         ? (post.meta_title_en ?? post.meta_title)
-        : post.meta_title;
+        : locale === "de"
+          ? (post.meta_title_de ?? post.meta_title)
+          : post.meta_title;
   const metaDescription =
     locale === "ru"
       ? (post.meta_description_ru ?? post.meta_description)
       : locale === "en"
         ? (post.meta_description_en ?? post.meta_description)
-        : post.meta_description;
+        : locale === "de"
+          ? (post.meta_description_de ?? post.meta_description)
+          : post.meta_description;
   const title =
-    metaTitle ?? pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru);
+    metaTitle ??
+    pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru, post.title_de);
   const description =
     metaDescription ??
-    pickLocaleField(locale, post.excerpt_tr, post.excerpt_en, post.excerpt_ru) ??
+    pickLocaleField(
+      locale,
+      post.excerpt_tr,
+      post.excerpt_en,
+      post.excerpt_ru,
+      post.excerpt_de,
+    ) ??
     undefined;
 
   const canonicalPath = getPathname({
@@ -101,18 +112,26 @@ export default async function BlogDetailPage({
 
   const relatedPosts = await getRelatedPosts(slug, 3);
 
-  const title = pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru);
+  const title = pickLocaleField(
+    locale,
+    post.title_tr,
+    post.title_en,
+    post.title_ru,
+    post.title_de,
+  );
   const excerpt = pickLocaleField(
     locale,
     post.excerpt_tr,
     post.excerpt_en,
     post.excerpt_ru,
+    post.excerpt_de,
   );
   const content = pickLocaleField(
     locale,
     post.content_tr,
     post.content_en,
     post.content_ru,
+    post.content_de,
   );
   const canonicalUrl = `${SITE_URL}${getPathname({
     locale,
@@ -255,12 +274,14 @@ export default async function BlogDetailPage({
                     related.title_tr,
                     related.title_en,
                     related.title_ru,
+                    related.title_de,
                   )}
                   excerpt={pickLocaleField(
                     locale,
                     related.excerpt_tr,
                     related.excerpt_en,
                     related.excerpt_ru,
+                    related.excerpt_de,
                   )}
                   coverImageUrl={related.cover_image_url}
                   publishedAt={related.published_at}

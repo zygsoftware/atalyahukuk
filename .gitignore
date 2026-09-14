@@ -27,3 +27,6 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# local backup of DB content generated during German localization
+.de-translations/

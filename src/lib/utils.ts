@@ -53,17 +53,19 @@ export function sanitizeFileName(fileName: string): string {
 }
 
 /**
- * Türkçe/İngilizce/Rusça alanlardan locale'e uygun olanı seçer.
- * Rusça alan boşsa İngilizce'ye, o da boşsa Türkçe'ye düşer.
+ * Türkçe/İngilizce/Rusça/Almanca alanlardan locale'e uygun olanı seçer.
+ * Rusça/Almanca alan boşsa İngilizce'ye, o da boşsa Türkçe'ye düşer.
  */
 export function pickLocaleField<T>(
   locale: string,
   tr: T,
   en: T | null | undefined,
   ru?: T | null,
+  de?: T | null,
 ): T {
   if (locale === "tr") return tr;
   if (locale === "ru") return (ru ?? en ?? tr) as T;
+  if (locale === "de") return (de ?? en ?? tr) as T;
   return (en ?? tr) as T;
 }
 
@@ -71,6 +73,7 @@ const DATE_LOCALE_MAP: Record<string, string> = {
   tr: "tr-TR",
   en: "en-US",
   ru: "ru-RU",
+  de: "de-DE",
 };
 
 export function formatDate(date: string, locale: string): string {

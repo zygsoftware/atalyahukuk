@@ -36,8 +36,20 @@ export default async function BlogPage({
   const items = posts.map((post) => ({
     id: post.id,
     slug: post.slug,
-    title: pickLocaleField(locale, post.title_tr, post.title_en, post.title_ru),
-    excerpt: pickLocaleField(locale, post.excerpt_tr, post.excerpt_en, post.excerpt_ru),
+    title: pickLocaleField(
+      locale,
+      post.title_tr,
+      post.title_en,
+      post.title_ru,
+      post.title_de,
+    ),
+    excerpt: pickLocaleField(
+      locale,
+      post.excerpt_tr,
+      post.excerpt_en,
+      post.excerpt_ru,
+      post.excerpt_de,
+    ),
     coverImageUrl: post.cover_image_url,
     publishedAt: post.published_at,
     isPinned: post.is_pinned,
