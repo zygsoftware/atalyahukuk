@@ -29,11 +29,13 @@ export async function generateMetadata({
     tr: "Hukuk Bürosu",
     en: "Law Firm",
     ru: "Юридическая фирма",
+    de: "Anwaltskanzlei",
   };
   const ogLocaleMap: Record<string, string> = {
     tr: "tr_TR",
     en: "en_US",
     ru: "ru_RU",
+    de: "de_DE",
   };
 
   return {
@@ -49,6 +51,7 @@ export async function generateMetadata({
         tr: "/",
         en: "/en",
         ru: "/ru",
+        de: "/de",
       },
     },
     openGraph: {

@@ -14,6 +14,7 @@ export default async function OpengraphImage({
     tr: "Haklarınızı Güvenle Savunuyoruz",
     en: "Defending Your Rights with Confidence",
     ru: "Защищаем Ваши Права с Уверенностью",
+    de: "Wir verteidigen Ihre Rechte mit Zuversicht",
   };
   const tagline = taglineMap[locale] ?? taglineMap.en;
 

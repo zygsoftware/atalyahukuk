@@ -8,6 +8,7 @@ const FAQ_HEADINGS: Record<string, string> = {
   tr: "Sık Sorulan Sorular",
   en: "Frequently Asked Questions",
   ru: "Часто задаваемые вопросы",
+  de: "Häufig gestellte Fragen",
 };
 
 export interface FaqEntry {
