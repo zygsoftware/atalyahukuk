@@ -89,7 +89,8 @@
     "members": {
       "member1": { "name": "RA Mümtaz Köse", "title": "Gründungspartner" },
       "member2": { "name": "RA Furkan Yağcı", "title": "Gründungspartner" },
-      "member3": { "name": "Gürkan Yavuz", "title": "IT-Spezialist" }
+      "member3": { "name": "Gürkan Yavuz", "title": "IT-Spezialist" },
+      "member4": { "name": "Nurda Nehir", "title": "Büromanagement" }
     }
   },
   "process": {
